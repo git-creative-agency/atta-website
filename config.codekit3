@@ -93,26 +93,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/css/reset-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/reset-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/reset.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/reset-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/css/styles.css": {
 		"aP": 1,
 		"bl": 0,
