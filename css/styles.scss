@@ -1,0 +1,294 @@
+/* Colors
+
+dark purple - #3700B3
+midtone purple - #6200EE
+light purple - #BB86FC
+light cyan - #03DAC5 
+midtone cyan - #018786
+black - #000000
+
+*/
+
+$darkpurple: rgb(55, 00, 179);
+$midpurple: rgb(98, 00, 238);
+$lightpurple: rgb(187, 134, 252);
+$darkblue: rgb(08, 01, 30);
+$midcyan: rgb(0, 86, 84);
+$lightcyan: rgb(3, 218, 197);
+$black: rgb(00, 00, 00);
+$white: rgb(255, 255, 255);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+  background-color: grey;
+  margin: 0;
+}
+
+.container {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+}
+
+.navbar {
+  background: #fff;
+  /* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  text-align: center;
+  background-color: none;
+  width: auto;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  display: block;
+  padding: 1em 2em;
+  font-family: arial;
+}
+
+.navbar li:hover {
+    background: #444;
+  }
+  
+.navbar li:hover a {
+    color: #fff;
+  }
+  
+  .menu-sub {
+    position: absolute;
+    left: 0;
+    background: #444;
+    width: 100%;
+    display: none;
+    color: #fff;
+    padding: 2em;
+    font-family: arial;
+  }
+  
+  nav li:hover .menu-sub {
+    display: block;
+  }
+  
+  .menu-sub li {
+    display: block;
+    /* text-align: left; */
+  }
+  
+  .menu-sub a {
+    padding: 0;
+    margin-bottom: .5em;
+  }
+  
+  .menu-sub a:hover {
+    text-decoration: underline;
+    color: #018786;
+  }
+  
+  .menu-category {
+    margin: 2em 0 .5em;
+  }
+  
+  .menu-category:first-of-type {
+    margin-top: 0;
+  }
+  
+  .menu-col-1,
+  .menu-col-2,
+  .menu-col-3,
+  .menu-col-4 {
+    float: left;
+  }
+  
+  .menu-col-1 {
+    width: 25%;
+  }
+  
+  .menu-col-2 {
+    width: 50%;
+  }
+  
+  .responsive {
+    max-width: 100%;
+    height: auto;
+
+  }
+
+      /* -------------LOGO ----------*/
+
+.header-logo{
+ 
+  text-align: center;
+  background-color:beige;
+  float: left;
+}
+/*----------------------------------------*/
+
+    
+
+.main-content {
+    height: 1300px;
+  }
+  aside{
+    border: 1px solid white;
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .wireframe2:nth-child(1){
+    width: 60%;
+    height: 400px;
+  }
+  .wireframe2:nth-child(2){
+    width: 38%;
+    float: right;
+    height: 400px;
+  }
+  
+  .wireframe2:nth-child(3){
+    width: 100%;
+    height: 400px;
+  }
+  
+  .wireframe2:nth-child(4){
+    width: 38%;
+    height: 400px;
+  }
+  .wireframe2:nth-child(5){
+    width: 60%;
+    float: right;
+    height: 400px;
+  }
+  
+  
+  /*----------------------------------------*/
+ 
+  .news-bar{
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: arial;
+    font-size: 10px;
+    
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /*
+  .social-media-icons ul{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    background-color:none;
+    padding-top: 10px;
+    
+}
+*/
+
+
+
+.col-name {
+  font-family: arial;
+  
+}
+.ftr-col-1,
+.ftr-col-2,
+.ftr-col-3,
+.ftr-col-4 {
+  font-family: arial;
+  font-size: 10px;
+  float: left;
+  padding: 20px;
+}
+
+.footer-nav{
+padding: 1%;
+box-sizing: border-box;
+min-height: 200px;
+
+}
+.footer-navbar{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+    justify-content: center;
+}
+.footer-navbar li{
+
+list-style-type: none;
+}
+
+.ftr-col-2 a,
+.ftr-col-3 a,
+.ftr-col-4 a{
+  text-decoration: none;
+  color: white;
+  background-color: none;
+  width: 120px;
+  float: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align:left;
+  margin-left: -40px;
+
+}
+
+.ftr-col-2 a:hover,
+.ftr-col-3 a:hover,
+.ftr-col-4 a:hover{
+ color: $lightpurple;
+
+}
+
+.ftr-col-name {
+  margin: 2em 0 .5em;
+  color: white;
+  background-color: none;
+  border-top: 2px solid $lightcyan;
+  /* border-radius: none;*/  
+  padding-top: 15px;
+  
+}
+
+footer{
+  height: 200px;
+  background-color: $darkblue;
+  padding-bottom: 50px;
+  
+}
+
+.sub-footer-copyright {
+  height: 70px;
+  background-color: black;
+}
+
+.copyright {
+  color: white;
+  font-family: arial;
+  font-size: 10px;
+  text-align: center;
+  padding-top: 28px;
+
+}

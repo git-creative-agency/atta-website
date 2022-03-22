@@ -68,3 +68,105 @@ header {
   margin-right: 4%;
   margin-left: 4%;
 }
+=======
+/* Retrieved from: https://stackoverflow.com/questions/58508959/css-grid-and-semantic-html */
+
+/* html,
+body,
+.grid-container {
+    height: 100%;
+    margin: 0;
+}
+
+.grid-container * {
+    border: 1px solid red;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 40em 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        " . header . "
+        " . content . "
+        " . footer . ";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: content;
+}
+
+footer {
+    grid-area: footer;
+} */
+
+
+/* Retrieved from: https://gridbyexample.com/examples/example16/ */
+
+body {
+    margin: auto;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+.news {
+    grid-area: news;
+}
+
+
+.connect {
+    grid-area: connect;
+    position: relative;
+}
+
+.subscribe {
+    grid-area: subscribe;
+}
+
+.events {
+    grid-area: events;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "news news news"
+        "events events connect"
+        "subscribe subscribe subscribe"
+        "footer footer footer";
+    background-color: #fff;
+    color: #444;
+}
+
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    font-size: 150%;
+}
+
+.header,
+.footer {
+    background-color: #999;
+}
