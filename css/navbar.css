@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color:#24252A;
+  /* background-color:#24252A; ~grey */
 }
 
 header {
@@ -36,6 +36,7 @@ header {
 .main_nav li {
   display: inline-block;
   padding: 0px 15px;
+  /* background-color: grey; */
 }
 
 .main_nav li a {
@@ -48,7 +49,7 @@ header {
 }
 
 .main_nav li a:hover{
-  color: #0088a9;
+  color: #e979c3;
 }
 
 
@@ -69,7 +70,7 @@ header {
 
 .middle {
   width: 60%;
-  background-color: white;
+  background-color: rgb(60, 149, 209);
   height: 50px;
   text-align: center;
   margin-right: 4%;
@@ -124,7 +125,7 @@ header {
   top: 50px;
   left: 0;
   margin-top: 42px;
-  height: 100vh;
+  height: calc(100vh - 100px);
   width: 100%;
 }
 
@@ -135,18 +136,23 @@ header {
   justify-content: center;
   display: flex;
   align-items: center;
+  background-color: rgb(134, 56, 165);
 }
 
-.hamburger_menu a:hover{
- background-color: tan; /* test hover */
+.hamburger_menu li:hover{
+ background-color: rgb(225, 103, 255); /* test hover */
 }
+
+.hamburger_menu li a:hover{
+    /* background-color: rgb(251, 134, 255); test hover */
+   }
 
 .hamburger_menu li a{
   color: white;
   font-family: arial;
   text-decoration: none;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 @media only screen and (max-width: 1146px) {
