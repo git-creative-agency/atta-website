@@ -1,33 +1,133 @@
-/* Colors
+// Variables -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-dark purple - #3700B3
-midtone purple - #6200EE
-light purple - #BB86FC
-light cyan - #03DAC5 
-midtone cyan - #018786
-black - #000000
+// Type
+$serif:           '', '', '', serif; // insert brand serif fonts here
+$sans:            '', '', sans-serif; // insert brand sans-serif fonts here
+$sans-cond:       ''; // insert brand sans-serif condensed fonts here
+$mono:            ''; // insert brand mono fonts here
 
+
+// Colors (hex)
+/*
+dark purple:      #3700B3
+midtone purple:   #6200EE
+light purple:     #BB86FC
+light cyan:       #03DAC5 
+midtone cyan:     #018786
+black:            #000000
+white:            #FFFFFF
 */
 
-$darkpurple: rgb(55, 00, 179);
-$midpurple: rgb(98, 00, 238);
-$lightpurple: rgb(187, 134, 252);
-$darkblue: rgb(08, 01, 30);
-$midcyan: rgb(0, 86, 84);
-$lightcyan: rgb(3, 218, 197);
-$black: rgb(00, 00, 00);
-$white: rgb(255, 255, 255);
+
+// Colors (rgb var)
+$darkpurple:     rgb(55, 00, 179);
+$midpurple:      rgb(98, 00, 238);
+$lightpurple:    rgb(187, 134, 252);
+$darkblue:       rgb(08, 01, 30);
+$midcyan:        rgb(0, 86, 84);
+$lightcyan:      rgb(3, 218, 197);
+$black:          rgb(00, 00, 00);
+$white:          rgb(255, 255, 255);
+
+// Testing Colours (for developing page structure)
+$beige:          #f6eec2;
+$purple:         #895890;
+$rgb-green:      rgb(0, 255, 0);
+$rgb-red:        rgb(255, 0, 0);
+$rgb-blue:       rgb(0, 0, 255);
+$rgb-cyan:       rgb(0, 255, 255);
+$rgb-magenta:    rgb(255, 0, 255);
+$rgb-yellow:     rgb(255, 255, 0);
+
+// Sizes
+$size:           12px; // for padding, etc.
+$radius:          3px;
+$grid-breakpoints: (
+    phone:          0,
+    tablet:     600px,
+    desktop:    900px,
+    large:     1600px);
+
+// Misc.
+$prefixes:     -webkit-, -moz-, -o-, "";
+
+// Global Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
+// Page Structure -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 body {
   background-color: grey;
   margin: 0;
+  // Diedra: CSS Grid -------------------------------------------
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template: auto auto auto 1fr / 1fr; // Header & Credits are thin, the others will adjust
+  grid-gap: 0;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    "credits";
+  overflow-x: hidden; // for mobile nav; needed because hiding the menu on the right side isn't perfect
 }
+
+header   {  grid-area: header;
+            z-index: 1;
+            background: $white;
+            -webkit-box-shadow:   0 0.5*$size $size 0 rgba(0, 0, 0, 0.2);
+            -moz-box-shadow:      0 0.5*$size $size 0 rgba(0, 0, 0, 0.2);
+            box-shadow:           0 0.5*$size $size 0 rgba(0, 0, 0, 0.2);   }
+main     {  grid-area: main;
+            background: $rgb-cyan;       }
+footer   {  grid-area: footer;
+            background: $rgb-magenta;    }
+credits  {  grid-area: credits;
+            background: $rgb-green;      }
+
+// Full Width (fw) -------------------------------------------
+
+.fw { // Container for content which goes across "the whole section" & has max-width of 1600
+  align-content: center;
+  height: auto;
+  margin: auto;
+    @include screen-large     { padding: $size 2*$size $size 2*$size; }
+    @include screen-desktop   { padding: $size 1.5$size $size 1.5*size; }
+    @include screen-tablet    { padding: $size;   }
+    @include screen-phone     { padding: $size;   }
+}
+
+// Main Column  -------------------------------------------
+
+h1, h2, h3, h4, h5, #headerGrid, .span, .col-1, .col-2, .col-3, .col-4, .col-4321 { max-width: 1600px; }
+
+// 1-Column horizontal section, sitting within a full-width (fw) section
+
+.col-1 {
+  display: grid;
+  grid-template: 1fr;
+  align-self: center;
+}
+
+.span {
+  // an item will span all the columns
+  grid-column: 1 / -1;
+}
+
+// 2-Column horizontal section, siting within a full-width (fw) section
+
+.col-2 {
+  display: grid;
+  grid-template: 1 / 1fr 1fr;
+  column-gap: $size;
+  background: $white;
+}
+
 
 .container {
   /* max-width: 1000px; */
@@ -233,7 +333,7 @@ min-height: 200px;
   padding: 0;
   position: relative;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 .footer-navbar li{
 
