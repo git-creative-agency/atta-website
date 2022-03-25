@@ -35,21 +35,18 @@
 	.nav__links li {
 	  display: inline-block;
 	  padding: 0px 15px;
+	  	a {
+			    transition: all 0.3s ease 0s;
+			    text-decoration: none;
+			    font-family: arial;
+			    font-weight: 500;
+			    font-size: 16px;
+			    color: #edf0f1;
+			&:hover{
+				color: #0088a9;
+				}
+			  }
 	}
-
-	.nav__links li a {
-	  transition: all 0.3s ease 0s;
-	  text-decoration: none;
-	  font-family: arial;
-	  font-weight: 500;
-	  font-size: 16px;
-	  color: #edf0f1;
-	}
-
-	.nav__links li a:hover{
-	  color: #0088a9;
-	}
-
 
 	.left {
 

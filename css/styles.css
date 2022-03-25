@@ -33,7 +33,6 @@ header {
   display: inline-block;
   padding: 0px 15px;
 }
-
 .nav__links li a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
@@ -42,7 +41,6 @@ header {
   font-size: 16px;
   color: #edf0f1;
 }
-
 .nav__links li a:hover {
   color: #0088a9;
 }
@@ -68,4 +66,3 @@ header {
   margin-right: 4%;
   margin-left: 4%;
 }
-=======
