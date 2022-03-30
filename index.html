@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>American Table Tennis Association</title>
-        <meta name="description" content="">
+        <meta name="description" content="Website of the American Table Tennis Association">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Open Graph Metadata (for Social Media) *Update Later -->
+        <meta property="og:title" content="American Table Tennis Association">
+        <meta property="og:description" content="Website of the American Table Tennis Association">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://.com">
+        <meta property="og:image" content="">
+
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="canonical" href="https://html5-templates.com/" />
         <link rel="apple-touch-icon" href="#">
         <!-- Place favicon.ico in the root directory -->
+
+        <!-- Stylesheets -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize-min.css">
         <link rel="stylesheet" href="css/reset-min.css"> <!-- Technical fixes for modern browsers and web problems. -->
         <link rel="stylesheet" href="css/main.min.css"> <!-- essential pieces that apply site-wide -->
         <link rel="stylesheet" href="css/styles.css"> <!-- Grid structure and most visual elements -->
         <link rel="stylesheet" href="css/print-min.css"> <!-- Print styles specifically -->
+
+        <!-- Scripts -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
@@ -21,11 +36,13 @@
         <script src="js/script.js"></script>
         <script src="js/index.js"></script>
     </head>
-    <body class="grid-container">
+
+    <body class="grid-container"> <!-- Add your site or application content here -->
+
         <!--[if lt IE 8]>
                 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
-        <!-- Add your site or application content here -->      
+
         <header>
             <!-- Justin : Desktop Nav -->
             <div class="left">
@@ -87,9 +104,11 @@
                 </div>
             </div>
         </header>
+
         <main>
+            
             <!-- Justin : Section -->
-            <section>
+            <!-- <section>
                 <h1>PlaceHolder Title</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -99,12 +118,32 @@
                     popularised in the 1960s with the release of Letraset sheets containing 
                     Lorem Ipsum passages, and more recently with desktop publishing software 
                     like Aldus PageMaker including versions of Lorem Ipsum.</p>      
-            </section>
+            </section> -->
+
             <!-- Diedra : CSS Grid Sections -->
-            <section class="news"></section>
-            <section class="subscribe"></section>
-            <section class="events"></section>
-            <section class="connect"></section>
+            <section class="fw">
+                <!-- <h3 class="h3-block">Latest News</h3> -->
+                <div class="grid-news">This is an image placeholder</div>
+                <!-- <p>DATE</p>
+                <h5>Story Headline</h5>
+                <p>Body text - teaser for article</p>
+                <a>Read More</a> -->
+                <div class="grid-news">This is an image placeholder</div>
+                <div class="grid-news">This is an image placeholder</div>
+                <div class="grid-news">This is an image placeholder</div>
+            </section>
+
+            <section class="fw events-connect">
+                <div class="grid-events">This is the events list placeholder</div>
+                <div class="grid-connect">This is the social media feed placeholder</div>
+            </section>
+
+
+            <section class="fw subscribe">
+                <div class="grid-subscribe">Stay Up To Speed</div>
+                <div class="grid-subscribe-signup">This is the newsletter signup placeholder</div>
+            </section>
+
         </main>
         <!-- Diedra : Footer -->
         <!-- code based on Prescott Perez-Fox's Portfolio -->

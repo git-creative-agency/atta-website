@@ -185,6 +185,53 @@ credits {
 	background: $rgb-green;
 }
 
+// CSS Grid Testing -------------------------------------------
+
+h3 {
+	text-transform: uppercase;
+}
+
+
+.news {
+	background: #08011E;
+	color: $white;
+}
+
+.grid-news, .grid-events, .grid-connect {
+	margin: 20px;
+	text-align: center;
+}
+
+.grid-news {
+	width: 398px;
+	height: 300px;
+	background: $lightpurple;
+}
+
+.grid-events {
+	width: 60%;
+	height: 300px;
+	background-color: $lightcyan;
+}
+
+.grid-connect {
+	width: 40%;
+	height: 300px;
+	background: $darkpurple;
+}
+
+.grid-subscribe {
+	width: 40%;
+	height: 300px;
+	background: $white;
+}
+
+.grid-subscribe-signup {
+	width: 60%;
+	height: 300px;
+	background: $lightpurple;
+}
+
 // Full Width (fw) -------------------------------------------
 
 .fw {
@@ -221,6 +268,120 @@ h1, h2, h3, h4, h5, #headerGrid, .span, .col-1, .col-2, .col-3, .col-4, .col-432
 	grid-template: 1 / 1fr 1fr;
 	column-gap: $size;
 	background: $white;
+}
+
+.split-2 {
+	// an item will split two columns
+	column-count: 2;
+	column-gap: $size;
+}
+
+.pos-1 {
+	// position into the first column
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.pos-2 {
+	// position into the second column
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+// 3-Column horizontal section, sitting within a full-width `fw` section
+
+.col-3 {
+	display: grid;
+	grid-template: 1 / 1fr 1fr 1fr;
+	column-gap: $size;
+	background: $beige;
+}
+
+.split-3 {
+	// an item will split three columns
+	column-count: 3;
+	column-gap: $size;
+}
+
+.pos-3 {
+	// position into the third column
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+
+.post-23 {
+	// position into the last 2/3 columns
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+// 4-Column horizontal section, sitting within a full-width `fw` section
+
+.col-4 {
+	display: grid;
+	grid-template: 1 / 1fr 1fr 1fr 1fr;
+	column-gap: $size;
+	background: $rgb-blue;
+}
+
+.col-4321 {
+	// a column will feature four columns at large size, then 3 columns, then 2 columns, then 1
+	display: grid;
+	column-gap: $size;
+
+	@include screen-large {
+		background: $rgb-cyan;
+		grid-template: 1 / 1fr 1fr 1fr 1fr;
+	}
+
+	@include screen-desktop {
+		background: $rgb-red;
+		grid-template: 1 / 1fr 1fr 1fr;
+	}
+
+	@include screen-tablet {
+		background: $rgb-green;
+		grid-template: 1 / 1fr 1fr;
+	}
+
+	@include screen-phone {
+		background: $rgb-blue;
+		grid-template: 1 / 1
+	}
+}
+
+.split-4 {
+	// an item will split across four columns
+	column-count: 4;
+	column-gap: $size;
+}
+
+.split-4321 {
+	// an item will flow into four columns at large size, then 3 columns, then 2 columns, then 1
+	column-gap: $size;
+	column-count: 4;
+
+	@include screen-large {
+		column-count: 4;
+	}
+
+	@include screen-desktop {
+		column-count: 3;
+	}
+
+	@include screen-tablet {
+		column-count: 2;
+	}
+
+	@include screen-phone {
+		column-count: 1;
+	}
+}
+
+.pos-4 {
+	// position into the fourth column
+	grid-column-start: 4;
+	grid-column-end: 5;
 }
 
 
