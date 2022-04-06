@@ -6,7 +6,6 @@ $sans: '', '', sans-serif; // insert brand sans-serif fonts here
 $sans-cond: ''; // insert brand sans-serif condensed fonts here
 $mono: ''; // insert brand mono fonts here
 
-
 // Colors (hex)
 /*
 dark purple:      #3700B3
@@ -18,7 +17,6 @@ black:            #000000
 white:            #FFFFFF
 */
 
-
 // Colors (rgb var)
 $darkpurple: rgb(55, 00, 179);
 $midpurple: rgb(98, 00, 238);
@@ -28,16 +26,6 @@ $midcyan: rgb(0, 86, 84);
 $lightcyan: rgb(3, 218, 197);
 $black: rgb(00, 00, 00);
 $white: rgb(255, 255, 255);
-
-// Testing Colours (for developing page structure)
-$beige: #f6eec2;
-$purple: #895890;
-$rgb-green: rgb(0, 255, 0);
-$rgb-red: rgb(255, 0, 0);
-$rgb-blue: rgb(0, 0, 255);
-$rgb-cyan: rgb(0, 255, 255);
-$rgb-magenta: rgb(255, 0, 255);
-$rgb-yellow: rgb(255, 255, 0);
 
 // Sizes
 $size: 12px; // for padding, etc.
@@ -54,46 +42,6 @@ $prefixes: -webkit-,
 "";
 
 // Mixins -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-@mixin borderRadius($size...) { // creates the shortcut for 'borderRadius'
-	@if length($size)==1 {
-		@each $prefix in $prefixes {
-			#{$prefix}border-radius: $size;
-		}
-	} @else {
-		@include customBorderRadius($size...);
-	}
-}
-
-@mixin customBorderRadius($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
-	@each $prefix in $prefixes {
-		@if $prefix=="-moz-" {
-			@if $topLeft !=0 	 { -moz-border-radius-topleft: 				$topLeft;     }
-			@if $topRight !=0 	 { -moz-border-radius-topright: 			$topRight;    }
-			@if $bottomRight !=0 { -moz-border-radius-bottomright: 			$bottomRight; }
-			@if $bottomLeft !=0  { -moz-border-radius-bottomleft: 			$bottomLeft;  }
-		} @else {
-			@if $topLeft !=0 	 { #{$prefix}border-top-left-radius: 		$topLeft;     }
-			@if $topRight !=0 	 { #{$prefix}border-top-right-radius: 		$topRight;	  }
-			@if $bottomRight !=0 { #{$prefix}border-bottom-right-radius: 	$bottomRight; }
-			@if $bottomLeft !=0  { #{$prefix}border-bottom-left-radius: 	$bottomLeft;  }
-		}
-	}
-}
-
-@mixin transition($transition-property, $transition-time, $method) { // Short way of using transition animations
-	-webkit-transition: 	$transition-property 		$transition-time 		$method;
-	-moz-transition: 		$transition-property 		$transition-time 		$method;
-	-ms-transition: 		$transition-property 		$transition-time 		$method;
-	-o-transition: 			$transition-property 		$transition-time 		$method;
-	transition: 			$transition-property 		$transition-time 		$method;
-}
-
-@mixin box-shadow(		$top,	$left,	$blur, 	$color,	$inset:"") {
-	-webkit-box-shadow: $top 	$left 	$blur 	$color 	#{$inset};
-	-moz-box-shadow: 	$top 	$left 	$blur 	$color	#{$inset};
-	box-shadow: 		$top 	$left 	$blur 	$color 	#{$inset};
-}
 
 @function tint($color, $percentage) { // creates "tint", the addition of white to $color (e.g. $percentage between $color and white)
 	@return mix(white, $color, $percentage);
@@ -128,347 +76,235 @@ $prefixes: -webkit-,
 	}
 }
 
+// General Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+	color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    color: white;
+    text-transform: uppercase !important;
+}
+
+a, a:link, a:active {
+    text-decoration: none;
+    color: white;
+}
+
+li.active {
+    font-weight: bold;
+}
+
 // Global Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
 // Page Structure -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
+// CSS Grid -------------------------------------------
 
-
-
-
-main {
-	grid-area: main;
-	background: $rgb-cyan;
+.row {
+	padding: 6em 8em;
 }
 
-footer {
-	grid-area: footer;
-	background: $rgb-magenta;
+// Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+/* Hero Section */
+
+.bg-image { 
+    max-width: 100%;
+    height: 50vh;
+    background: url("../images/desktop/home.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-credits {
-	grid-area: credits;
-	background: $rgb-green;
+.bg-image h1 {
+    color: white;
+    text-shadow: 2px 2px #333;
 }
 
-// CSS Grid Testing -------------------------------------------
+// Main Navigation -------------------------------------------
 
-h3 {
-	text-transform: uppercase;
+/* Logo */
+
+.navbar-brand img { 
+    width: 186.83px;
+    height: 73px;
 }
 
-.grid-news, .grid-events, .grid-connect {
-	margin: 20px;
-	text-align: center;
+// .nav-row {
+//     background-color: rgba(55,17,179,0.5) !important;
+// 	height: 150px;
+// }
+
+.navbar {
+    background-color: rgba(55,17,179,0.5) !important;
 }
 
-.grid-news {
-	width: 398px;
-	height: 300px;
-	background: $lightpurple;
+
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
 }
 
-.grid-events {
-	width: 60%;
-	height: 300px;
-	background-color: $lightcyan;
+// .dropdown-menu {
+// 	width: 100vw !important;
+// 	height: 20% !important;
+// }
+
+// Breadcrumb Navigation -------------------------------------------
+
+.breadcrumb, .breadcrumb-item {
+    height: 10px;
+    font-size: small;
+    color: white !important;
+    text-transform: uppercase;
 }
 
-.grid-connect {
-	width: 40%;
-	height: 300px;
-	background: $darkpurple;
+// Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// News Section -------------------------------------------
+
+.card-deck, .card {
+	background-color: #08011E; // color from XD Prototype
 }
 
-.grid-subscribe {
-	width: 40%;
-	height: 300px;
-	background: $white;
+.card-body {
+	padding: 1em 0;
 }
 
-.grid-subscribe-signup {
-	width: 60%;
-	height: 300px;
-	background: $lightpurple;
+// Media Queries (Image Carousel) -------------------------------------------
+
+@media (min-width: 650px) { 
+  .containerMobile {
+    display: none;
+  }
 }
 
-// Full Width (fw) -------------------------------------------
-
-.fw {
-	// Container for content which goes across "the whole section" & has max-width of 1600
-	align-content: center;
-	height: auto;
-	margin: auto;
-		@include screen-large   	{ padding: $size 2*$size $size 2*$size; }
-		@include screen-desktop 	{ padding: $size 1.5*$size $size 1.5*$size; }
-		@include screen-tablet 		{ padding: $size; }
-		@include screen-phone  		{ padding: $size; }
+@media (max-width: 650px) { 
+  .containerDesktop {
+    display: none;
+  }
 }
 
-// Main Column  -------------------------------------------
 
-h1, h2, h3, h4, h5, #headerGrid, .span, .col-1, .col-2, .col-3, .col-4, .col-4321 { max-width: 1600px; }
 
-// 1-Column horizontal section, sitting within a full-width (fw) section
-
-.col-1 {
-	display: grid;
-	grid-template: 1fr;
-	align-self: center;
-}
-
-.span { // an item will span all the columns
-	grid-column: 1 / -1;
-}
-
-// 2-Column horizontal section, siting within a full-width (fw) section
-
-.col-2 {
-	display: grid;
-	grid-template: 1 / 1fr 1fr;
-	column-gap: $size;
-	background: $white;
-}
-
-.split-2 {
-	// an item will split two columns
-	column-count: 2;
-	column-gap: $size;
-}
-
-.pos-1 {
-	// position into the first column
-	grid-column-start: 1;
-	grid-column-end: 2;
-}
-
-.pos-2 {
-	// position into the second column
-	grid-column-start: 2;
-	grid-column-end: 3;
-}
-
-// 3-Column horizontal section, sitting within a full-width `fw` section
-
-.col-3 {
-	display: grid;
-	grid-template: 1 / 1fr 1fr 1fr;
-	column-gap: $size;
-	background: $beige;
-}
-
-.split-3 {
-	// an item will split three columns
-	column-count: 3;
-	column-gap: $size;
-}
-
-.pos-3 {
-	// position into the third column
-	grid-column-start: 3;
-	grid-column-end: 4;
-}
-
-.post-23 {
-	// position into the last 2/3 columns
-	grid-column-start: 2;
-	grid-column-end: 4;
-}
-
-// 4-Column horizontal section, sitting within a full-width `fw` section
-
-.col-4 {
-	display: grid;
-	grid-template: 1 / 1fr 1fr 1fr 1fr;
-}
-
-.col-4321 {
-	// a column will feature four columns at large size, then 3 columns, then 2 columns, then 1
-	display: grid;
-	column-gap: $size;
-
-	@include screen-large {
-		background: $rgb-cyan;
-		grid-template: 1 / 1fr 1fr 1fr 1fr;
-	}
-
-	@include screen-desktop {
-		background: $rgb-red;
-		grid-template: 1 / 1fr 1fr 1fr;
-	}
-
-	@include screen-tablet {
-		background: $rgb-green;
-		grid-template: 1 / 1fr 1fr;
-	}
-
-	@include screen-phone {
-		background: $rgb-blue;
-		grid-template: 1 / 1
-	}
-}
-
-.split-4 {
-	// an item will split across four columns
-	column-count: 4;
-	column-gap: $size;
-}
-
-.split-4321 {
-	// an item will flow into four columns at large size, then 3 columns, then 2 columns, then 1
-	column-gap: $size;
-	column-count: 4;
-
-	@include screen-large {
-		column-count: 4;
-	}
-
-	@include screen-desktop {
-		column-count: 3;
-	}
-
-	@include screen-tablet {
-		column-count: 2;
-	}
-
-	@include screen-phone {
-		column-count: 1;
-	}
-}
-
-.pos-4 {
-	// position into the fourth column
-	grid-column-start: 4;
-	grid-column-end: 5;
-}
-
+// Justin's Styles
 
 ////////////////////////////////////////
 //////////// MAIN CONTENT //////////////
 ////////////////////////////////////////
 
-section {
-	background: lightsalmon;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+// section {
+// 	background: lightsalmon;
+// 	height: 100vh;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
 
-p {
-	color: white;
-
-	width: 50%;
-}
-
-h1 {
-	margin: 50px;
-	color: black;
-}
-
-.main-content {
-	height: 1300px;
-}
-
-
-.col-name {
-	font-family: arial;
-
-}
 
 ////////////////////////////////////////
 ////////////// FOOTER //////////////////
 ////////////////////////////////////////
 
-.ftr-col-1,
-.ftr-col-2,
-.ftr-col-3,
-.ftr-col-4 {
-	font-family: arial;
-	font-size: 10px;
-	float: left;
-	padding: 20px;
-}
+// .ftr-col-1,
+// .ftr-col-2,
+// .ftr-col-3,
+// .ftr-col-4 {
+// 	font-family: arial;
+// 	font-size: 10px;
+// 	float: left;
+// 	padding: 20px;
+// }
 
-.footer-nav {
-	padding: 1%;
-	box-sizing: border-box;
-	min-height: 200px;
+// .footer-nav {
+// 	padding: 1%;
+// 	box-sizing: border-box;
+// 	min-height: 200px;
 
-}
+// }
 
-.footer-navbar {
-	margin: 0;
-	padding: 0;
-	position: relative;
-	display: flex;
-	justify-content: center;
-}
+// .footer-navbar {
+// 	margin: 0;
+// 	padding: 0;
+// 	position: relative;
+// 	display: flex;
+// 	justify-content: center;
+// }
 
-.footer-navbar li {
+// .footer-navbar li {
 
-	list-style-type: none;
-}
+// 	list-style-type: none;
+// }
 
-.ftr-col-2 a,
-.ftr-col-3 a,
-.ftr-col-4 a {
-	text-decoration: none;
-	color: white;
-	background-color: none;
-	width: 120px;
-	float: left;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	text-align: left;
-	margin-left: -40px;
+// .ftr-col-2 a,
+// .ftr-col-3 a,
+// .ftr-col-4 a {
+// 	text-decoration: none;
+// 	color: white;
+// 	background-color: none;
+// 	width: 120px;
+// 	float: left;
+// 	padding-top: 8px;
+// 	padding-bottom: 8px;
+// 	text-align: left;
+// 	margin-left: -40px;
 
-}
+// }
 
-.ftr-col-2 a:hover,
-.ftr-col-3 a:hover,
-.ftr-col-4 a:hover {
-	color: $lightpurple;
+// .ftr-col-2 a:hover,
+// .ftr-col-3 a:hover,
+// .ftr-col-4 a:hover {
+// 	color: $lightpurple;
 
-}
+// }
 
-.ftr-col-name {
-	margin: 2em 0 .5em;
-	color: white;
-	background-color: none;
-	border-top: 2px solid $lightcyan;
-	/* border-radius: none;*/
-	padding-top: 15px;
+// .ftr-col-name {
+// 	margin: 2em 0 .5em;
+// 	color: white;
+// 	background-color: none;
+// 	border-top: 2px solid $lightcyan;
+// 	/* border-radius: none;*/
+// 	padding-top: 15px;
 
-}
+// }
 
-footer {
-	height: 200px;
-	background-color: $darkblue;
-	padding-bottom: 50px;
+// footer {
+// 	height: 200px;
+// 	background-color: $darkblue;
+// 	padding-bottom: 50px;
 
-}
+// }
 
-.sub-footer-copyright {
-	height: 70px;
-	background-color: black;
-}
+// .sub-footer-copyright {
+// 	height: 70px;
+// 	background-color: black;
+// }
 
-.copyright {
-	color: white;
-	font-family: arial;
-	font-size: 10px;
-	text-align: center;
-	padding-top: 28px;
+// .copyright {
+// 	color: white;
+// 	font-family: arial;
+// 	font-size: 10px;
+// 	text-align: center;
+// 	padding-top: 28px;
 
-}
+// }
 
 ////////////////////////////////////////
 ////////////// HEADER //////////////////
@@ -485,21 +321,9 @@ footer {
     width: 1000px;
     //background-color:blue;
 }
-.bgimage {
-    background-image: url('images/home.jpg');
-    height: 60vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
-}
-
-.gradient {
-    
-}
 
 .nopad {
     padding: 0;
-    
 }
 
 
@@ -512,8 +336,8 @@ footer {
     padding-left: 0;
     padding-right: 0;
     //background-color: blue;
-    text-align: center;
-    }
+    // text-align: center;
+}
 
 .main-bar{
     
