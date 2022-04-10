@@ -140,7 +140,7 @@ li.active {
 
 // Main Navigation -------------------------------------------
 
-/* Logo */
+// Logo ------------------------------------------------------
 
 .navbar-brand img { 
     width: 186.83px;
@@ -154,204 +154,6 @@ li.active {
 
 .navbar {
     background-color: rgba(55,17,179,0.5) !important;
-}
-
-
-.nav-link {
-    color: white !important;
-    text-transform: uppercase;
-}
-
-// .dropdown-menu {
-// 	width: 100vw !important;
-// 	height: 20% !important;
-// }
-
-// Breadcrumb Navigation -------------------------------------------
-
-.breadcrumb, .breadcrumb-item {
-    height: 10px;
-    font-size: small;
-    color: white !important;
-    text-transform: uppercase;
-}
-
-// Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// News Section -------------------------------------------
-
-.card-deck, .card {
-	background-color: #08011E; // color from XD Prototype
-}
-
-.card-body {
-	padding: 1em 0;
-}
-
-// Media Queries (Image Carousel) -------------------------------------------
-
-@media (min-width: 650px) { 
-  .containerMobile {
-    display: none;
-  }
-}
-
-@media (max-width: 650px) { 
-  .containerDesktop {
-    display: none;
-  }
-}
-
-
-
-// Justin's Styles
-
-////////////////////////////////////////
-//////////// MAIN CONTENT //////////////
-////////////////////////////////////////
-
-// section {
-// 	background: lightsalmon;
-// 	height: 100vh;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-
-////////////////////////////////////////
-////////////// FOOTER //////////////////
-////////////////////////////////////////
-
-// .ftr-col-1,
-// .ftr-col-2,
-// .ftr-col-3,
-// .ftr-col-4 {
-// 	font-family: arial;
-// 	font-size: 10px;
-// 	float: left;
-// 	padding: 20px;
-// }
-
-// .footer-nav {
-// 	padding: 1%;
-// 	box-sizing: border-box;
-// 	min-height: 200px;
-
-// }
-
-// .footer-navbar {
-// 	margin: 0;
-// 	padding: 0;
-// 	position: relative;
-// 	display: flex;
-// 	justify-content: center;
-// }
-
-// .footer-navbar li {
-
-// 	list-style-type: none;
-// }
-
-// .ftr-col-2 a,
-// .ftr-col-3 a,
-// .ftr-col-4 a {
-// 	text-decoration: none;
-// 	color: white;
-// 	background-color: none;
-// 	width: 120px;
-// 	float: left;
-// 	padding-top: 8px;
-// 	padding-bottom: 8px;
-// 	text-align: left;
-// 	margin-left: -40px;
-
-// }
-
-// .ftr-col-2 a:hover,
-// .ftr-col-3 a:hover,
-// .ftr-col-4 a:hover {
-// 	color: $lightpurple;
-
-// }
-
-// .ftr-col-name {
-// 	margin: 2em 0 .5em;
-// 	color: white;
-// 	background-color: none;
-// 	border-top: 2px solid $lightcyan;
-// 	/* border-radius: none;*/
-// 	padding-top: 15px;
-
-// }
-
-// footer {
-// 	height: 200px;
-// 	background-color: $darkblue;
-// 	padding-bottom: 50px;
-
-// }
-
-// .sub-footer-copyright {
-// 	height: 70px;
-// 	background-color: black;
-// }
-
-// .copyright {
-// 	color: white;
-// 	font-family: arial;
-// 	font-size: 10px;
-// 	text-align: center;
-// 	padding-top: 28px;
-
-// }
-
-
-////////////////////////////////////////
-////////////// HEADER //////////////////
-////////////////////////////////////////
-
-.logo {
-	width: 200px;
-	// background-color: blue;
-    margin-top:-40px;
-}
-
-.fill{
-    height: 10000px;
-    width: 1000px;
-    //background-color:blue;
-}
-
-.nopad {
-    padding: 0;
-}
-
-
-.height-nav {
-    vertical-align: center;
-    background-color: yellow;
-}
-
-
-
-.nav-vert{
-    height: 70px;
-}
-
-    $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px,
-        xxl: 1320px
-      );
-      
-//
-
-.container {
-	/* max-width: 1000px; */
-	margin: 0 auto;
 }
 
 .navbar {
@@ -381,24 +183,30 @@ li.active {
 			padding: 1.5em 0.1em;
 			font-family: arial;
 		    font-size: 12px;
-		    font-weight:bolder;
+		    // font-weight:bolder;
 		    /// border-bottom: 2px solid white; check
 		}
 }
 
-
-.b{
-    float: right;
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
 }
-nav {
-	font-size: 0;
-}
-
-
-.navbar-category {
-	// background-color: pink;     
+// Navbar Hovers ------------------------------------------------
+.navbar li:hover {
+	background: rgb(100, 47, 245);
 }
 
+.navbar li:hover a {
+	color: #fff;
+}
+
+// .dropdown-menu {
+// 	width: 100vw !important;
+// 	height: 20% !important;
+// }
+
+// Nav Mobile ------------------------------------------------------
 @media only screen and (max-width: 1320px)
  {
 	.navbar a{
@@ -441,76 +249,60 @@ nav {
 }
 }
 
-.navbar li:hover {
-	background: rgb(100, 47, 245);
+// Breadcrumb Navigation -------------------------------------------
+
+.breadcrumb, .breadcrumb-item {
+    height: 10px;
+    font-size: small;
+    color: white !important;
+    text-transform: uppercase;
 }
 
-.navbar li:hover a {
-	color: #fff;
+// Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// News Section -------------------------------------------
+
+.card-deck, .card {
+	background-color: #08011E; // color from XD Prototype
 }
 
-.menu-sub {
-	position: absolute;
-	left: 0;
-	background: rgb(100, 47, 245);
-	width: 100%;
-	display: none;
-	color: #fff;
-	padding: 2em;
-	font-family: arial;
-
-	width: 100vw;
-	left: calc(-50vw + 50%);
+.card-body {
+	padding: 1em 0;
 }
 
-nav li:hover .menu-sub {
-	display: block;
+// Media Queries (Image Carousel) -------------------------------------------
+
+@media (min-width: 650px) { 
+  .containerMobile {
+    display: none;
+  }
 }
 
-.menu-sub li {
-	display: block;
-	/* text-align: left; */
+@media (max-width: 650px) { 
+  .containerDesktop {
+    display: none;
+  }
 }
 
-.menu-sub a {
-	padding: 0;
-	margin-bottom: .5em;
+
+.logo {
+	width: 200px;
+	// background-color: blue;
+    margin-top:-40px;
 }
 
-.menu-sub a:hover {
-	text-decoration: underline;
-	color: #018786;
-}
 
-.menu-category {
-	margin: 2em 0 .5em;
-}
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+      );
 
-.menu-category:first-of-type {
-	margin-top: 0;
-}
-
-.menu-col-1,
-.menu-col-2,
-.menu-col-3,
-.menu-col-4 {
-	float: left;
-}
-
-.menu-col-1 {
-	width: 25%;
-}
-
-.menu-col-2 {
-	width: 50%;
-}
-
-.responsive {
-	max-width: 100%;
-}
-
-// Hamgburger Menu
-
+// Hamgburger Menu -------------------------------------------
+// Readd hamburger function top right corner of navbar
+/* For Reference
 #hamburger-icon {
 	margin: auto 0;
 	display: none;
@@ -588,13 +380,11 @@ nav li:hover .menu-sub {
 		display: block;
 	}
 }
+*/
 
 
 
-////////////////////////////////////////
-////////////// FOOTER //////////////////
-////////////////////////////////////////
-
+// FOOTER ----------------------------------------------------------
 .ftr-col-1,
 .ftr-col-2,
 .ftr-col-3,
@@ -603,24 +393,6 @@ nav li:hover .menu-sub {
 	font-size: 10px;
 	float: left;
 	padding: 20px;
-}
-
-.footer-nav {
-	padding: 1%;
-	box-sizing: border-box;
-	min-height: 200px;
-
-}
-
-.footer-navbar {
-	margin: 0;
-	padding: 0;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	li {
-		list-style-type: none;
-	}
 }
 
 .ftr-col-2	{
@@ -633,7 +405,8 @@ nav li:hover .menu-sub {
 					padding-top: 8px;
 					padding-bottom: 8px;
 					text-align: left;
-					margin-left: -40px;
+					margin-left: 0px;
+					font-weight: bolder;
 				}
 				p {
 					font-weight: bolder;
@@ -643,13 +416,9 @@ nav li:hover .menu-sub {
 					list-style-type: none;
 				}
 }
-
-.ftr-col-2 a {
-	margin-left: 0px;
-	/// border-left: 2px solid red;
-	font-weight: bolder;
-} // Why is this here twice!!
-
+.ftr-logo {
+	width: 450px;
+}
 .ftr-col-name {
 	text-align: left;
 	margin-left: 33px;
@@ -662,45 +431,9 @@ nav li:hover .menu-sub {
 	padding-top: 24px;
 }
 
-// footer {
-//	height: 200px;
-//	background-color: $darkblue;
-//	padding-bottom: 50px;
-//}
-
-.sub-footer-copyright {
-	height: 70px;
-	background-color: black;
-}
-
-.copyright {
-	color: white;
-	font-family: arial;
-	font-size: 10px;
-	text-align: center;
-	padding-top: 28px;
-
-}
-
-.footer-bg {
-	height: 200px;
-
-	background-color: red;
-}
-
-.credits {
-	height: 50px;
-
-	background-color: blue;
-}
-
 .ftr-vert {
 	// height: 200px;
 	background-color: $darkblue;
-}
-
-.ftr-logo{
-	width: 500px;
 }
 
 .footer-color {
@@ -710,7 +443,20 @@ nav li:hover .menu-sub {
 	padding-bottom: 40px;
 }
 
-.minus-row{
+.footerminus-row{
 	margin-top: -70px;
+}
 
+.creditsminus-row{
+	
+}
+
+.credits {
+	height: 50px;
+
+	background-color: blue;
+}
+
+.row-minus2{
+	padding: -6em -8em;
 }
