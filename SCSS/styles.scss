@@ -333,12 +333,7 @@ li.active {
     background-color: yellow;
 }
 
-.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-    //background-color: blue;
-    // text-align: center;
-}
+
 
 .nav-vert{
     height: 70px;
@@ -595,42 +590,6 @@ nav li:hover .menu-sub {
 }
 
 
-// New Thumbnails
-
-.news-wrapper {
-    // border:1px solid red; check border
-    max-width: 420px;
-    overflow: hidden;
-    margin: 10px
-  }
-
-.news-2 {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: all 1s ease;
-    &:hover {
-		   transform: scale(1.15);
-  }
-}
-
-.category-indent{
-    margin-top: 40px;;
-  }
-
-  // News Bar
-
-.news-bar {
-    background-color: rgb(100, 47, 245);
-    margin-top: -24px;
-    height: 15px;
-    width: 100vw;
-}
-
-.news {
-	height: 100%;
-}
-
 
 ////////////////////////////////////////
 ////////////// FOOTER //////////////////
@@ -695,7 +654,7 @@ nav li:hover .menu-sub {
 	text-align: left;
 	margin-left: 33px;
 	width: 190px;
-	color: white;
+	color: white; 
 	background-color: none;
 	border-top: 2px solid $lightcyan;
 	// border-right: 2px solid $lightcyan;
@@ -703,11 +662,11 @@ nav li:hover .menu-sub {
 	padding-top: 24px;
 }
 
-footer {
-	height: 200px;
-	background-color: $darkblue;
-	padding-bottom: 50px;
-}
+// footer {
+//	height: 200px;
+//	background-color: $darkblue;
+//	padding-bottom: 50px;
+//}
 
 .sub-footer-copyright {
 	height: 70px;
@@ -741,12 +700,17 @@ footer {
 }
 
 .ftr-logo{
-	width: 400px;
+	width: 500px;
 }
 
 .footer-color {
 	background-color: $darkblue;
-	height: 270px;
+	height: 330px;
 	padding-top: 20px;
 	padding-bottom: 40px;
+}
+
+.minus-row{
+	margin-top: -70px;
+
 }
