@@ -40,12 +40,12 @@
     <body> <!-- Add your site or application content here -->
 
 
-<!-------------------------------- Diedra's Nav -------------------------------->
+<!-------------------------------- Navigation -------------------------------->
         
         <header class="bg-image"> <!-- Hero Image -->
             <section class="container-fluid">
-                <div class="row margin68 nav-row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
                         <!-- Top Main Navigation -->
                         <nav class="navbar navbar-expand-lg">
                             <div class="container-fluid">
@@ -150,52 +150,35 @@
                                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                         <button class="btn btn-outline-success" type="submit">Search</button>
                                     </form> -->
+                                    </div>
                                 </div>
-                            </div>
-                        </nav>
+                            </nav>
+                            <!-- Breadcrumb Navigation -->
+                            <nav class="bg-info ps-5 pt-1" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">USA</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="index.html">Home</a></li>
+                            </ol>
+                            </nav>
+                        </div>
                     </div>
-                </div>
+                    <!-- Hero Call-to-Action -->
+                    <div class="row hero">
+                        <div class="d-grid justify-content-end">
+                            <button class="btn btn-primary btn-lg" type="button">Learn More</button>
+                        </div>
+                        <div class="col">
+                            <h1 class="display-1 text-end">2022 Fall<br>Team League</h1>
+                        </div>
+                    </div>
             </section>
+
         </header>
 
-<!-------------------------------- Nav -------------------------------->
+        <!-------------------------------- Main -------------------------------->
 
-    <main class="container-fluid">
+        <main class="container-fluid">
             <!-- Desktop News Section -->
-
-
-            <!-- <section class="row containerDesktop bg-secondary pt-5">
-                <h2>Latest News</h2>
-                <article class="col pt-2">
-                    <img src="images/news/news-1.png" class="img-thumbnail" alt="">
-                    <p><small>DATE</small></p>
-                    <h3>Story Headline</h3>
-                    <p><small>text - teaser for article</small></p>
-                    <p class="text-decoration-underline"><small><a>Read More</a></small></p>
-                </article>
-                <article class="col pt-2">
-                    <img src="images/news/news-2.png" class="img-thumbnail" alt="">
-                    <p><small>DATE</small></p>
-                    <h3>Story Headline</h3>
-                    <p><small>text - teaser for article</small></p>
-                    <p class="text-decoration-underline"><small><a>Read More</a></small></p>
-                </article>
-                <article class="col pt-2">
-                    <img src="images/news/news-3.png" class="img-thumbnail" alt="">
-                    <p><small>DATE</small></p>
-                    <h3>Story Headline</h3>
-                    <p><small>text - teaser for article</small></p>
-                    <p class="text-decoration-underline"><small><a>Read More</a></small></p>
-                </article>
-                <article class="col pt-2">
-                    <img src="images/news/news-4.png" class="img-thumbnail" alt="">
-                    <p><small>DATE</small></p>
-                    <h3>Story Headline</h3>
-                    <p><small>text - teaser for article</small></p>
-                    <p class="text-decoration-underline"><small><a>Read More</a></small></p>
-                </article>
-            </section> -->
-
             <section class="row margin68 containerDesktop card-deck text-white">
                 <h2>Latest News</h2>
                 <article class="card col">
@@ -275,125 +258,151 @@
                 </div>
             </section>
 
-            <!-- Upcoming Events Section -->
-            <section class="row margin68">
-                <article class="col col-lg-8 bg-dark">
+            <!-- Upcoming Events // Connect With Us Section -->
+            <section class="row">
+                <article class="col-lg-7 bg-dark margin68">
                         <h2>Upcoming Events</h2>
+
+                        <button class="btn btn-primary btn-lg" type="button">More P2A Events</button>
                 </article>
-                <article class="col col-lg-4 bg-primary">
+                <article class="col-lg-5 bg-secondary margin68">
                     <h2>Connect With Us</h2>
+                    <section class="container-fluid">
+                        <div class="row row-cols-4 p-0 m-0 g-2">
+                            <img class="col" src="images/social/social-1.png" alt="">
+                            <img class="col" src="images/social/social-2.png" alt="">
+                            <img class="col" src="images/social/social-3.png" alt="">
+                            <img class="col" src="images/social/social-4.png" alt="">
+                            <img class="col" src="images/social/social-5.png" alt="">
+                            <img class="col" src="images/social/social-6.png" alt="">
+                            <img class="col" src="images/social/social-7.png" alt="">
+                            <img class="col" src="images/social/social-8.png" alt="">
+                            <img class="col" src="images/social/social-9.png" alt="">
+                            <img class="col" src="images/social/social-10.png" alt="">
+                            <img class="col" src="images/social/social-11.png" alt="">
+                            <img class="col" src="images/social/social-12.png" alt="">
+                        </div>
                 </article>
             </section>
 
-        </main>        
-    </body>
-    
-        <footer>
-    
-        <div class="footer-color container-fluid full-width">
-            <div class="row margin28">
-                
-                <!-- footer logo -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 justify-content-start">
-                    <div class="ftr-vert">
-                        <img class="ftr-logo" src="images/logo/ATTA-Acronym-Wordmark-Horizontal-Light-Gradient.png" alt="logo" >
-                    </div>
-                </div>
-                <div class=" col-xl-4 "> <!-- negative space placeholder -->
-                </div>
+            <!-- Stay Up To Speed Section -->
+            <section class="row margin68 bg-primary text-white">
+                <article class="col-lg-3">
+                    <h2>Stay Up To Speed</h2>
+                    <p>Join Our Newsletter</p>
+                </article>
+                <article class="col-lg-9">
+                    <form>
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                        <input type="email" placeholder="Email">
+                        <button class="btn btn-dark btn-lg" type="button">Subscribe</button>
+                    </form> 
+                </article>
+            </section>
+        </main>     
 
-                <!-- footer sitemap + additional links -->
-                <div class=" col-xl-2 p-0">
-                    <div class="ftr-col-2">
-                        <p class="ftr-col-name">Resoures</p>
-                        <ul>
-                            <li><a href="">NEWS</a></li>
-                            <li><a href="">ATTA ASSISTANCE</a></li>
-                            <li><a href="">TABLE TENNIS</a></li>
-                        </ul>
+        <!-------------------------------- Footer -------------------------------->
+
+        <footer>
+            <div class="footer-color container-fluid full-width">
+                <div class="row margin28">
+                    
+                    <!-- footer logo -->
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 justify-content-start">
+                        <div class="ftr-vert">
+                            <img class="ftr-logo" src="images/logo/ATTA-Acronym-Wordmark-Horizontal-Light-Gradient.png" alt="logo" >
+                        </div>
                     </div>
-                </div>
-                <div class=" col-xl-2 p-0">
-                    <div class="ftr-col-2">
-                        <p class="ftr-col-name">Play</p>
-                        <ul>
-                            <li><a href="">OUTREACH PROGRAMS</a></li>
-                            <li><a href="">P2A EVENTS</a></li>
-                            <li><a href="">TEAM LEAGUE</a></li>
-                        </ul>
+                    <div class=" col-xl-4 "> <!-- negative space placeholder -->
                     </div>
-                </div>
-                <div class=" col-xl-2 p-0">
-                    <div class="ftr-col-2">
-                        <p class="ftr-col-name">Get Involved</p>
-                        <ul>
-                            <li><a href="">SPONSORSHIP</a></li>
-                            <li><a href="">CAREER</a></li>
-                            <li><a href="">CONTACT US</a></li>
-                        </ul>
+
+                    <!-- footer sitemap + additional links -->
+                    <div class=" col-xl-2 p-0">
+                        <div class="ftr-col-2">
+                            <p class="ftr-col-name">Resources</p>
+                            <ul>
+                                <li><a href="">NEWS</a></li>
+                                <li><a href="">ATTA ASSISTANCE</a></li>
+                                <li><a href="">TABLE TENNIS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" col-xl-2 p-0">
+                        <div class="ftr-col-2">
+                            <p class="ftr-col-name">Play</p>
+                            <ul>
+                                <li><a href="">OUTREACH PROGRAMS</a></li>
+                                <li><a href="">P2A EVENTS</a></li>
+                                <li><a href="">TEAM LEAGUE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" col-xl-2 p-0">
+                        <div class="ftr-col-2">
+                            <p class="ftr-col-name">Get Involved</p>
+                            <ul>
+                                <li><a href="">SPONSORSHIP</a></li>
+                                <li><a href="">CAREER</a></li>
+                                <li><a href="">CONTACT US</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-                
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        
-    <!-- privacy and copyright -->
-    
-        
-                <credits>
-                    <div class=" credits container-fluid full-width margin18">
-                        <div class="row row-minus2">
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
-                                <div class="">
-                                    <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
-                                </div>
+            <!-- privacy and copyright -->
+            <credits>
+                <div class=" credits container-fluid full-width margin18">
+                    <div class="row row-minus2">
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
+                            <div class="">
+                                <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
                             </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
-                                <div class="">
-                                    <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
-                                </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
+                            <div class="">
+                                <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
                             </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
-                                <div class="">
-                                    <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
-                                </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
+                            <div class="">
+                                <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
                             </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
-                                <div class="">
-                                    <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
-                                </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 justify-content-start">
+                            <div class="">
+                                <img class="social-logo" src="images/icons/insta_white.png" alt="logo" >
                             </div>
-                            <div class=" col-lg-2 "> <!-- negative space placeholder -->
+                        </div>
+                        <div class=" col-lg-2 "> <!-- negative space placeholder -->
+                        </div>
+                        <div class=" col-xl-2 p-0">
+                            <div class="ftr-col-2">
+                                <ul> <!-- will adjust later - current placeholder to match layout of above footer-->
+                                    <li><a href="">SPONSORSHIP</a></li>
+                                </ul>
                             </div>
-                            <div class=" col-xl-2 p-0">
-                                <div class="ftr-col-2">
-                                    <ul> <!-- will adjust later - current placeholder to match layout of above footer-->
-                                        <li><a href="">SPONSORSHIP</a></li>
-                                    </ul>
-                                </div>
+                        </div>
+                        <div class=" col-xl-2 p-0">
+                            <div class="ftr-col-2">
+                                <ul> <!-- will adjust later - current placeholder to match layout of above footer-->
+                                    <li><a href="">SPONSORSHIP</a></li>
+                                </ul>
                             </div>
-                            <div class=" col-xl-2 p-0">
-                                <div class="ftr-col-2">
-                                    <ul> <!-- will adjust later - current placeholder to match layout of above footer-->
-                                        <li><a href="">SPONSORSHIP</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class=" col-xl-2 p-0">
-                                <div class="ftr-col-2">
-                                    <ul> <!-- will adjust later - current placeholder to match layout of above footer-->
-                                        <li><a href="">SPONSORSHIP</a></li>
-                                    </ul>
-                                </div>
+                        </div>
+                        <div class=" col-xl-2 p-0">
+                            <div class="ftr-col-2">
+                                <ul> <!-- will adjust later - current placeholder to match layout of above footer-->
+                                    <li><a href="">SPONSORSHIP</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </credits>
-           
-
-        
-    </footer>
+                </div>
+            </credits> 
+        </footer>    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
     
 </html>

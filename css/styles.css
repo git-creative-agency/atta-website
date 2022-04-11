@@ -66,9 +66,13 @@ li.active {
   position: relative;
 }
 
-.bg-image h1 {
+.bgimage h1 {
   color: white;
   text-shadow: 2px 2px #333;
+}
+
+.hero {
+  margin-top: 20% !important;
 }
 
 .navbar-brand img {
@@ -173,8 +177,8 @@ li.active {
 }
 
 .breadcrumb, .breadcrumb-item {
-  height: 10px;
-  font-size: small;
+  height: 20px;
+  font-size: smaller !important;
   color: white !important;
   text-transform: uppercase;
 }

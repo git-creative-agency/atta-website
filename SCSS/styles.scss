@@ -146,9 +146,13 @@ li.active {
     position: relative;
 }
 
-.bg-image h1 {
+.bgimage h1 {
     color: white;
     text-shadow: 2px 2px #333;
+}
+
+.hero {
+    margin-top: 20% !important;
 }
 
 // Main Navigation -------------------------------------------
@@ -159,11 +163,6 @@ li.active {
     width: 186.83px;
     height: 73px;
 }
-
-// .nav-row {
-//     background-color: rgba(55,17,179,0.5) !important;
-// 	height: 150px;
-// }
 
 .navbar {
     background-color: rgba(55,17,179,0.5) !important;
@@ -279,8 +278,8 @@ li.active {
 // Breadcrumb Navigation -------------------------------------------
 
 .breadcrumb, .breadcrumb-item {
-    height: 10px;
-    font-size: small;
+    height: 20px;
+    font-size: smaller !important;
     color: white !important;
     text-transform: uppercase;
 }
