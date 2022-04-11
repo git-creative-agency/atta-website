@@ -39,8 +39,12 @@ li.active {
           box-sizing: inherit;
 }
 
-.row {
+.margin68 {
   padding: 6em 8em;
+}
+
+.footermargin {
+  padding: 2em 8em;
 }
 
 /* Hero Section */
@@ -103,12 +107,25 @@ li.active {
   font-size: 12px;
 }
 
+/* TESTING mobile
+
+@include screen-desktop {
+	.navbar {
+		width: 100px;
+	
+	.navbar-brand {
+		margin-left: -100px;
+	}
+	}
+}
+*/
 .nav-link {
   color: white !important;
   text-transform: uppercase;
 }
 
 .navbar li:hover {
+  font-weight: bolder;
   background: #642ff5;
 }
 

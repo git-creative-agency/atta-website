@@ -115,9 +115,14 @@ li.active {
 
 // CSS Grid -------------------------------------------
 
-.row {
+.margin68{
 	padding: 6em 8em;
 }
+
+.footermargin{
+	padding: 2em 8em;
+}
+
 
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -185,8 +190,21 @@ li.active {
 		    font-size: 12px;
 		    // font-weight:bolder;
 		    /// border-bottom: 2px solid white; check
+			
 		}
 }
+/* TESTING mobile
+
+@include screen-desktop {
+	.navbar {
+		width: 100px;
+	
+	.navbar-brand {
+		margin-left: -100px;
+	}
+	}
+}
+*/
 
 .nav-link {
     color: white !important;
@@ -194,6 +212,7 @@ li.active {
 }
 // Navbar Hovers ------------------------------------------------
 .navbar li:hover {
+	font-weight: bolder;
 	background: rgb(100, 47, 245);
 }
 
