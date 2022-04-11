@@ -119,6 +119,14 @@ li.active {
 	padding: 6em 8em;
 }
 
+.margin28{
+	padding: 2em 8em;
+}
+
+.margin18{
+	padding: 1em 8em;
+}
+
 .footermargin{
 	padding: 2em 8em;
 }
@@ -466,16 +474,30 @@ $container-max-widths: (
 	margin-top: -70px;
 }
 
-.creditsminus-row{
-	
-}
-
 .credits {
-	height: 50px;
 
-	background-color: blue;
+
+	background-color: black;
+
+	p{
+		margin-top: 1em;
+		font-size: 12px;
+		font-weight: bolder;
+		text-align: center;
+		color: white;
+	}
 }
 
 .row-minus2{
 	padding: -6em -8em;
+}
+
+
+
+
+.social-logo{
+	width:40px;
+	text-align: center;
+	display: flex;
+	background-color: black;
 }
