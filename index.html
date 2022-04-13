@@ -259,15 +259,46 @@
             </section>
 
             <!-- Upcoming Events // Connect With Us Section -->
-            <section class="row">
-                <article class="col-lg-7 bg-dark margin68">
+            <section class="row g-5 bg-secondary margin68">
+                <article class="col-lg-7">
                         <h2>Upcoming Events</h2>
-
+                        <table class="table">
+                            <tr>
+                            <th scope="row">Event Name 1</th>
+                            <td>Date</td>
+                            <td>Time</td>
+                            <td>Location</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Event Name 2</th>
+                            <td>Date</td>
+                            <td>Time</td>
+                            <td>Location</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Event Name 3</th>
+                            <td>Date</td>
+                            <td>Time</td>
+                            <td>Location</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Event Name 4</th>
+                            <td>Date</td>
+                            <td>Time</td>
+                            <td>Location</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Event Name 5</th>
+                            <td>Date</td>
+                            <td>Time</td>
+                            <td>Location</td>
+                            </tr>
+                        </table>
                         <button class="btn btn-primary btn-lg" type="button">More P2A Events</button>
                 </article>
-                <article class="col-lg-5 bg-secondary margin68">
-                    <h2>Connect With Us</h2>
+                <article class="col-lg-5">
                     <section class="container-fluid">
+                        <h2>Connect With Us</h2>
                         <div class="row row-cols-4 p-0 m-0 g-2">
                             <img class="col" src="images/social/social-1.png" alt="">
                             <img class="col" src="images/social/social-2.png" alt="">
@@ -286,18 +317,29 @@
             </section>
 
             <!-- Stay Up To Speed Section -->
-            <section class="row margin68 bg-primary text-white">
-                <article class="col-lg-3">
+            <section class="row margin68 bg-primary">
+                <article class="col-md-3 col-sm-12 text-white">
                     <h2>Stay Up To Speed</h2>
                     <p>Join Our Newsletter</p>
                 </article>
-                <article class="col-lg-9">
-                    <form>
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name">
-                        <input type="email" placeholder="Email">
-                        <button class="btn btn-dark btn-lg" type="button">Subscribe</button>
-                    </form> 
+                <article class="col-md-9 col-sm-12 text-dark">
+                    <form class="row g-3 text-uppercase">
+                        <div class="form-floating col-md-6 col-sm-12">
+                            <input type="text" class="form-control" id="fName" placeholder="Enter First Name">
+                            <label for="fName" class="form-label">First Name</label>
+                        </div>
+                        <div class="form-floating col-md-6 col-sm-12">
+                            <input type="text" class="form-control" id="lName" placeholder="Enter Last Name">
+                            <label for="lName" class="form-label">Last Name</label>
+                        </div>
+                        <div class="form-floating col-12">
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email Address">
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-dark btn-lg" type="button">Subscribe</button>                        
+                        </div>
+                    </form>
                 </article>
             </section>
         </main>     
