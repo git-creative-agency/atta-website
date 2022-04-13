@@ -47,8 +47,8 @@ li.active {
   padding: 2em 8em;
 }
 
-.margin08 {
-  padding: 0em 8em;
+.margin18 {
+  padding: 1em 8em;
 }
 
 .footermargin {
@@ -293,6 +293,7 @@ li.active {
 .ftr-col-4 {
   font-family: arial;
   font-size: 10px;
+  float: left;
   padding: 20px;
 }
 
@@ -320,7 +321,6 @@ li.active {
 
 .ftr-logo {
   width: 450px;
-  margin-left: -32px;
 }
 
 .ftr-col-name {
@@ -345,179 +345,31 @@ li.active {
   padding-bottom: 40px;
 }
 
-.credits-color {
+.footerminus-row {
+  margin-top: -70px;
+}
+
+.credits {
   background-color: black;
-  height: 4em;
+}
+
+.credits p {
+  margin-top: 1em;
+  font-size: 12px;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+}
+
+.row-minus2 {
+  padding: -6em -8em;
 }
 
 .social-logo {
-  width: 33px;
+  width: 40px;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: black;
-  margin: 0px 15px;
-}
-
-.social-row {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: reverse !important;
-      -ms-flex-direction: row-reverse !important;
-          flex-direction: row-reverse !important;
-  float: left;
-  margin-top: 1em;
-  margin-left: -20px;
-}
-
-@media only screen and (max-width: 600px) {
-  .ftr-logo {
-    width: 377px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 auto;
-  }
-  .margin28 {
-    padding: 0em 0em;
-  }
-  .margin08 {
-    padding: 0em 0em;
-  }
-  .ftr-col-name {
-    text-align: left;
-    margin-left: 33px;
-    width: 190px;
-    color: white;
-    background-color: none;
-    border-top: 2px solid #03dac5;
-    /* border-radius: none;*/
-    padding-top: 5px;
-  }
-  .footer-color {
-    background-color: #08011e;
-    height: 730px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-  .ftr-col-1,
-  .ftr-col-2,
-  .ftr-col-3,
-  .ftr-col-4 {
-    font-family: arial;
-    font-size: 10px;
-    width: 300px;
-    margin: 10px 25px;
-  }
-  .social-logo {
-    width: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: black;
-    margin: 0px 1.6em 1.5em auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .social-row {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
-    width: 100vw;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    float: left;
-  }
-  .credits-color {
-    height: 21em;
-    background-color: black;
-    padding-top: 15px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .ftr-logo {
-    width: 377px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 auto;
-  }
-  .margin28 {
-    padding: 0em 0em;
-  }
-  .margin08 {
-    padding: 0em 0em;
-  }
-  .ftr-col-name {
-    text-align: left;
-    margin-left: 33px;
-    width: 190px;
-    color: white;
-    background-color: none;
-    border-top: 2px solid #03dac5;
-    /* border-radius: none;*/
-    padding-top: 5px;
-  }
-  .footer-color {
-    background-color: #08011e;
-    height: 730px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-  .ftr-col-1,
-  .ftr-col-2,
-  .ftr-col-3,
-  .ftr-col-4 {
-    font-family: arial;
-    font-size: 10px;
-    width: 300px;
-    margin: 10px 25px;
-  }
-  .social-logo {
-    width: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: black;
-    margin: 0px 1.6em 1.5em auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .social-row {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
-    width: 100vw;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    float: left;
-  }
-  .credits-color {
-    height: 21em;
-    background-color: black;
-    padding-top: 15px;
-  }
 }
