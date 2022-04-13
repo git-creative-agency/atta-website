@@ -111,12 +111,13 @@ li.active {
 
 .navbar a {
   color: white;
-  width: 12em;
+  width: 11em;
   text-decoration: none;
   display: block;
   padding: 1.5em 0.1em;
   font-family: arial;
   font-size: 12px;
+  font-weight: bolder;
 }
 
 /* TESTING mobile
@@ -132,37 +133,128 @@ li.active {
 }
 */
 .nav-link {
-  color: white !important;
+  color: white;
   text-transform: uppercase;
 }
 
 .navbar li:hover {
-  font-weight: bolder;
   background: #642ff5;
+  border-radius: 5px;
 }
 
 .navbar li:hover a {
   color: #fff;
 }
 
-@media only screen and (max-width: 1320px) {
+.test {
+  width: 100vw;
+  height: 10px;
+  background-color: green;
+}
+
+@media only screen and (max-width: 1400px) {
+  .navbar {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    background-color: none;
+    width: auto;
+  }
+  .navbar ul li {
+    display: inline-block;
+    /* margin-right: -4px; moves li in sub menu */
+  }
   .navbar a {
     color: white;
-    width: 12em;
+    width: 10.7em;
     text-decoration: none;
     display: block;
-    padding: 1.3em 0.05em;
+    padding: 1.5em 0.1em;
     font-family: arial;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bolder;
   }
 }
 
-@media only screen and (max-width: 1222px) {
-  .navbar a,
-  .navbar-category,
+@media only screen and (max-width: 1200px) {
   .navbar {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    background-color: none;
+    width: auto;
+  }
+  .navbar ul li {
     visibility: hidden;
+    /* margin-right: -4px; moves li in sub menu */
+  }
+  .navbar a {
+    color: white;
+    width: 10.7em;
+    text-decoration: none;
+    display: block;
+    padding: 1.5em 0.1em;
+    font-family: arial;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .margin68 {
+    padding: 3em 4em;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .test {
+    background-color: blue;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .test {
+    background-color: red;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .test {
+    background-color: pink;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .test {
+    background-color: teal;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .test {
+    background-color: purple;
   }
 }
 
@@ -189,6 +281,10 @@ li.active {
 
 .card-body {
   padding: 1em 0;
+}
+
+.card-margin {
+  margin-right: 10px;
 }
 
 @media (min-width: 650px) {

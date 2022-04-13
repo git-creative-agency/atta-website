@@ -51,31 +51,43 @@ $prefixes: -webkit-,
 	@return mix(black, $color, $percentage);
 }
 
-
-@mixin screen-large { // Large - 1601 to 2500 screen size
-	@media only screen and (max-width: 2500px) {
+@mixin xxl { // Large - 1601 to 2500 screen size
+	@media only screen and (max-width: 1400px) {
 		@content;
 	}
 }
 
-@mixin screen-desktop { // desktop - 901 to 1600 screen size
-	@media only screen and (max-width: 1600px) {
+@mixin xl { // Large - 1601 to 2500 screen size
+	@media only screen and (max-width: 1200px) {
 		@content;
 	}
 }
 
-@mixin screen-tablet { // Tablet - 601 to 900 screen size
-	@media only screen and (max-width: 900px) {
+@mixin lg { // desktop - 901 to 1600 screen size
+	@media only screen and (max-width: 992px) {
 		@content;
 	}
 }
 
-@mixin screen-phone { // Phone - below 600 screen size
-	@media only screen and (max-width: 600px) {
+@mixin md { // Tablet - 601 to 900 screen size
+	@media only screen and (max-width: 768px) {
 		@content;
 	}
 }
 
+@mixin sm { // Phone - below 600 screen size
+	@media only screen and (max-width: 576px) {
+		@content;
+	}
+}
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 // General Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 html {
@@ -189,13 +201,13 @@ li.active {
 		}
 		a {
 			color: white;
-		    width: 12em;
+		    width: 11em;
 			text-decoration: none;
 			display: block;
 			padding: 1.5em 0.1em;
 			font-family: arial;
 		    font-size: 12px;
-		    // font-weight:bolder;
+		    font-weight:bolder;
 		    /// border-bottom: 2px solid white; check
 			
 		}
@@ -214,13 +226,13 @@ li.active {
 */
 
 .nav-link {
-    color: white !important;
+    color: white ;
     text-transform: uppercase;
 }
 // Navbar Hovers ------------------------------------------------
 .navbar li:hover {
-	font-weight: bolder;
 	background: rgb(100, 47, 245);
+	border-radius: 5px;
 }
 
 .navbar li:hover a {
@@ -233,22 +245,123 @@ li.active {
 // }
 
 // Nav Mobile ------------------------------------------------------
-@media only screen and (max-width: 1320px)
- {
-	.navbar a{
-        color: white;
-        width: 12em;
-        text-decoration: none;
-        display: block;
-        
-        padding: 1.3em 0.05em;
-        font-family: arial;
-        font-size: 12px;
-        font-weight:bolder;
-        
-        
+.test{
+	width: 100vw;
+	height:10px;
+	background-color: green;
+}
+
+@include xxl {
+	.navbar {
+		// background: #fff;
+		justify-content: center;
+		align-items: center;
+		/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				position: relative;
+				text-align: center;
+				background-color: none;
+				width: auto;   
+				li {
+					display: inline-block;
+					
+					/* margin-right: -4px; moves li in sub menu */
+				}
+			}
+			a {
+				color: white;
+				width: 10.7em;
+				text-decoration: none;
+				display: block;
+				padding: 1.5em 0.1em;
+				font-family: arial;
+				font-size: 10px;
+				font-weight:bolder;
+				/// border-bottom: 2px solid white; check
+				
+			}
 	}
-  }
+	}
+
+	@include xl {
+		.navbar {
+			// background: #fff;
+			justify-content: center;
+			align-items: center;
+			/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					position: relative;
+					text-align: center;
+					background-color: none;
+					width: auto;   
+					li {
+						visibility:hidden;
+						
+						/* margin-right: -4px; moves li in sub menu */
+					}
+				}
+				a {
+					color: white;
+					width: 10.7em;
+					text-decoration: none;
+					display: block;
+					padding: 1.5em 0.1em;
+					font-family: arial;
+					font-size: 10px;
+					font-weight:bolder;
+					/// border-bottom: 2px solid white; check
+					
+				}
+		}
+	}
+	@include xl {
+		.margin68 {
+			padding: 3em 4em;
+		}
+	}
+	
+@media only screen and (max-width: 1320px){
+	
+}
+
+@include xxl {
+	.test {
+		background-color: blue;
+	}
+}
+
+@include xl {
+	.test {
+		background-color: red;
+	}
+}
+
+@include lg {
+	.test {
+		background-color: pink;
+	}
+}
+
+@include md {
+	.test {
+		background-color: teal;
+	}
+}
+
+@include sm {
+	.test {
+		background-color: purple;
+	}
+}
+
+
+
 
   @media only screen and (max-width: 1222px)
   {
@@ -260,7 +373,7 @@ li.active {
     // display: block;
     // padding: 0em 1em;
     // font-family: arial;
-    visibility: hidden;
+    // visibility: hidden;
 }
 }
 
@@ -294,6 +407,10 @@ li.active {
 
 .card-body {
 	padding: 1em 0;
+}
+
+.card-margin{
+	margin-right: 10px;
 }
 
 // Media Queries (Image Carousel) -------------------------------------------
