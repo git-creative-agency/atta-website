@@ -647,6 +647,7 @@ $container-max-widths: (
 			text-align: left;
 			margin-left: 0px;
 			font-weight: bolder;
+			
 		}
 		p {
 			font-weight: bolder;
@@ -670,6 +671,7 @@ $container-max-widths: (
 		padding: 1em 8em;
 	}
 }
+
 
 @include xl {
 	.margin28 {
@@ -702,6 +704,10 @@ $container-max-widths: (
 	.social-logo{
 		width:40px;
 		margin: 0px 65px;	
+	}
+	.credits-color {
+		height: 9em;
+		background-color: black;
 	}	
 }
 
@@ -709,6 +715,10 @@ $container-max-widths: (
 	.social-logo{
 		width:40px;
 		margin: 0px 32px;
+	}
+	.credits-color {
+		height: 9em;
+		background-color: black;
 	}
 }
 @include sm {
