@@ -288,12 +288,12 @@ li.active {
 	}
 	}
 
-	@include xl {
+	/* FOR NAVBAR drop @include xl {
 		.navbar {
 			// background: #fff;
 			justify-content: center;
 			align-items: center;
-			/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
+			/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) 
 				ul {
 					margin: 0;
 					padding: 0;
@@ -305,7 +305,7 @@ li.active {
 					li {
 						visibility:hidden;
 						
-						/* margin-right: -4px; moves li in sub menu */
+						/* margin-right: -4px; moves li in sub menu 
 					}
 				}
 				a {
@@ -325,6 +325,7 @@ li.active {
 			visibility: hidden;
 		}
 	}
+	*/
 	@include xl {
 		.margin68 {
 			padding: 3em 4em;
@@ -705,10 +706,7 @@ $container-max-widths: (
 		width:40px;
 		margin: 0px 65px;	
 	}
-	.credits-color {
-		height: 9em;
-		background-color: black;
-	}	
+		
 }
 
 @include md {
