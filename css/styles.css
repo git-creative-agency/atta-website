@@ -392,7 +392,7 @@ li.active {
 .ftr-col-4 {
   font-family: arial;
   font-size: 10px;
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .ftr-col-2 a {
@@ -446,11 +446,12 @@ li.active {
   margin-top: -70px;
 }
 
-.credits {
+.credits-color {
   background-color: black;
+  height: 6.3em;
 }
 
-.credits p {
+.credits-color p {
   margin-top: 1em;
   font-size: 12px;
   font-weight: bolder;
@@ -515,9 +516,6 @@ li.active {
   .ftr-vert {
     text-align: center;
   }
-}
-
-@media only screen and (max-width: 1400px) {
   .margin28 {
     padding: 2em 8em;
   }
@@ -583,17 +581,29 @@ li.active {
   .margin18 {
     padding: 1em 4em;
   }
-  .create-row {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
-  }
   .social-logo {
     width: 40px;
     margin: 0px 19px;
+  }
+  .social-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .ftr-col-1,
+  .ftr-col-2,
+  .ftr-col-3,
+  .ftr-col-4 {
+    font-family: arial;
+    font-size: 10px;
+    width: 200px;
+    height: 45px;
+    margin: 10px 25px;
+  }
+  .credits-color {
+    height: 20em;
+    background-color: black;
+  }
+  .ftr-col-name {
+    padding-top: 10px;
   }
 }

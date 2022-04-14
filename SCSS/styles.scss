@@ -539,7 +539,7 @@ $container-max-widths: (
 .ftr-col-4 {
 	font-family: arial;
 	font-size: 10px;
-	padding: 10px;
+	padding-left: 10px;
 }
 
 .ftr-col-2	{
@@ -594,8 +594,9 @@ $container-max-widths: (
 	margin-top: -70px;
 }
 
-.credits {
+.credits-color {
 	background-color: black;
+	height: 6.3em;
 	p{
 		margin-top: 1em;
 		font-size: 12px;
@@ -620,8 +621,6 @@ $container-max-widths: (
 	float:left;
 	margin-top: 1em;
 }
-
-
 
 @include xxl {
 	.ftr-col-name {
@@ -664,11 +663,6 @@ $container-max-widths: (
 		// background-color: $darkblue;
 		text-align: center;
 	}
-}
-
-
-
-@include xxl {
 	.margin28 {
 		padding: 2em 8em;
 	}
@@ -725,15 +719,30 @@ $container-max-widths: (
 		padding: 1em 4em;
 	}
 
-.create-row{
-	display: flex !important;
-flex-direction: row-reverse !important;
-}
-
 .social-logo{
 	width:40px;
 	margin: 0px 19px;
 	
 }
-
+.social-row{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.ftr-col-1,
+.ftr-col-2,
+.ftr-col-3,
+.ftr-col-4 {
+	font-family: arial;
+	font-size: 10px;
+	width: 200px;
+	height: 45px;
+	margin: 10px 25px;	
+}
+.credits-color {
+	height: 20em;
+	background-color: black;
+}
+.ftr-col-name {
+	padding-top: 10px;
+}
 }
