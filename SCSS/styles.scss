@@ -234,13 +234,34 @@ a{
 	font-size: 16px;
 	font-weight: bold;
 	//color:$darkpurple;
+	
 }
 
+.dropdown-item {
+	background-color:$darkblue;
+	opacity: 100%;
+	color: white;
+	
+	li{
+		background-color:red;
+		color:white;
+	}
+	a {
+		
+	}
+	
+}
+
+.nav-item {
+	font-size: 16px;
+}
 // Navbar Hovers ------------------------------------------------
 .nav-link:hover {
     color: $lightcyan;
 }
-
+.dropdown-item:hover {
+	color: $darkblue;
+}
 // .dropdown-menu {
 // 	width: 100vw !important;
 // 	height: 20% !important;
@@ -251,6 +272,21 @@ a{
 	width: 100vw;
 	height:10px;
 	background-color: green;
+}
+
+
+
+@include xxl {
+	.nav-item {
+	
+		font-size: 14px;
+	}
+}
+@include xl {
+	.nav-item {
+	
+		font-size: 10px;
+	}
 }
 
 
