@@ -176,14 +176,14 @@ li.active {
 
 @media only screen and (max-width: 992px) {
   .nav-item {
-    font-size: 12px;
+    font-size: 16px;
   }
   .nav-category-title {
-    margin-left: 5px;
-    font-size: 12px;
+    margin-left: 10px;
+    font-size: 16px;
   }
   .dropdown-item {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
