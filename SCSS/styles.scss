@@ -26,6 +26,7 @@ $midcyan: rgb(0, 86, 84);
 $lightcyan: rgb(3, 218, 197);
 $black: rgb(00, 00, 00);
 $white: rgb(255, 255, 255);
+$primary: red;
 
 // Sizes
 $size: 12px; // for padding, etc.
@@ -140,7 +141,7 @@ li.active {
 }
 
 .margin18{
-	padding: 1em 8em;
+	padding: 2em 8em;
 }
 
 .footermargin{
@@ -154,7 +155,8 @@ li.active {
 
 .bg-image { 
     max-width: 100%;
-    height: 50vh;
+    height: 60vh;
+	opacity: 100%;
     background: url("../images/desktop/home.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -180,42 +182,25 @@ li.active {
     height: 73px;
 }
 
-.navbar {
-    background-color: rgba(55,17,179,0.5) !important;
+
+.navbar-bg{
+	background-color:$darkpurple;
+	border-radius: 25px 25px 0 0;
+a{
+	color:white;
+	font-size: 14px;
+}
+}
+.dropdown-bg {
+	//background-color:$darkpurple;
+}
+.navbar-menu li:hover{
+	color: red;
+}
+.dropdown-bg li:hover {
+	//background-color:$darkpurple;
 }
 
-.navbar {
-	// background: #fff;
-    justify-content: center;
-    align-items: center;
-	/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			position: relative;
-			text-align: center;
-			background-color: none;
-			width: auto;   
-			li {
-				display: inline-block;
-			    
-				/* margin-right: -4px; moves li in sub menu */
-			}
-		}
-		a {
-			color: white;
-		    width: 11em;
-			text-decoration: none;
-			display: block;
-			padding: 1.5em 0.1em;
-			font-family: arial;
-		    font-size: 12px;
-		    font-weight:bolder;
-		    /// border-bottom: 2px solid white; check
-			
-		}
-}
 /* TESTING mobile
 
 @include screen-desktop {
@@ -233,14 +218,54 @@ li.active {
     color: white ;
     text-transform: uppercase;
 }
-// Navbar Hovers ------------------------------------------------
-.navbar li:hover {
-	background: rgb(100, 47, 245);
-	border-radius: 5px;
+
+.navbar{
+	background-color:white;
+	border-radius:20px 20px 0 0;
+	border: solid 2px black;
 }
 
-.navbar li:hover a {
-	color: #fff;
+.breadcrumb-color{
+	background-color:$darkblue ;
+	border-right: solid 2px black;
+	border-left: solid 2px black;
+	border-bottom: solid 2px black;
+	border-radius: 0 0 5px 5px;
+}
+
+.nav-category-title {
+	margin-left: 15px;
+	font-size: 16px;
+	font-weight: bold;
+	//color:$darkpurple;
+	
+}
+
+.dropdown-item {
+	background-color:$darkblue;
+	opacity: 100%;
+	color: white;
+	
+	li{
+		background-color:red;
+		color:white;
+	}
+	a {
+		
+	}
+	
+}
+
+.nav-item {
+	font-size: 16px;
+	font-weight: bold;
+}
+// Navbar Hovers ------------------------------------------------
+.nav-link:hover {
+    color: $lightcyan;
+}
+.dropdown-item:hover {
+	color: $darkblue;
 }
 
 // .dropdown-menu {
@@ -255,80 +280,74 @@ li.active {
 	background-color: green;
 }
 
+
+
 @include xxl {
-	.navbar {
-		// background: #fff;
-		justify-content: center;
-		align-items: center;
-		/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
-			ul {
-				margin: 0;
-				padding: 0;
-				list-style: none;
-				position: relative;
-				text-align: center;
-				background-color: none;
-				width: auto;   
-				li {
-					display: inline-block;
-					
-					/* margin-right: -4px; moves li in sub menu */
-				}
-			}
-			a {
-				color: white;
-				width: 10.7em;
-				text-decoration: none;
-				display: block;
-				padding: 1.5em 0.1em;
-				font-family: arial;
-				font-size: 10px;
-				font-weight:bolder;
-				/// border-bottom: 2px solid white; check
-				
-			}
+	.nav-item {
+		font-size: 12px;
 	}
+}
+@include xl {
+	.nav-item {
+		font-size: 10px;
+	}
+}
+
+@include lg {
+.nav-item {
+	font-size: 12px;
+}
+
+.nav-category-title{
+	margin-left:5px;
+	font-size:12px;
+}
+.dropdown-item{
+	font-size: 12px;
+}
+}
+
+
+
+@include md {
+	.nav-category-title{
+		margin-left:10px;
+		font-size:16px;
+	}
+	.nav-item {
+		font-size: 16px;
+	}
+	.dropdown-item{
+		font-size: 16px;
+	}
+}
+@include sm {
+	.nav-category-title{
+		margin-left:10px;
+		font-size:16px;
+	}
+	.dropdown-item{
+		font-size: 16px;
+	}
+	.nav-item {
+		font-size: 16px;
+	}
+}
+@include xxl {
+	
 	}
 
-	@include xl {
-		.navbar {
-			// background: #fff;
-			justify-content: center;
-			align-items: center;
-			/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
-				ul {
-					margin: 0;
-					padding: 0;
-					list-style: none;
-					position: relative;
-					text-align: center;
-					background-color: none;
-					width: auto;   
-					li {
-						visibility:hidden;
-						
-						/* margin-right: -4px; moves li in sub menu */
-					}
-				}
-				a {
-					color: white;
-					width: 10.7em;
-					text-decoration: none;
-					display: block;
-					padding: 1.5em 0.1em;
-					font-family: arial;
-					font-size: 10px;
-					font-weight:bolder;
-					/// border-bottom: 2px solid white; check
-					
-				}
-		}
+@include xl {
+		
 	}
+	
 	@include xl {
 		.margin68 {
 			padding: 3em 4em;
 		}
 	}
+
+	
 	
 @media only screen and (max-width: 1320px){
 	
@@ -546,8 +565,7 @@ $container-max-widths: (
 .ftr-col-4 {
 	font-family: arial;
 	font-size: 10px;
-	float: left;
-	padding: 20px;
+	padding-left: 10px;
 }
 
 .ftr-col-2	{
@@ -577,7 +595,7 @@ $container-max-widths: (
 .ftr-col-name {
 	text-align: left;
 	margin-left: 33px;
-	width: 190px;
+	width: 181px;
 	color: white; 
 	background-color: none;
 	border-top: 2px solid $lightcyan;
@@ -593,20 +611,18 @@ $container-max-widths: (
 
 .footer-color {
 	background-color: $darkblue;
-	height: 330px;
-	padding-top: 20px;
-	padding-bottom: 40px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .footerminus-row{
 	margin-top: -70px;
 }
 
-.credits {
-
-
+.credits-color {
 	background-color: black;
-
+	height: 6.3em;
 	p{
 		margin-top: 1em;
 		font-size: 12px;
@@ -620,12 +636,146 @@ $container-max-widths: (
 	padding: -6em -8em;
 }
 
+.social-logo{
+	width:40px;
+	margin: 0px 15px;
+}
+
+.social-row{
+	display: flex !important;
+	flex-direction: row-reverse !important;
+	float:left;
+	margin-top: 1em;
+}
+
+@include xxl {
+	.ftr-col-name {
+		text-align: left;
+		margin-left: 33px;
+		width: 85px;
+		color: white; 
+		background-color: none;
+		border-top: 2px solid $lightcyan;
+		// border-right: 2px solid $lightcyan;
+		/* border-radius: none;*/
+		padding-top: 24px;
+	}
+
+	.ftr-col-2	{
+		a {
+			text-decoration: none;
+			color: white;
+			background-color: none;
+			width: 120px;
+			float: left;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			text-align: left;
+			margin-left: 0px;
+			font-weight: bolder;
+			
+		}
+		p {
+			font-weight: bolder;
+			font-size: 14px;
+		}
+		li {
+			list-style-type: none;
+		}
+	}
+	.ftr-logo {
+		width: 350px;	
+}
+	.ftr-vert {
+		// background-color: $darkblue;
+		text-align: center;
+	}
+	.margin28 {
+		padding: 2em 8em;
+	}
+	.margin18 {
+		padding: 1em 8em;
+	}
+}
 
 
+@include xl {
+	.margin28 {
+		padding: 2em 4em;
+	}
+	.margin18 {
+		padding: 1em 4em;
+	}
+}
+
+@include lg {
+	.margin28 {
+		padding: 2em 4em;
+	}
+	.margin18 {
+		padding: 1em 4em;
+	}
+	.social-logo{
+		width:40px;
+		margin: 0px 15px;
+	}
+	.social-row{
+		display: flex !important;
+		flex-direction: row-reverse !important;
+		float: none;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+	.social-logo{
+		width:40px;
+		margin: 0px 65px;	
+	}
+		
+}
+
+@include md {
+	.social-logo{
+		width:40px;
+		margin: 0px 32px;
+	}
+	.credits-color {
+		height: 9em;
+		background-color: black;
+	}
+}
+@include sm {
+	.margin28 {
+		padding: 2em 4em;
+	}
+	.margin18 {
+		padding: 1em 4em;
+	}
 
 .social-logo{
 	width:40px;
-	text-align: center;
-	display: flex;
+	margin: 0px 19px;
+	
+}
+.social-row{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.ftr-col-1,
+.ftr-col-2,
+.ftr-col-3,
+.ftr-col-4 {
+	font-family: arial;
+	font-size: 10px;
+	width: 200px;
+	height: 45px;
+	margin: 10px 25px;	
+}
+.credits-color {
+	height: 20em;
 	background-color: black;
+}
+.ftr-col-name {
+	padding-top: 10px;
+}
 }
