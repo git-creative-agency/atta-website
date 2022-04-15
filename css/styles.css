@@ -145,6 +145,7 @@ li.active {
 
 .nav-item {
   font-size: 16px;
+  font-weight: bold;
 }
 
 .nav-link:hover {
@@ -163,13 +164,52 @@ li.active {
 
 @media only screen and (max-width: 1400px) {
   .nav-item {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .nav-item {
     font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-item {
+    font-size: 12px;
+  }
+  .nav-category-title {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  .dropdown-item {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-category-title {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .nav-item {
+    font-size: 16px;
+  }
+  .dropdown-item {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .nav-category-title {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .dropdown-item {
+    font-size: 16px;
+  }
+  .nav-item {
+    font-size: 16px;
   }
 }
 

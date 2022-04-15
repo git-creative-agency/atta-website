@@ -254,6 +254,7 @@ a{
 
 .nav-item {
 	font-size: 16px;
+	font-weight: bold;
 }
 // Navbar Hovers ------------------------------------------------
 .nav-link:hover {
@@ -262,6 +263,7 @@ a{
 .dropdown-item:hover {
 	color: $darkblue;
 }
+
 // .dropdown-menu {
 // 	width: 100vw !important;
 // 	height: 20% !important;
@@ -278,19 +280,55 @@ a{
 
 @include xxl {
 	.nav-item {
-	
-		font-size: 14px;
+		font-size: 12px;
 	}
 }
 @include xl {
 	.nav-item {
-	
 		font-size: 10px;
 	}
 }
 
+@include lg {
+.nav-item {
+	font-size: 12px;
+}
+
+.nav-category-title{
+	margin-left:5px;
+	font-size:12px;
+}
+.dropdown-item{
+	font-size: 12px;
+}
+}
 
 
+
+@include md {
+	.nav-category-title{
+		margin-left:10px;
+		font-size:16px;
+	}
+	.nav-item {
+		font-size: 16px;
+	}
+	.dropdown-item{
+		font-size: 16px;
+	}
+}
+@include sm {
+	.nav-category-title{
+		margin-left:10px;
+		font-size:16px;
+	}
+	.dropdown-item{
+		font-size: 16px;
+	}
+	.nav-item {
+		font-size: 16px;
+	}
+}
 @include xxl {
 	
 	}
@@ -304,6 +342,8 @@ a{
 			padding: 3em 4em;
 		}
 	}
+
+	
 	
 @media only screen and (max-width: 1320px){
 	
