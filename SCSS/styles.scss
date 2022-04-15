@@ -26,6 +26,7 @@ $midcyan: rgb(0, 86, 84);
 $lightcyan: rgb(3, 218, 197);
 $black: rgb(00, 00, 00);
 $white: rgb(255, 255, 255);
+$primary: red;
 
 // Sizes
 $size: 12px; // for padding, etc.
@@ -150,7 +151,8 @@ li.active {
 
 .bg-image { 
     max-width: 100%;
-    height: 50vh;
+    height: 60vh;
+	opacity: 100%;
     background: url("../images/desktop/home.jpg");
 	background-position: center;
     background-repeat: no-repeat;
@@ -176,42 +178,25 @@ li.active {
     height: 73px;
 }
 
-.navbar {
-    background-color: rgba(55,17,179,0.5) !important;
+
+.navbar-bg{
+	background-color:$darkpurple;
+	border-radius: 25px 25px 0 0;
+a{
+	color:white;
+	font-size: 14px;
+}
+}
+.dropdown-bg {
+	//background-color:$darkpurple;
+}
+.navbar-menu li:hover{
+	color: red;
+}
+.dropdown-bg li:hover {
+	//background-color:$darkpurple;
 }
 
-.navbar {
-	// background: #fff;
-    justify-content: center;
-    align-items: center;
-	/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			position: relative;
-			text-align: center;
-			background-color: none;
-			width: auto;   
-			li {
-				display: inline-block;
-			    
-				/* margin-right: -4px; moves li in sub menu */
-			}
-		}
-		a {
-			color: white;
-		    width: 11em;
-			text-decoration: none;
-			display: block;
-			padding: 1.5em 0.1em;
-			font-family: arial;
-		    font-size: 12px;
-		    font-weight:bolder;
-		    /// border-bottom: 2px solid white; check
-			
-		}
-}
 /* TESTING mobile
 
 @include screen-desktop {
@@ -229,14 +214,31 @@ li.active {
     color: white ;
     text-transform: uppercase;
 }
-// Navbar Hovers ------------------------------------------------
-.navbar li:hover {
-	background: rgb(100, 47, 245);
-	border-radius: 5px;
+
+.navbar{
+	background-color:white;
+	border-radius:20px 20px 0 0;
+	border: solid 2px black;
 }
 
-.navbar li:hover a {
-	color: #fff;
+.breadcrumb-color{
+	background-color:$darkblue ;
+	border-right: solid 2px black;
+	border-left: solid 2px black;
+	border-bottom: solid 2px black;
+	border-radius: 0 0 5px 5px;
+}
+
+.nav-category-title {
+	margin-left: 15px;
+	font-size: 16px;
+	font-weight: bold;
+	//color:$darkpurple;
+}
+
+// Navbar Hovers ------------------------------------------------
+.nav-link:hover {
+    color: $lightcyan;
 }
 
 // .dropdown-menu {
@@ -254,78 +256,13 @@ li.active {
 
 
 @include xxl {
-	.navbar {
-		// background: #fff;
-		justify-content: center;
-		align-items: center;
-		/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) */
-			ul {
-				margin: 0;
-				padding: 0;
-				list-style: none;
-				position: relative;
-				text-align: center;
-				background-color: none;
-				width: auto;   
-				li {
-					display: inline-block;
-					
-					/* margin-right: -4px; moves li in sub menu */
-				}
-			}
-			a {
-				color: white;
-				width: 10.7em;
-				text-decoration: none;
-				display: block;
-				padding: 1.5em 0.1em;
-				font-family: arial;
-				font-size: 10px;
-				font-weight:bolder;
-				/// border-bottom: 2px solid white; check
-				
-			}
-	}
+	
 	}
 
-	/* FOR NAVBAR drop @include xl {
-		.navbar {
-			// background: #fff;
-			justify-content: center;
-			align-items: center;
-			/* box-shadow: 0 0 15px 0 rgba($color: #03DAC5 , $alpha: 1.0) 
-				ul {
-					margin: 0;
-					padding: 0;
-					list-style: none;
-					position: relative;
-					text-align: center;
-					background-color: none;
-					width: auto;   
-					li {
-						visibility:hidden;
-						
-						/* margin-right: -4px; moves li in sub menu 
-					}
-				}
-				a {
-					color: white;
-					width: 10.7em;
-					text-decoration: none;
-					display: block;
-					padding: 1.5em 0.1em;
-					font-family: arial;
-					font-size: 10px;
-					font-weight:bolder;
-					/// border-bottom: 2px solid white; check
-					
-				}
-		}
-		.bg-info{
-			visibility: hidden;
-		}
+@include xl {
+		
 	}
-	*/
+	
 	@include xl {
 		.margin68 {
 			padding: 3em 4em;
