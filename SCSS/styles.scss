@@ -146,6 +146,10 @@ section {
 	padding: 2em 8em;
 }
 
+.margin38{
+	padding: 3em 8em;
+}
+
 .margin18{
 	padding: 2em 8em;
 }
@@ -154,17 +158,18 @@ section {
 	padding: 2em 8em;
 }
 
+// BG Colors -----------------------------------------------------
+.bg-grey{
+	background-color:rgb(221, 221, 221);
+}
 
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 /* Hero Section */
 
-
-
-
 .bg-image { 
 	width: 100vw;
-	height: 70vh;
+	height: 65vh;
 	opacity: 100%;
     background: url("../images/desktop/home.jpg");
 	background-repeat: no-repeat;
@@ -191,6 +196,7 @@ section {
     height: 73px;
 }
 
+//Navbar Content ------------------------------------------------------
 .navbar, .navbar-dark, .bg-dark {
     background-color: rgba(55,17,179,0.5) !important;
 }
@@ -200,23 +206,6 @@ section {
     text-transform: uppercase;
 	font-size: 14px;
 }
-
-.dropdown-menu {
-	background-color:$darkpurple;
-}
-
-/* TESTING mobile
-
-@include screen-desktop {
-	.navbar {
-		width: 100px;
-	
-	.navbar-brand {
-		margin-left: -100px;
-	}
-	}
-}
-*/
 
 
 .nav-link {
@@ -230,7 +219,22 @@ section {
 	border: solid 2px black;
 }
 
+.dropdown-bg{
+	background-color:rgb(08, 01, 30);
+}
 
+.nav-item {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+// Navbar Hovers ------------------------------------------------
+.nav-link:hover {
+    color: $lightcyan;
+}
+
+// Breadcrumbs ------------------------------------------------
 .breadcrumb-color{
 	background-color:$darkblue ;
 	// border-right: solid 2px black;
@@ -238,56 +242,14 @@ section {
 	// border-bottom: solid 2px black;
 	// border-radius: 0 0 5px 5px;
 }
-
-.dropdown-header {
-	// margin-left: 15px;
-	font-size: 16px;
-	font-weight: bold;
-	//color:$darkpurple;
-	
-}
-
-.dropdown-item {
-	background-color:$darkblue;
-	opacity: 100%;
-	color: white;
-	
-	li{
-		background-color:red;
-		color:white;
-	}
-	// a {
-		
-	// }
-	
-}
-.dropdown-bg{
-	background-color:rgb(08, 01, 30);
-}
-.nav-item {
-	font-size: 16px;
-	font-weight: bold;
-}
-// Navbar Hovers ------------------------------------------------
-.nav-link:hover {
-    color: $lightcyan;
-}
-.dropdown-item:hover {
-	color: $darkblue;
-}
-
 // .dropdown-menu {
 // 	width: 100vw !important;
 // 	height: 20% !important;
 // }
 
-// Nav Mobile ------------------------------------------------------
-.test{
-	//width: 100vw;
-	height:10px;
-	background-color: green;
-}
 
+
+// Accordion ------------------------------------------------------
 .accordion-body{
 	border: 1px solid #dee2e6;
 	padding: 100px;
@@ -305,7 +267,12 @@ section {
 }
 
 .accordion-item h2 button:hover{
-	color: blue !important;
+	color: $lightpurple !important;
+	
+}
+
+.accordion-item h2 button :active{
+	color: red !important;
 	
 }
 .content-title{
@@ -327,113 +294,8 @@ section {
 	margin: -1px;
 }
 
-.bg-grey{
-	background-color:rgb(221, 221, 221);
-}
+// Accordion Hovers
 
-
-@include xxl {
-	.nav-item {
-		font-size: 12px;
-	}
-}
-@include xl {
-	.nav-item {
-		font-size: 10px;
-	}
-}
-
-@include lg {
-.nav-item {
-	font-size: 16px;
-}
-
-.nav-category-title{
-	margin-left:10px;
-	font-size:16px;
-}
-.dropdown-item{
-	font-size: 16px;
-}
-}
-
-
-
-
-
-@include md {
-	.nav-category-title{
-		margin-left:10px;
-		font-size:16px;
-	}
-	.nav-item {
-		font-size: 16px;
-	}
-	.dropdown-item{
-		font-size: 16px;
-	}
-}
-@include sm {
-	.nav-category-title{
-		margin-left:10px;
-		font-size:16px;
-	}
-	.dropdown-item{
-		font-size: 16px;
-	}
-	.nav-item {
-		font-size: 16px;
-	}
-}
-@include xxl {
-	
-	}
-
-@include xl {
-		
-	}
-	
-	@include xl {
-		.margin68 {
-			padding: 3em 4em;
-		}
-	}
-
-	
-	
-@media only screen and (max-width: 1320px){
-	
-}
-
-@include xxl {
-	.test {
-		background-color: blue;
-	}
-}
-
-@include xl {
-	.test {
-		background-color: red;
-	}
-}
-
-@include lg {
-	.test {
-		background-color: pink;
-	}
-}
-
-@include md {
-	.test {
-		background-color: teal;
-	}
-}
-
-@include sm {
-	.test {
-		background-color: purple;
-	}
-}
 
 
 

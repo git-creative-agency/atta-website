@@ -56,6 +56,10 @@ section {
   padding: 2em 8em;
 }
 
+.margin38 {
+  padding: 3em 8em;
+}
+
 .margin18 {
   padding: 2em 8em;
 }
@@ -64,10 +68,14 @@ section {
   padding: 2em 8em;
 }
 
+.bg-grey {
+  background-color: #dddddd;
+}
+
 /* Hero Section */
 .bg-image {
   width: 100vw;
-  height: 70vh;
+  height: 65vh;
   opacity: 100%;
   background: url("../images/desktop/home.jpg");
   background-repeat: no-repeat;
@@ -100,22 +108,6 @@ section {
   font-size: 14px;
 }
 
-.dropdown-menu {
-  background-color: #3700b3;
-}
-
-/* TESTING mobile
-
-@include screen-desktop {
-	.navbar {
-		width: 100px;
-	
-	.navbar-brand {
-		margin-left: -100px;
-	}
-	}
-}
-*/
 .nav-link {
   color: white;
   text-transform: uppercase;
@@ -124,26 +116,6 @@ section {
 .navbar {
   background-color: white;
   border: solid 2px black;
-}
-
-.breadcrumb-color {
-  background-color: #08011e;
-}
-
-.dropdown-header {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.dropdown-item {
-  background-color: #08011e;
-  opacity: 100%;
-  color: white;
-}
-
-.dropdown-item li {
-  background-color: red;
-  color: white;
 }
 
 .dropdown-bg {
@@ -159,13 +131,8 @@ section {
   color: #03dac5;
 }
 
-.dropdown-item:hover {
-  color: #08011e;
-}
-
-.test {
-  height: 10px;
-  background-color: green;
+.breadcrumb-color {
+  background-color: #08011e;
 }
 
 .accordion-body {
@@ -183,7 +150,11 @@ section {
 }
 
 .accordion-item h2 button:hover {
-  color: blue !important;
+  color: #bb86fc !important;
+}
+
+.accordion-item h2 button :active {
+  color: red !important;
 }
 
 .content-title {
@@ -202,97 +173,6 @@ section {
 
 .accordion-body, .accordion-item {
   margin: -1px;
-}
-
-.bg-grey {
-  background-color: #dddddd;
-}
-
-@media only screen and (max-width: 1400px) {
-  .nav-item {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .nav-item {
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .nav-item {
-    font-size: 16px;
-  }
-  .nav-category-title {
-    margin-left: 10px;
-    font-size: 16px;
-  }
-  .dropdown-item {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .nav-category-title {
-    margin-left: 10px;
-    font-size: 16px;
-  }
-  .nav-item {
-    font-size: 16px;
-  }
-  .dropdown-item {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .nav-category-title {
-    margin-left: 10px;
-    font-size: 16px;
-  }
-  .dropdown-item {
-    font-size: 16px;
-  }
-  .nav-item {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .margin68 {
-    padding: 3em 4em;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .test {
-    background-color: blue;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .test {
-    background-color: red;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .test {
-    background-color: pink;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .test {
-    background-color: teal;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .test {
-    background-color: purple;
-  }
 }
 
 @media only screen and (max-width: 960px) {
