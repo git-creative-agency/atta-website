@@ -146,6 +146,10 @@ section {
   color: white;
 }
 
+.dropdown-bg {
+  background-color: #08011e;
+}
+
 .nav-item {
   font-size: 16px;
   font-weight: bold;
