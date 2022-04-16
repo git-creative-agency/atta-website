@@ -225,7 +225,7 @@ a{
 
 .navbar{
 	background-color:white;
-	border-radius:20px 20px 0 0;
+	
 	border: solid 2px black;
 }
 
@@ -279,9 +279,33 @@ a{
 
 // Nav Mobile ------------------------------------------------------
 .test{
-	width: 100vw;
+	//width: 100vw;
 	height:10px;
 	background-color: green;
+}
+
+.accordion-item, .accordion-header{
+	font-size: 15px;
+	border: 1px solid black;
+	
+}
+.content-titles{
+	color:black;
+}
+
+.accordion-item h2 button{
+	display: block;
+	text-align: left;
+	text-decoration: none;
+	color:#bc5148;
+	position: relative;
+	-webkit-box-shadow: 0 3px 10px -2px rgba(0,0,0,0.2) !important;
+	box-shadow: 0 3px 10px -2px rgba(0,0,0,0.2) !important;
+	border-radius: 0;
+}
+
+.accordion-body, .accordion-item{
+	margin: 10px;
 }
 
 
