@@ -163,6 +163,10 @@ section {
 	background-color:rgb(221, 221, 221);
 }
 
+.bg-darkblue{
+	background-color: $darkblue;
+}
+
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 /* Hero Section */
@@ -227,6 +231,31 @@ section {
 	font-size: 16px;
 	font-weight: bold;
 }
+
+// Second Navbar ------------------------------------------------
+.second-navbar{
+	display: inline-block;
+}
+.second-navbar-center{
+	text-align:center;
+}
+.second-navbar {
+	text-align:center;
+	a {
+		color:white;
+		font-weight: bold;
+	}
+	ul {
+	list-style: none;
+	}
+	li{
+	display: inline-block;
+	margin: 0px 30px;
+	}
+}
+
+//Second Navbar Hover
+
 
 
 // Navbar Hovers ------------------------------------------------

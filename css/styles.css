@@ -72,6 +72,10 @@ section {
   background-color: #dddddd;
 }
 
+.bg-darkblue {
+  background-color: #08011e;
+}
+
 /* Hero Section */
 .bg-image {
   width: 100vw;
@@ -125,6 +129,32 @@ section {
 .nav-item {
   font-size: 16px;
   font-weight: bold;
+}
+
+.second-navbar {
+  display: inline-block;
+}
+
+.second-navbar-center {
+  text-align: center;
+}
+
+.second-navbar {
+  text-align: center;
+}
+
+.second-navbar a {
+  color: white;
+  font-weight: bold;
+}
+
+.second-navbar ul {
+  list-style: none;
+}
+
+.second-navbar li {
+  display: inline-block;
+  margin: 0px 30px;
 }
 
 .nav-link:hover {
