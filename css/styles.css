@@ -39,12 +39,17 @@ li.active {
           box-sizing: inherit;
 }
 
-.margin61 {
-  padding: 6em 1em;
+.container-fluid {
+  padding: 0;
+  margin: 0;
 }
 
-.margin68 {
+section {
   padding: 6em 8em;
+}
+
+.margin61 {
+  padding: 6em 1em;
 }
 
 .margin28 {
@@ -61,17 +66,14 @@ li.active {
 
 /* Hero Section */
 .bg-image {
-  max-width: 100%;
-  min-height: 50vh;
-  max-height: 100vh;
+  width: 100vw;
+  height: 60vh;
   opacity: 100%;
   background: url("../images/desktop/home.jpg");
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  position: relative;
-  padding: 0;
-  margin: 0;
+  background-attachment: relative;
 }
 
 .bgimage h1 {
@@ -79,23 +81,27 @@ li.active {
   text-shadow: 2px 2px #333;
 }
 
+.hero {
+  margin-top: 550px !important;
+}
+
 .navbar-brand img {
   width: 186.83px;
   height: 73px;
 }
 
-.navbar-bg {
-  background-color: #3700b3;
-  border-radius: 25px 25px 0 0;
+.navbar, .navbar-dark, .bg-dark {
+  background-color: rgba(55, 17, 179, 0.5) !important;
 }
 
-.navbar-bg a {
-  color: white;
+.nav-link {
+  color: white !important;
+  text-transform: uppercase;
   font-size: 14px;
 }
 
-.navbar-menu li:hover {
-  color: red;
+.dropdown-menu {
+  background-color: #3700b3;
 }
 
 /* TESTING mobile
@@ -122,14 +128,9 @@ li.active {
 
 .breadcrumb-color {
   background-color: #08011e;
-  border-right: solid 2px black;
-  border-left: solid 2px black;
-  border-bottom: solid 2px black;
-  border-radius: 0 0 5px 5px;
 }
 
-.nav-category-title {
-  margin-left: 15px;
+.dropdown-header {
   font-size: 16px;
   font-weight: bold;
 }
