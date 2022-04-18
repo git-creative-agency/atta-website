@@ -204,6 +204,7 @@ section {
 //Navbar Content ------------------------------------------------------
 .navbar, .navbar-dark, .bg-dark {
     background-color: rgba(55,17,179,0.5) !important;
+	
 }
 
 .nav-link {
@@ -216,6 +217,7 @@ section {
 .nav-link {
     color: white ;
     text-transform: uppercase;
+	
 }
 
 .navbar{
@@ -226,11 +228,19 @@ section {
 
 .dropdown-bg{
 	background-color:rgb(08, 01, 30);
+	a{
+		color: white;
+	}
 }
 
+.nav-text li{
+	
+	color: white;
+}
 .nav-item {
 	font-size: 16px;
 	font-weight: bold;
+	
 }
 
 // Second Navbar ------------------------------------------------
@@ -405,13 +415,16 @@ section {
 
 // ATTA Maps -----------------------------------------------------------
 .ATTA-maps{
-	padding: 0;
 	width: 100%;
 	height: 720px;
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
-
+// Column Lines ------------------------------------------------------
+td, th {
+	border-bottom: 5px solid black;
+	
+  }
 
 // Upcoming Events // Connect With Us Section -------------------------------------------
 

@@ -127,6 +127,14 @@ section {
   background-color: #08011e;
 }
 
+.dropdown-bg a {
+  color: white;
+}
+
+.nav-text li {
+  color: white;
+}
+
 .nav-item {
   font-size: 16px;
   font-weight: bold;
@@ -249,11 +257,14 @@ section {
 }
 
 .ATTA-maps {
-  padding: 0;
   width: 100%;
   height: 720px;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+td, th {
+  border-bottom: 5px solid black;
 }
 
 .ftr-col-1,
