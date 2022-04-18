@@ -16,6 +16,19 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1200px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
 h1, h2 {
   color: white;
   text-transform: uppercase !important;
@@ -78,24 +91,43 @@ section {
 }
 
 /* Hero Section */
-.bg-image {
-  width: 100vw;
-  height: 65vh;
-  opacity: 100%;
-  background: url("../images/desktop/home.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: relative;
+@media (min-width: 992px) {
+  .bg-image {
+    background: url("../images/desktop/home.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+  }
+  .hero {
+    padding-top: 45vh;
+    padding-right: 6.5em;
+  }
+}
+
+@media (max-width: 992px) {
+  .bg-image {
+    background: url("../images/mobile/home.jpg");
+    height: 100vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+  }
+  .hero {
+    padding-top: 80vh;
+    padding-right: 6em;
+  }
 }
 
 .bgimage h1 {
   color: white;
   text-shadow: 2px 2px #333;
-}
-
-.hero {
-  margin-top: 550px !important;
 }
 
 .navbar-brand img {
@@ -116,11 +148,6 @@ section {
 .nav-link {
   color: white;
   text-transform: uppercase;
-}
-
-.navbar {
-  background-color: white;
-  border: solid 2px black;
 }
 
 .dropdown-bg {
@@ -225,11 +252,12 @@ section {
 }
 
 .breadcrumb, .breadcrumb-item {
-  height: 20px;
+  height: 25px;
   font-size: smaller !important;
   color: white !important;
   text-transform: uppercase;
   padding-left: 1.5em;
+  margin: 0;
 }
 
 .card-deck, .card {
@@ -244,13 +272,13 @@ section {
   margin-right: 10px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .containerMobile {
     display: none;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .containerDesktop {
     display: none;
   }

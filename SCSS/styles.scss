@@ -82,6 +82,7 @@ $prefixes: -webkit-,
 		@content;
 	}
 }
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -90,6 +91,7 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px
 );
+
 // General Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 html {
@@ -99,6 +101,19 @@ html {
 	color: white;
     font-family: Arial, Helvetica, sans-serif;
 	scroll-behavior: smooth;
+}
+
+@media (min-width: 1200px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
 }
 
 h1, h2 {
@@ -172,24 +187,61 @@ section {
 
 /* Hero Section */
 
-.bg-image { 
-	width: 100vw;
-	height: 65vh;
-	opacity: 100%;
-    background: url("../images/desktop/home.jpg");
-	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: relative;
+// .bg-image { 
+// 	width: 100%;
+// 	opacity: 100%;
+// 	background-repeat: no-repeat;
+//     background-position: center;
+// 	-webkit-background-size: cover;
+// 	-moz-background-size: cover;
+// 	-o-background-size: cover;
+// 	background-size: cover;
+//     background-attachment: relative;
+// }
+
+@media (min-width: 992px) { // desktop hero image size
+	.bg-image {
+		background: url("../images/desktop/home.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+	}
+	.hero {
+		padding-top: 45vh;
+		padding-right: 6.5em;
+	}	
+} 
+
+@media (max-width: 992px) { // mobile hero image size
+	.bg-image {
+		background: url("../images/mobile/home.jpg");
+		height: 100vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+	}
+	.hero {
+		padding-top: 80vh;
+		padding-right: 6em;
+	}
 }
 
 .bgimage h1 {
     color: white;
     text-shadow: 2px 2px #333;
-}
-
-.hero {
-    margin-top: 550px !important;
 }
 
 // Main Navigation -------------------------------------------
@@ -218,12 +270,6 @@ section {
     color: white ;
     text-transform: uppercase;
 	
-}
-
-.navbar{
-	background-color:white;
-	
-	border: solid 2px black;
 }
 
 .dropdown-bg{
@@ -368,11 +414,12 @@ section {
 // Breadcrumb Navigation -------------------------------------------
 
 .breadcrumb, .breadcrumb-item {
-    height: 20px;
+    height: 25px;
     font-size: smaller !important;
     color: white !important;
     text-transform: uppercase;
 	padding-left: 1.5em;
+	margin: 0;
 }
 
 // Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -401,13 +448,13 @@ section {
 //   xl: 1200px,
 //   xxl: 1400px
 
-@media (min-width: 576px) { 
+@media (min-width: 992px) { 
   .containerMobile {
     display: none;
   }
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 992px) { 
   .containerDesktop {
     display: none;
   }
