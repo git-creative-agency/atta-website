@@ -183,6 +183,10 @@ section {
 	background-color: $darkblue;
 }
 
+.bg-lightpurple{
+	background-color: $darkpurple;
+}
+
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 /* Hero Section */
@@ -364,6 +368,10 @@ section {
 .content-title{
 	color:black;
 }
+.content-title-invert{
+	color:white;
+}
+
 
 .accordion-item h2 button{
 	
@@ -430,12 +438,28 @@ section {
 	background-color: #08011E; // color from XD Prototype
 }
 
+.card-deck-invert, .card-invert {
+	background-color: white; // color from XD Prototype
+}
+
 .card-body {
 	padding: 1em 0;
 }
 
 .card-margin{
 	margin-right: 10px;
+}
+
+.news-pad {
+	padding:0 30px 0 0;
+}
+
+.txt-black{
+	color: black;
+	a{
+	color: black;
+	}
+	
 }
 
 // Media Queries (Image Carousel) -------------------------------------------
@@ -464,13 +488,19 @@ section {
 .ATTA-maps{
 	width: 100%;
 	height: 720px;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 // Column Lines ------------------------------------------------------
-td, th {
-	border-bottom: 5px solid black;
+.news-row-style {
+	border-bottom: 5px solid white;
+	width: 100%;
+	font-size: 24px;	
 	
+  }
+
+  .news-a-style {
+	  color: white;
   }
 
 // Upcoming Events // Connect With Us Section -------------------------------------------
