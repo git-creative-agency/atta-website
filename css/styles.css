@@ -208,8 +208,12 @@ section {
   background-color: #08011e;
 }
 
-.bg-lightpurple {
+.bg-darkpurple {
   background-color: #3700b3;
+}
+
+.bg-darkblue {
+  background-color: #08011e;
 }
 
 /* Hero Section */
@@ -352,14 +356,6 @@ section {
   color: red !important;
 }
 
-.content-title {
-  color: black;
-}
-
-.content-title-invert {
-  color: white;
-}
-
 .accordion-item h2 button {
   text-align: left;
   text-decoration: none;
@@ -403,6 +399,7 @@ section {
 
 .card-body {
   padding: 1em 0;
+  width: 100%;
 }
 
 .card-margin {
@@ -448,6 +445,46 @@ section {
 
 .news-a-style {
   color: white;
+}
+
+.content-title {
+  color: black;
+  font-family: Inter-Bold;
+}
+
+.content-title-invert {
+  color: white;
+  font-family: Inter-Bold;
+  padding-right: 40px;
+}
+
+.content-title-invert {
+  color: white;
+}
+
+.upcoming-events-border-black {
+  /* td is option here 
+	td {
+		font-family: Inter-Light;
+		font-size: 24px;
+		color: white;
+		}
+	}
+	*/
+}
+
+.upcoming-events-border-black tr {
+  border-bottom: 2px solid white;
+}
+
+.upcoming-events-border-black th {
+  font-family: Inter-Light;
+  font-size: 24px;
+  color: white;
+}
+
+.upcoming-events-border-black td {
+  padding-bottom: 100px;
 }
 
 .ftr-col-1,

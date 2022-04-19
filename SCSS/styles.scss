@@ -295,8 +295,12 @@ section {
 	background-color: $darkblue;
 }
 
-.bg-lightpurple{
+.bg-darkpurple{
 	background-color: $darkpurple;
+}
+
+.bg-darkblue{
+	background-color: $darkblue;
 }
 
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -487,12 +491,7 @@ section {
 	color: red !important;
 	
 }
-.content-title{
-	color:black;
-}
-.content-title-invert{
-	color:white;
-}
+
 
 
 .accordion-item h2 button{
@@ -566,6 +565,8 @@ section {
 
 .card-body {
 	padding: 1em 0;
+	//can remove width if content is to be centered
+	width: 100%;
 }
 
 .card-margin{
@@ -626,7 +627,44 @@ section {
   }
 
 // Upcoming Events // Connect With Us Section -------------------------------------------
+.content-title{
+	color:black;
+	font-family: Inter-Bold;
+}
 
+.content-title-invert{
+	color:white;
+	font-family: Inter-Bold;
+	padding-right: 40px;	
+	
+}
+.content-title-invert{
+	color:white;
+}
+
+.upcoming-events-border-black{
+	tr{
+		border-bottom: 2px solid white;
+	} 
+	th{
+		font-family: Inter-Light;
+		font-size: 24px;
+		color: white;
+		
+	}
+	/* td is option here 
+	td {
+		font-family: Inter-Light;
+		font-size: 24px;
+		color: white;
+		}
+	}
+	*/
+
+td{
+	padding-bottom: 100px;
+}
+}
 
 // Stay Up To Speed Section -------------------------------------------
 
