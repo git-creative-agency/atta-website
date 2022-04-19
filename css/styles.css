@@ -2,18 +2,23 @@
 dark purple:      #3700B3
 midtone purple:   #6200EE
 light purple:     #BB86FC
-light cyan:       #03DAC5 
+dark blue		  #08011E
 midtone cyan:     #018786
+light cyan:       #03DAC5 
 black:            #000000
 white:            #FFFFFF
+grey: 			  #E8E8E8
 */
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  color: white;
 }
 
 @media (min-width: 1200px) {
@@ -42,8 +47,7 @@ html {
   }
 }
 
-h1, h2 {
-  color: white;
+h1, h3 {
   text-transform: uppercase !important;
 }
 
@@ -56,6 +60,13 @@ li.active {
   font-weight: bold;
 }
 
+.btn {
+  background-color: #bb86fc;
+  border-radius: 50px;
+  padding: 10px 50px;
+  border: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +75,62 @@ li.active {
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+.bg-darkpurple {
+  background-color: #3700b3;
+}
+
+.bg-midpurple {
+  background-color: #6200ee;
+}
+
+.bg-lightpurple {
+  background-color: #bb86fc;
+}
+
+.bg-darkblue {
+  background-color: #08011e;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-grey {
+  background-color: #e8e8e8;
+}
+
+.text-darkpurple {
+  color: #3700b3;
+}
+
+.text-midpurple {
+  color: #6200ee;
+}
+
+.text-lightpurple {
+  color: #bb86fc;
+}
+
+.text-darkblue {
+  color: #08011e;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-grey {
+  color: #e8e8e8;
 }
 
 .container-fluid {
@@ -93,18 +160,6 @@ section {
 
 .footermargin {
   padding: 2em 8em;
-}
-
-.bg-grey {
-  background-color: #dddddd;
-}
-
-.bg-darkblue {
-  background-color: #08011e;
-}
-
-.bg-lightpurple {
-  background-color: #3700b3;
 }
 
 /* Hero Section */
@@ -152,12 +207,7 @@ section {
   height: 73px;
 }
 
-.navbar, .navbar-dark, .bg-dark {
-  background-color: rgba(55, 17, 179, 0.5) !important;
-}
-
 .nav-link {
-  color: white !important;
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -167,21 +217,18 @@ section {
   text-transform: uppercase;
 }
 
-.dropdown-bg {
-  background-color: #08011e;
+.dropdown-menu {
+  background: #08011e;
 }
 
-.dropdown-bg a {
-  color: white;
-}
-
-.nav-text li {
-  color: white;
-}
-
-.nav-item {
-  font-size: 16px;
+.dropdown-header {
+  color: #bb86fc;
   font-weight: bold;
+  font-size: large;
+}
+
+.dropdown-item {
+  color: white;
 }
 
 .second-navbar {
@@ -197,7 +244,6 @@ section {
 }
 
 .second-navbar a {
-  color: white;
   font-weight: bold;
 }
 
@@ -212,10 +258,6 @@ section {
 
 .nav-link:hover {
   color: #03dac5;
-}
-
-.breadcrumb-color {
-  background-color: #08011e;
 }
 
 .accordion-body {
@@ -264,7 +306,6 @@ section {
 
 @media only screen and (max-width: 960px) {
   .navbar a {
-    color: white;
     text-decoration: none;
     display: block;
     padding: 0em 0.5em;
@@ -275,7 +316,6 @@ section {
 .breadcrumb, .breadcrumb-item {
   height: 25px;
   font-size: smaller !important;
-  color: white !important;
   text-transform: uppercase;
   padding-left: 1.5em;
   margin: 0;
@@ -338,6 +378,10 @@ section {
   color: white;
 }
 
+.subscribe {
+  background-color: #3700b3;
+}
+
 .ftr-col-1,
 .ftr-col-2,
 .ftr-col-3,
@@ -384,12 +428,7 @@ section {
   padding-top: 24px;
 }
 
-.ftr-vert {
-  background-color: #08011e;
-}
-
 .footer-color {
-  background-color: #08011e;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -399,7 +438,6 @@ section {
 }
 
 .credits-color {
-  background-color: black;
   height: 6.3em;
 }
 
@@ -439,13 +477,12 @@ section {
     width: 85px;
     color: white;
     background-color: none;
-    border-top: 2px solid #03dac5;
+    border-top: 2px solid #6200ee;
     /* border-radius: none;*/
     padding-top: 24px;
   }
   .ftr-col-2 a {
     text-decoration: none;
-    color: white;
     background-color: none;
     width: 120px;
     float: left;
@@ -557,7 +594,6 @@ section {
   }
   .credits-color {
     height: 20em;
-    background-color: black;
   }
   .ftr-col-name {
     padding-top: 10px;
