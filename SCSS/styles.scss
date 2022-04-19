@@ -116,6 +116,19 @@ html {
 	}
 }
 
+@media (min-width: 1400px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
 h1, h2 {
     color: white;
     text-transform: uppercase !important;
