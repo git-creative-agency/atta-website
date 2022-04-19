@@ -45,6 +45,105 @@ $prefixes: -webkit-,
 -o-,
 "";
 
+// Fonts
+@font-face {
+	font-family: "Kasumi";
+	src: url("/fonts/Kasumi\ Regular.otf")
+}
+@font-face {
+	font-family: "Inter-Black";
+	src: url("/fonts/Inter-Black.otf")
+}
+@font-face {
+	font-family: "Inter-Black-Italic";
+	src: url("/fonts/Inter-BlackItalic.otf")
+}
+@font-face {
+	font-family: "Inter-Bold";
+	src: url("/fonts/Inter-Bold.otf")
+}
+@font-face {
+	font-family: "Bold-Italic";
+	src: url("/fonts/Inter-BoldItalic.otf")
+}
+@font-face {
+	font-family: "Inter-ExtraBold";
+	src: url("/fonts/Inter-ExtraBold.otf")
+}
+@font-face {
+	font-family: "Inter-ExtraBold-Italic";
+	src: url("/fonts/Inter-ExtraBoldItalic.otf")
+}
+@font-face {
+	font-family: "Inter-ExtraLight";
+	src: url("/fonts/Inter-ExtraLight.otf")
+}
+@font-face {
+	font-family: "Inter-ExtraLight-Italic";
+	src: url("/fonts/Inter-ExtraLightItalic.otf")
+}
+@font-face {
+	font-family: "Inter-Italic";
+	src: url("/fonts/Inter-Italic.otf")
+}
+@font-face {
+	font-family: "Inter-Light";
+	src: url("/fonts/Inter-Light.otf")
+}
+@font-face {
+	font-family: "Inter-Light-Italic";
+	src: url("/fonts/Inter-LightItalic.otf")
+}
+@font-face {
+	font-family: "Inter-Medium";
+	src: url("/fonts/Inter-Medium.otf")
+}
+@font-face {
+	font-family: "Inter-Medium-Italic";
+	src: url("/fonts/Inter-MediumItalic.otf")
+}
+@font-face {
+	font-family: "Inter-Regular";
+	src: url("/fonts/Inter-Regular.otf")
+}
+@font-face {
+	font-family: "Inter-SemiBold";
+	src: url("/fonts/Inter-SemiBold.otf")
+}
+@font-face {
+	font-family: "Inter-SemiBold-Italic";
+	src: url("/fonts/Inter-SemiBoldItalic.otf")
+}
+@font-face {
+	font-family: "Inter-Thin";
+	src: url("/fonts/Inter-Thin.otf")
+}
+@font-face {
+	font-family: "Inter-Thin-Italic";
+	src: url("/fonts/Inter-ThinItalic.otf")
+}
+@font-face {
+	font-family: "Inter-V";
+	src: url("/fonts/Inter-V.otf")
+}
+
+
+
+
+
+
+
+
+
+
+.page-tagline {
+	font-family: Kasumi;
+	// font-size: 70px;
+	width: 100%;
+}
+
+
+
 // Mixins -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 @function tint($color, $percentage) { // creates "tint", the addition of white to $color (e.g. $percentage between $color and white)
@@ -274,6 +373,16 @@ section {
 		padding-top: 80vh;
 		padding-right: 6em;
 	}
+}
+
+.call-to-action{
+	
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  
 }
 
 .bgimage h1 {
