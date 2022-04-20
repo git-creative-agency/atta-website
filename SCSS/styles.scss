@@ -127,23 +127,6 @@ $prefixes: -webkit-,
 	src: url("/fonts/Inter-V.otf")
 }
 
-
-
-
-
-
-
-
-
-
-.page-tagline {
-	font-family: Kasumi;
-	// font-size: 70px;
-	width: 100%;
-}
-
-
-
 // Mixins -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 @function tint($color, $percentage) { // creates "tint", the addition of white to $color (e.g. $percentage between $color and white)
@@ -247,6 +230,7 @@ li.active {
 }
 
 .btn {
+	color: $white;
 	background-color: $lightpurple;
 	border-radius: 50px;
 	padding: 10px 50px;
@@ -350,7 +334,7 @@ section {
 		background-attachment: relative;
 	}
 	.hero {
-		padding-top: 45vh;
+		padding-top: 40vh;
 		padding-right: 6.5em;
 	}	
 } 
@@ -370,24 +354,28 @@ section {
 		background-attachment: relative;
 	}
 	.hero {
-		padding-top: 80vh;
+		padding-top: 70vh;
 		padding-right: 6em;
 	}
 }
 
-.call-to-action{
-	
+.call-to-action {
 	position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
-.bgimage h1 {
-    color: white;
-    text-shadow: 2px 2px #333;
+// .bgimage h1 {
+//     text-shadow: 2px 2px #333;
+// 	font-family: Kasumi;
+// }
+
+.page-tagline {
+	font-family: Kasumi;
+	// font-size: 70px;
+	width: 100%;
 }
 
 // Main Navigation -------------------------------------------
@@ -401,18 +389,16 @@ section {
 
 //Navbar Content ------------------------------------------------------
 
+.navbar {
+	padding: 2em 8em;
+}
+
 .nav-link {
-    // color: white !important;
     text-transform: uppercase;
 	font-size: 14px;
+	&:hover {color: $lightcyan;} // defines the hover state
 }
 
-
-.nav-link {
-    color: white ;
-    text-transform: uppercase;
-	
-}
 
 // .dropdown-bg{
 // 	background-color:rgb(08, 01, 30);
@@ -462,9 +448,7 @@ section {
 
 
 // Navbar Hovers ------------------------------------------------
-.nav-link:hover {
-    color: $lightcyan;
-}
+
 
 // Accordion ------------------------------------------------------
 .accordion-body{

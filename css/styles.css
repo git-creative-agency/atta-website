@@ -109,11 +109,6 @@ grey: 			  #E8E8E8
   src: url("/fonts/Inter-V.otf");
 }
 
-.page-tagline {
-  font-family: Kasumi;
-  width: 100%;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -166,6 +161,7 @@ li.active {
 }
 
 .btn {
+  color: white;
   background-color: #bb86fc;
   border-radius: 50px;
   padding: 10px 50px;
@@ -280,7 +276,7 @@ section {
     background-attachment: relative;
   }
   .hero {
-    padding-top: 45vh;
+    padding-top: 40vh;
     padding-right: 6.5em;
   }
 }
@@ -297,7 +293,7 @@ section {
     background-attachment: relative;
   }
   .hero {
-    padding-top: 80vh;
+    padding-top: 70vh;
     padding-right: 6em;
   }
 }
@@ -309,9 +305,9 @@ section {
   transform: translateY(-50%);
 }
 
-.bgimage h1 {
-  color: white;
-  text-shadow: 2px 2px #333;
+.page-tagline {
+  font-family: Kasumi;
+  width: 100%;
 }
 
 .navbar-brand img {
@@ -319,14 +315,17 @@ section {
   height: 73px;
 }
 
+.navbar {
+  padding: 2em 8em;
+}
+
 .nav-link {
   text-transform: uppercase;
   font-size: 14px;
 }
 
-.nav-link {
-  color: white;
-  text-transform: uppercase;
+.nav-link:hover {
+  color: #03dac5;
 }
 
 .dropdown-menu {
@@ -366,10 +365,6 @@ section {
 .second-navbar li {
   display: inline-block;
   margin: 0px 30px;
-}
-
-.nav-link:hover {
-  color: #03dac5;
 }
 
 .accordion-body {
