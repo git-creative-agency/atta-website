@@ -286,7 +286,7 @@ section {
 	padding: 2em 8em;
 }
 
-// BG Colors -----------------------------------------------------
+// BG & Text Colors -----------------------------------------------------
 .bg-grey{
 	background-color:rgb(221, 221, 221);
 }
@@ -301,6 +301,10 @@ section {
 
 .bg-darkblue{
 	background-color: $darkblue;
+}
+
+.text-black{
+	color: black;
 }
 
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -554,7 +558,6 @@ section {
 // Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // News Section -------------------------------------------
-
 .card-deck, .card {
 	background-color: #08011E; // color from XD Prototype
 }
@@ -563,10 +566,23 @@ section {
 	background-color: white; // color from XD Prototype
 }
 
-.card-body {
+.card-body{
+	padding: 1em 0;
+	width: 100%;
+}
+.card-body-invert {
 	padding: 1em 0;
 	//can remove width if content is to be centered
 	width: 100%;
+	small{
+		color:red;
+	}
+	h5, small{
+		color:black;
+	}
+	a{
+	color: blue;	
+	}
 }
 
 .card-margin{
@@ -627,6 +643,13 @@ section {
   }
 
 // Upcoming Events // Connect With Us Section -------------------------------------------
+.button-font button{
+	font-family:Inter-Light;
+	font-size: 16px;
+	margin-top: 2em;
+	
+}
+
 .content-title{
 	color:black;
 	font-family: Inter-Bold;
@@ -648,7 +671,7 @@ section {
 	} 
 	th{
 		font-family: Inter-Light;
-		font-size: 24px;
+		font-size: 28px;
 		color: white;
 		
 	}

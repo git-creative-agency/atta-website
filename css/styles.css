@@ -216,6 +216,10 @@ section {
   background-color: #08011e;
 }
 
+.text-black {
+  color: black;
+}
+
 /* Hero Section */
 @media (min-width: 992px) {
   .bg-image {
@@ -402,6 +406,23 @@ section {
   width: 100%;
 }
 
+.card-body-invert {
+  padding: 1em 0;
+  width: 100%;
+}
+
+.card-body-invert small {
+  color: red;
+}
+
+.card-body-invert h5, .card-body-invert small {
+  color: black;
+}
+
+.card-body-invert a {
+  color: blue;
+}
+
 .card-margin {
   margin-right: 10px;
 }
@@ -447,6 +468,12 @@ section {
   color: white;
 }
 
+.button-font button {
+  font-family: Inter-Light;
+  font-size: 16px;
+  margin-top: 2em;
+}
+
 .content-title {
   color: black;
   font-family: Inter-Bold;
@@ -479,7 +506,7 @@ section {
 
 .upcoming-events-border-black th {
   font-family: Inter-Light;
-  font-size: 24px;
+  font-size: 28px;
   color: white;
 }
 
