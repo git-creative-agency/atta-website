@@ -125,22 +125,12 @@ $prefixes: -webkit-,
 	src: url("/fonts/Inter-V.otf")
 }
 
-
-
-
-
-
-
-
-
-
 .page-tagline {
 	font-family: Kasumi;
-	// font-size: 70px;
+	//font-size: 70px;
 	width: 100%;
+	
 }
-
-
 
 // Mixins -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -292,7 +282,7 @@ a, a:link, a:active {
 }
 
 li.active {
-    font-weight: bold;
+    //font-weight: bold;
 }
 
 // Global Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -381,7 +371,7 @@ section {
 	}
 	label{
 		color: black;
-		font-family:Inter-Light;
+		font-family:Inter-Light; 
 		font-size: 18px;
 		text-transform: lowercase;
 	}
@@ -400,7 +390,6 @@ section {
 	color:white;
 }
 .text-white{
-	
 	h2{
 		color:white;
 		font-family: Inter-Bold;
@@ -456,7 +445,7 @@ section {
 		background-attachment: relative;
 	}
 	.hero {
-		padding-top: 45vh;
+		padding-top: 25vh;
 		padding-right: 6.5em;
 	}	
 } 
@@ -476,7 +465,7 @@ section {
 		background-attachment: relative;
 	}
 	.hero {
-		padding-top: 80vh;
+		padding-top: 30vh;
 		padding-right: 6em;
 	}
 }
@@ -514,33 +503,117 @@ section {
 .nav-link {
     color: white !important;
     text-transform: uppercase;
-	font-size: 14px;
-}
-
-
-.nav-link {
-    color: white ;
-    text-transform: uppercase;
-	
+	font-size: 16px;
+	font-family: Inter-Medium;
 }
 
 .dropdown-bg{
 	background-color:rgb(08, 01, 30);
 	a{
-		color: white;
+		color: red;
+		
 	}
 }
 
 .nav-text li{
-	
 	color: white;
+	font-family: Inter-Bold;
 }
 .nav-item {
-	font-size: 16px;
-	font-weight: bold;
+	font-size: 11px;
+	
+	
+}
+// Navbar Mobile ------------------------------------------------
+
+// Will cleann upthe mobile code for navmenu - was testing fontsizing
+// Can condense this section
+		
+@include sm{
+	.nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: Inter-Bold !important;
+	}
+	.dropdown-header{
+		font-size: 28px;
+		font-family: Inter-Medium;
+	}
+	.dropdown-bg{
+		background-color:rgb(08, 01, 30);
+		a{
+			font-family: Inter-Light;
+			color: red;
+			font-size: 18px;
+			
+		}
+	}
+	}
+	
+@include md{
+.navbar, .navbar-dark, .bg-dark {
+	background-color: rgba(55,17,179,0.5) !important;
 	
 }
 
+.nav-link {
+	color: white !important;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: Inter-Medium !important;
+}
+.dropdown-header{
+	font-size: 28px;
+	font-family: Inter-Medium;
+}
+.dropdown-bg{
+	background-color:rgb(08, 01, 30);
+	a{
+		font-family: Inter-Light;
+		color: red;
+		font-size: 18px;
+		
+	}
+}
+
+.nav-text li{
+	color: white;
+	font-family: Inter-Bold !important;
+}
+.nav-item {
+	font-size: 11px;
+}
+}
+@include lg{
+	.nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: Inter-Bold !important; 
+	}
+	}
+	
+@include xl {
+	.nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-family: Inter-Bold !important;
+	}
+	}
+
+	@include xxl {
+		.nav-link {
+			color: white !important;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-family: Inter-Bold !important;
+		}
+		}
+		
+		
+	// Second 
 // Second Navbar ------------------------------------------------
 .second-navbar{
 	display: inline-block;
@@ -652,7 +725,7 @@ section {
 // }
 // }
 
-@media only screen and (max-width: 960px)
+/* @media only screen and (max-width: 960px)
 {
 .navbar a{
   color: white;
@@ -661,7 +734,7 @@ section {
   padding: 0em 0.5em;
   font-family: arial;
 }
-}
+} */
 
 // Breadcrumb Navigation -------------------------------------------
 
