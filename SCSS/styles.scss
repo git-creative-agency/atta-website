@@ -189,6 +189,58 @@ html {
 body {
 	color: $white;
 }
+@media (min-width: 0px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 576px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
+@media (min-width: 576px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 768px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
+
+@media (min-width: 768px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 992px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
+@media (min-width: 992px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
 
 @media (min-width: 1200px) {
 	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
@@ -269,7 +321,10 @@ li.active {
 .text-black 		{color: $black;}
 .text-white 		{color: $white;}
 .text-grey 			{color: $grey;}
-
+/// Fonts ---------------------------------------------------------------------
+h2 {
+	font-family: Inter-Bold;
+}
 // Page Structure -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // CSS Grid -------------------------------------------
@@ -550,10 +605,12 @@ section {
 
 .card-deck-invert, .card-invert {
 	background-color: white; // color from XD Prototype
+	color: black;
 }
 
 .card-body {
 	padding: 1em 0;
+	width: 100%;
 }
 
 .card-margin{
@@ -606,16 +663,106 @@ section {
 	border-bottom: 5px solid white;
 	width: 100%;
 	font-size: 24px;	
-	
   }
 
 .news-a-style {
 	color: white;
 }
-
+// Buttons ------------------------------------------------------------------------------
+.btn-midpurple{
+	background-color: $lightpurple;
+	color:white;
+}
+.btn-midpurple:hover{
+	background-color: $lightcyan;
+	color:white;
+}
 // Upcoming Events // Connect With Us Section -------------------------------------------
+.text-black{
+	h2{
+		color: black;
+		font-family: Inter-Bold;
+		
+	}
+	th, td{
+		color: black;
+		padding: 36.8px 0;
+		font-size: 18px;
+	}
+	tr{
+		border-bottom: 2px solid black;
+		padding-bottom: 30px;
+		font-size: 18px;
+	}
+	label{
+		color: black;
+		font-family:Inter-Light;
+		font-size: 18px;
+		text-transform: lowercase;
+	}
+	label::first-letter {
+		text-transform: uppercase;
+		padding-left: 8px;
+	}
+}
 
+.button-font button{
+	font-family:Inter-Light;
+	font-size: 18px;
+	margin-top: 2em;
+	border-radius: 50px;
+	padding: 15px 30px;
+}
 
+.button-font-big button{
+	font-family:Inter-Light;
+	font-size: 18px;
+	margin-top: 0em;
+	border-radius: 50px;
+	padding: 15px 30px;
+	
+}
+
+.content-title{
+	color:black;
+	font-family: Inter-Bold;
+}
+
+.content-title-invert{
+	color:white;
+	font-family: Inter-Bold;
+	padding-right: 40px;	
+	
+}
+.content-title-invert{
+	color:white;
+}
+
+.upcoming-events-border-black{
+	tr{
+		border-bottom: 2px solid white;
+		font-family: Inter-Bold;
+	} 
+	th{
+		font-family: Inter-Light;
+		font-size: 28px;
+		color: white;
+		
+	}
+	/* td is option here 
+	td {
+		font-family: Inter-Light;
+		font-size: 24px;
+		color: white;
+		}
+	}
+	*/
+a:hover{
+	color:$lightpurple;
+	//color:$lightcyan;
+	//color:rgb(191, 173, 212);
+}
+}
 
 // Stay Up To Speed Section -------------------------------------------
 
@@ -681,36 +828,11 @@ $container-max-widths: (
 	padding-top: 24px;
 }
 
-.ftr-vert {
-	// height: 200px;
-	// background-color: $darkblue;
-}
-
 .footer-color {
 	// background-color: $darkblue;
 	
 	padding-top: 10px;
 	padding-bottom: 10px;
-}
-
-.footerminus-row{
-	margin-top: -70px;
-}
-
-.credits-color {
-	// background-color: black;
-	height: 6.3em;
-	p{
-		margin-top: 1em;
-		font-size: 12px;
-		font-weight: bolder;
-		text-align: center;
-		color: white;
-	}
-}
-
-.row-minus2{
-	padding: -6em -8em;
 }
 
 .social-logo{
