@@ -121,6 +121,58 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 0px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 576px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
+@media (min-width: 576px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
+@media (min-width: 768px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
+@media (min-width: 992px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
 @media (min-width: 1200px) {
   header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
     max-width: 1400px;
@@ -193,7 +245,7 @@ section {
 }
 
 .margin18 {
-  padding: 2em 8em;
+  padding: 1em 8em;
 }
 
 .footermargin {
@@ -208,6 +260,14 @@ section {
   background-color: #08011e;
 }
 
+.bg-cyan {
+  background-color: #005654;
+}
+
+.bg-lightpurple {
+  background-color: #bb86fc;
+}
+
 .bg-darkpurple {
   background-color: #3700b3;
 }
@@ -216,8 +276,66 @@ section {
   background-color: #08011e;
 }
 
-.text-black {
+.text-black h2 {
   color: black;
+  font-family: Inter-Bold;
+}
+
+.text-black th, .text-black td {
+  color: black;
+  padding: 35.3px 0;
+  font-size: 18px;
+}
+
+.text-black tr {
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+.text-black label {
+  color: black;
+  font-family: Inter-Light;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+
+.text-black label::first-letter {
+  text-transform: uppercase;
+  padding-left: 8px;
+}
+
+.btn-midpurple {
+  background-color: #6200ee;
+  color: white;
+}
+
+.btn-midpurple:hover {
+  background-color: #03dac5;
+  color: white;
+}
+
+.text-white h2 {
+  color: white;
+  font-family: Inter-Bold;
+}
+
+.text-white p {
+  font-size: 20px;
+  font-family: Inter-Light;
+}
+
+.text-white th, .text-white td {
+  color: white;
+  padding: 35.3px 0;
+  font-size: 18px;
+  margin-top: -100px;
+}
+
+.text-white tr {
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+  font-size: 18px;
 }
 
 /* Hero Section */
@@ -470,8 +588,18 @@ section {
 
 .button-font button {
   font-family: Inter-Light;
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 2em;
+  border-radius: 50px;
+  padding: 15px 30px;
+}
+
+.button-font-big button {
+  font-family: Inter-Light;
+  font-size: 18px;
+  margin-top: 0em;
+  border-radius: 50px;
+  padding: 15px 30px;
 }
 
 .content-title {
@@ -508,6 +636,10 @@ section {
   font-family: Inter-Light;
   font-size: 28px;
   color: white;
+}
+
+.upcoming-events-border-black a:hover {
+  color: #bb86fc;
 }
 
 .upcoming-events-border-black td {
