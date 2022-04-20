@@ -127,22 +127,12 @@ $prefixes: -webkit-,
 	src: url("/fonts/Inter-V.otf")
 }
 
-
-
-
-
-
-
-
-
-
 .page-tagline {
 	font-family: Kasumi;
-	// font-size: 70px;
+	//font-size: 70px;
 	width: 100%;
+	
 }
-
-
 
 // Mixins -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -202,6 +192,59 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 	scroll-behavior: smooth;
 }
+@media (min-width: 0px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 576px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
+@media (min-width: 576px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 768px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
+
+@media (min-width: 768px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 992px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
+@media (min-width: 992px) {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	body {
+		border: solid $lightcyan 2px;
+	}
+	html {
+		background-color: black;
+	}
+}
+
 
 body {
 	color: $white;
@@ -243,7 +286,7 @@ a, a:link, a:active {
 }
 
 li.active {
-    font-weight: bold;
+    //font-weight: bold;
 }
 
 .btn {
@@ -312,12 +355,97 @@ section {
 }
 
 .margin18{
-	padding: 2em 8em;
+	padding: 1em 8em;
 }
 
 .footermargin{
 	padding: 2em 8em;
 }
+
+// BG & Text Colors -----------------------------------------------------
+.bg-grey{
+	background-color:rgb(221, 221, 221);
+}
+
+.bg-darkblue{
+	background-color: $darkblue;
+}
+.bg-cyan{
+	background-color: $midcyan;
+}
+.bg-lightpurple{
+	background-color: $lightpurple;
+}
+
+.bg-darkpurple{
+	background-color: $darkpurple;
+}
+
+.bg-darkblue{
+	background-color: $darkblue;
+}
+
+.text-black{
+	
+	h2{
+		color: black;
+		font-family: Inter-Bold;
+		
+	}
+	th, td{
+		color: black;
+		padding: 35.3px 0;
+		font-size: 18px;
+	}
+	tr{
+		border-bottom: 2px solid black;
+		padding-bottom: 30px;
+		font-size: 18px;
+	}
+	label{
+		color: black;
+		font-family:Inter-Light; 
+		font-size: 18px;
+		text-transform: lowercase;
+	}
+	label::first-letter {
+		text-transform: uppercase;
+		padding-left: 8px;
+	}
+	
+}
+.btn-midpurple{
+	background-color: $midpurple;
+	color:white;
+}
+.btn-midpurple:hover{
+	background-color: $lightcyan;
+	color:white;
+}
+.text-white{
+	h2{
+		color:white;
+		font-family: Inter-Bold;
+	}
+	p{
+		font-size: 20px;
+		font-family: Inter-Light;
+	}
+	th, td{
+		color: white;
+		padding: 35.3px 0;
+		font-size: 18px;
+		margin-top: -100px;	
+	}
+	tr{
+		border-bottom: 2px solid black;
+		padding-bottom: 30px;
+		font-size: 18px;
+	}
+	
+}
+
+	
 
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -350,7 +478,7 @@ section {
 		background-attachment: relative;
 	}
 	.hero {
-		padding-top: 45vh;
+		padding-top: 25vh;
 		padding-right: 6.5em;
 	}	
 } 
@@ -370,7 +498,7 @@ section {
 		background-attachment: relative;
 	}
 	.hero {
-		padding-top: 80vh;
+		padding-top: 30vh;
 		padding-right: 6em;
 	}
 }
@@ -404,15 +532,28 @@ section {
 .nav-link {
     // color: white !important;
     text-transform: uppercase;
-	font-size: 14px;
+	font-size: 16px;
+	font-family: Inter-Medium;
 }
 
+.dropdown-bg{
+	background-color:rgb(08, 01, 30);
+	a{
+		color: red;
+		
+	}
+}
 
-.nav-link {
-    color: white ;
-    text-transform: uppercase;
+.nav-text li{
+	color: white;
+	font-family: Inter-Bold;
+}
+.nav-item {
+	font-size: 11px;
+	
 	
 }
+// Navbar Mobile ------------------------------------------------
 
 // .dropdown-bg{
 // 	background-color:rgb(08, 01, 30);
@@ -433,8 +574,94 @@ section {
 
 .dropdown-item {
 	color: $white;
+// Will cleann upthe mobile code for navmenu - was testing fontsizing
+// Can condense this section
+		
+@include sm{
+	.nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: Inter-Bold !important;
+	}
+	.dropdown-header{
+		font-size: 28px;
+		font-family: Inter-Medium;
+	}
+	.dropdown-bg{
+		background-color:rgb(08, 01, 30);
+		a{
+			font-family: Inter-Light;
+			color: red;
+			font-size: 18px;
+			
+		}
+	}
+	}
+	
+@include md{
+.navbar, .navbar-dark, .bg-dark {
+	background-color: rgba(55,17,179,0.5) !important;
+	
 }
 
+.nav-link {
+	color: white !important;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: Inter-Medium !important;
+}
+.dropdown-header{
+	font-size: 28px;
+	font-family: Inter-Medium;
+}
+.dropdown-bg{
+	background-color:rgb(08, 01, 30);
+	a{
+		font-family: Inter-Light;
+		color: red;
+		font-size: 18px;
+		
+	}
+}
+
+.nav-text li{
+	color: white;
+	font-family: Inter-Bold !important;
+}
+.nav-item {
+	font-size: 11px;
+}
+}
+@include lg{
+	.nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: Inter-Bold !important; 
+	}
+	}
+	
+@include xl {
+	.nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-family: Inter-Bold !important;
+	}
+	}
+
+	@include xxl {
+		.nav-link {
+			color: white !important;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-family: Inter-Bold !important;
+		}
+		}
+		
+		
+	// Second 
 // Second Navbar ------------------------------------------------
 .second-navbar{
 	display: inline-block;
@@ -500,6 +727,7 @@ section {
 }
 
 
+
 .accordion-item h2 button{
 	
 	text-align: left;
@@ -535,7 +763,7 @@ section {
 // }
 // }
 
-@media only screen and (max-width: 960px)
+/* @media only screen and (max-width: 960px)
 {
 .navbar a{
 //   color: white;
@@ -544,11 +772,12 @@ section {
   padding: 0em 0.5em;
   font-family: arial;
 }
-}
+} */
 
 // Breadcrumb Navigation -------------------------------------------
 
 .breadcrumb, .breadcrumb-item {
+	
     height: 25px;
     font-size: smaller !important;
     text-transform: uppercase;
@@ -559,7 +788,6 @@ section {
 // Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // News Section -------------------------------------------
-
 .card-deck, .card {
 	background-color: #08011E; // color from XD Prototype
 }
@@ -568,8 +796,23 @@ section {
 	background-color: white; // color from XD Prototype
 }
 
-.card-body {
+.card-body{
 	padding: 1em 0;
+	width: 100%;
+}
+.card-body-invert {
+	padding: 1em 0;
+	//can remove width if content is to be centered
+	width: 100%;
+	small{
+		color:red;
+	}
+	h5, small{
+		color:black;
+	}
+	a{
+	color: blue;	
+	}
 }
 
 .card-margin{
@@ -630,7 +873,65 @@ section {
 }
 
 // Upcoming Events // Connect With Us Section -------------------------------------------
+.button-font button{
+	font-family:Inter-Light;
+	font-size: 18px;
+	margin-top: 2em;
+	border-radius: 50px;
+	padding: 15px 30px;
+}
 
+.button-font-big button{
+	font-family:Inter-Light;
+	font-size: 18px;
+	margin-top: 0em;
+	border-radius: 50px;
+	padding: 15px 30px;
+	
+}
+
+.content-title{
+	color:black;
+	font-family: Inter-Bold;
+}
+
+.content-title-invert{
+	color:white;
+	font-family: Inter-Bold;
+	padding-right: 40px;	
+	
+}
+.content-title-invert{
+	color:white;
+}
+
+.upcoming-events-border-black{
+	tr{
+		border-bottom: 2px solid white;
+	} 
+	th{
+		font-family: Inter-Light;
+		font-size: 28px;
+		color: white;
+		
+	}
+	/* td is option here 
+	td {
+		font-family: Inter-Light;
+		font-size: 24px;
+		color: white;
+		}
+	}
+	*/
+a:hover{
+	color:$lightpurple;
+	//color:$lightcyan;
+	//color:rgb(191, 173, 212);
+}
+td{
+	padding-bottom: 100px;
+}
+}
 
 
 // Stay Up To Speed Section -------------------------------------------

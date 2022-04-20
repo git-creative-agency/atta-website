@@ -124,6 +124,56 @@ html {
 
 body {
   color: white;
+@media (min-width: 0px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 576px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
+@media (min-width: 576px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
+@media (min-width: 768px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
+}
+
+@media (min-width: 992px) {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  body {
+    border: solid #03dac5 2px;
+  }
+  html {
+    background-color: black;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -260,11 +310,97 @@ section {
 }
 
 .margin18 {
-  padding: 2em 8em;
+  padding: 1em 8em;
 }
 
 .footermargin {
   padding: 2em 8em;
+}
+
+.bg-grey {
+  background-color: #dddddd;
+}
+
+.bg-darkblue {
+  background-color: #08011e;
+}
+
+.bg-cyan {
+  background-color: #005654;
+}
+
+.bg-lightpurple {
+  background-color: #bb86fc;
+}
+
+.bg-darkpurple {
+  background-color: #3700b3;
+}
+
+.bg-darkblue {
+  background-color: #08011e;
+}
+
+.text-black h2 {
+  color: black;
+  font-family: Inter-Bold;
+}
+
+.text-black th, .text-black td {
+  color: black;
+  padding: 35.3px 0;
+  font-size: 18px;
+}
+
+.text-black tr {
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+.text-black label {
+  color: black;
+  font-family: Inter-Light;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+
+.text-black label::first-letter {
+  text-transform: uppercase;
+  padding-left: 8px;
+}
+
+.btn-midpurple {
+  background-color: #6200ee;
+  color: white;
+}
+
+.btn-midpurple:hover {
+  background-color: #03dac5;
+  color: white;
+}
+
+.text-white h2 {
+  color: white;
+  font-family: Inter-Bold;
+}
+
+.text-white p {
+  font-size: 20px;
+  font-family: Inter-Light;
+}
+
+.text-white th, .text-white td {
+  color: white;
+  padding: 35.3px 0;
+  font-size: 18px;
+  margin-top: -100px;
+}
+
+.text-white tr {
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+  font-size: 18px;
 }
 
 /* Hero Section */
@@ -280,7 +416,7 @@ section {
     background-attachment: relative;
   }
   .hero {
-    padding-top: 45vh;
+    padding-top: 25vh;
     padding-right: 6.5em;
   }
 }
@@ -297,7 +433,7 @@ section {
     background-attachment: relative;
   }
   .hero {
-    padding-top: 80vh;
+    padding-top: 30vh;
     padding-right: 6em;
   }
 }
@@ -321,12 +457,8 @@ section {
 
 .nav-link {
   text-transform: uppercase;
-  font-size: 14px;
-}
-
-.nav-link {
-  color: white;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-family: Inter-Medium;
 }
 
 .dropdown-menu {
@@ -341,6 +473,90 @@ section {
 
 .dropdown-item {
   color: white;
+  font-family: Inter-Bold;
+}
+
+.nav-item {
+  font-size: 11px;
+}
+
+@media only screen and (max-width: 576px) {
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Inter-Bold !important;
+  }
+  .dropdown-header {
+    font-size: 28px;
+    font-family: Inter-Medium;
+  }
+  .dropdown-bg {
+    background-color: #08011e;
+  }
+  .dropdown-bg a {
+    font-family: Inter-Light;
+    color: red;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar, .navbar-dark, .bg-dark {
+    background-color: rgba(55, 17, 179, 0.5) !important;
+  }
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Inter-Medium !important;
+  }
+  .dropdown-header {
+    font-size: 28px;
+    font-family: Inter-Medium;
+  }
+  .dropdown-bg {
+    background-color: #08011e;
+  }
+  .dropdown-bg a {
+    font-family: Inter-Light;
+    color: red;
+    font-size: 18px;
+  }
+  .nav-text li {
+    color: white;
+    font-family: Inter-Bold !important;
+  }
+  .nav-item {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Inter-Bold !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Inter-Bold !important;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Inter-Bold !important;
+  }
 }
 
 .second-navbar {
@@ -394,14 +610,6 @@ section {
   color: red !important;
 }
 
-.content-title {
-  color: black;
-}
-
-.content-title-invert {
-  color: white;
-}
-
 .accordion-item h2 button {
   text-align: left;
   text-decoration: none;
@@ -424,7 +632,7 @@ section {
     font-family: arial;
   }
 }
-
+} */
 .breadcrumb, .breadcrumb-item {
   height: 25px;
   font-size: smaller !important;
@@ -443,6 +651,24 @@ section {
 
 .card-body {
   padding: 1em 0;
+  width: 100%;
+}
+
+.card-body-invert {
+  padding: 1em 0;
+  width: 100%;
+}
+
+.card-body-invert small {
+  color: red;
+}
+
+.card-body-invert h5, .card-body-invert small {
+  color: black;
+}
+
+.card-body-invert a {
+  color: blue;
 }
 
 .card-margin {
@@ -490,8 +716,64 @@ section {
   color: white;
 }
 
-.subscribe {
-  background-color: #3700b3;
+.button-font button {
+  font-family: Inter-Light;
+  font-size: 18px;
+  margin-top: 2em;
+  border-radius: 50px;
+  padding: 15px 30px;
+}
+
+.button-font-big button {
+  font-family: Inter-Light;
+  font-size: 18px;
+  margin-top: 0em;
+  border-radius: 50px;
+  padding: 15px 30px;
+}
+
+.content-title {
+  color: black;
+  font-family: Inter-Bold;
+}
+
+.content-title-invert {
+  color: white;
+  font-family: Inter-Bold;
+  padding-right: 40px;
+}
+
+.content-title-invert {
+  color: white;
+}
+
+.upcoming-events-border-black {
+  /* td is option here 
+	td {
+		font-family: Inter-Light;
+		font-size: 24px;
+		color: white;
+		}
+	}
+	*/
+}
+
+.upcoming-events-border-black tr {
+  border-bottom: 2px solid white;
+}
+
+.upcoming-events-border-black th {
+  font-family: Inter-Light;
+  font-size: 28px;
+  color: white;
+}
+
+.upcoming-events-border-black a:hover {
+  color: #bb86fc;
+}
+
+.upcoming-events-border-black td {
+  padding-bottom: 100px;
 }
 
 .ftr-col-1,
