@@ -277,9 +277,7 @@ a, a:link, a:active {
     color: white;
 }
 
-li.active {
-    font-weight: bold;
-}
+
 
 .btn {
 	color: $white;
@@ -448,32 +446,33 @@ section {
 	padding: 2em 8em;
 }
 
+
 .nav-link {
+	color:white !important;
+	font-family: Inter-Medium;
     text-transform: uppercase;
-	font-size: 14px;
+	font-size: 16px;
 	&:hover {color: $lightcyan;} // defines the hover state
 }
 
+.dropdown-header{ // color of navbar main
+	color: $lightpurple !important;
+	font-family: Inter-Medium;
+	font-size: 16px !important;
+	//text-decoration: underline;
+}
+.dropdown-item { // color of submenu items
+	color:white;
+	font-size: 16px;
+} 
 
-// .dropdown-bg{
-// 	background-color:rgb(08, 01, 30);
-// 	a{
-// 		color: white;
-// 	}
-// }
+.dropdown-header {  // color of submenu title
+	color: $lightpurple;
+	font-family: Inter-Bold;
+}
 
 .dropdown-menu {
 	background: $darkblue;
-}
-
-.dropdown-header {
-	color: $lightpurple;
-	font-weight: bold;
-	font-size: large;
-}
-
-.dropdown-item {
-	color: $white;
 }
 
 // Second Navbar ------------------------------------------------
@@ -497,6 +496,8 @@ section {
 	margin: 0px 30px;
 	}
 }
+
+
 
 //Second Navbar Hover
 
@@ -705,6 +706,8 @@ section {
 		padding-left: 8px;
 	}
 }
+
+md
 
 .button-font button{
 	font-family:Inter-Light;

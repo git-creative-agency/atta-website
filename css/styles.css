@@ -208,10 +208,6 @@ a, a:link, a:active {
   color: white;
 }
 
-li.active {
-  font-weight: bold;
-}
-
 .btn {
   color: white;
   background-color: #bb86fc;
@@ -376,26 +372,34 @@ section {
 }
 
 .nav-link {
+  color: white !important;
+  font-family: Inter-Medium;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .nav-link:hover {
   color: #03dac5;
 }
 
-.dropdown-menu {
-  background: #08011e;
-}
-
 .dropdown-header {
-  color: #bb86fc;
-  font-weight: bold;
-  font-size: large;
+  color: #bb86fc !important;
+  font-family: Inter-Medium;
+  font-size: 16px !important;
 }
 
 .dropdown-item {
   color: white;
+  font-size: 16px;
+}
+
+.dropdown-header {
+  color: #bb86fc;
+  font-family: Inter-Bold;
+}
+
+.dropdown-menu {
+  background: #08011e;
 }
 
 .second-navbar {
