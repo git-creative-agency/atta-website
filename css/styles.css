@@ -382,6 +382,10 @@ section {
   color: #03dac5;
 }
 
+.dropdown-item {
+  cursor: pointer;
+}
+
 .dropdown-header {
   color: #bb86fc !important;
   font-family: Inter-Medium;
@@ -484,8 +488,13 @@ section {
   height: 25px;
   font-size: smaller !important;
   text-transform: uppercase;
-  padding-left: 1.5em;
+  font-family: Inter-Medium;
+  padding-left: 2em;
   margin: 0;
+}
+
+.breadcrumb {
+  background-color: #08011e;
 }
 
 .card-deck, .card {
@@ -586,6 +595,7 @@ section {
   padding-left: 8px;
 }
 
+md
 .button-font button {
   font-family: Inter-Light;
   font-size: 18px;

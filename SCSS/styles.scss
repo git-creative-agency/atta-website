@@ -454,7 +454,9 @@ section {
 	font-size: 16px;
 	&:hover {color: $lightcyan;} // defines the hover state
 }
-
+.dropdown-item{
+	cursor: pointer;
+}
 .dropdown-header{ // color of navbar main
 	color: $lightpurple !important;
 	font-family: Inter-Medium;
@@ -592,8 +594,12 @@ section {
     height: 25px;
     font-size: smaller !important;
     text-transform: uppercase;
-	padding-left: 1.5em;
+	font-family:Inter-Medium;
+	padding-left: 2em;
 	margin: 0;
+}
+.breadcrumb{
+	background-color:$darkblue;
 }
 
 // Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
