@@ -218,6 +218,11 @@ a, a:link, a:active {
           box-sizing: inherit;
 }
 
+div, article {
+  margin: 0;
+  padding: 0;
+}
+
 .bg-darkpurple {
   background-color: #3700b3;
 }
@@ -314,6 +319,16 @@ section {
 }
 
 /* Hero Section */
+.d-grid {
+  margin: auto;
+  padding: 0;
+  bottom: 0;
+}
+
+.bg-image row {
+  bottom: 0;
+}
+
 @media (min-width: 992px) {
   .bg-image {
     background: url("../images/desktop/home.jpg");
@@ -324,10 +339,21 @@ section {
     background-position: center;
     background-size: cover;
     background-attachment: relative;
+    padding: 0 8em;
   }
   .hero {
-    padding-top: 40vh;
-    padding-right: 6.5em;
+    padding-top: 18em;
+  }
+  .hero h1 {
+    font-family: Kasumi;
+    width: 100%;
+    font-size: 7em;
+    line-height: 1em;
+    letter-spacing: .1em;
+    margin: .25em 0;
+  }
+  .hero .hero-button-mobile {
+    display: none;
   }
 }
 
@@ -341,10 +367,21 @@ section {
     background-position: center;
     background-size: cover;
     background-attachment: relative;
+    padding: 0 2.5em;
   }
   .hero {
-    padding-top: 70vh;
-    padding-right: 6em;
+    padding-top: 50em;
+  }
+  .hero h1 {
+    font-family: Kasumi;
+    width: 100%;
+    font-size: 5.25em;
+    line-height: 1em;
+    letter-spacing: .1em;
+    margin: .25em 0;
+  }
+  .hero-button-desktop {
+    display: none;
   }
 }
 
@@ -361,23 +398,26 @@ section {
 }
 
 .navbar-brand img {
-  width: 186.83px;
-  height: 73px;
+  width: 187px;
 }
 
 .navbar {
-  padding: 3em 6.75em;
+  padding: 2.5em 6.75em .5em;
 }
 
 .nav-link {
-  color: white !important;
+  color: white;
   font-family: Inter-Medium;
   text-transform: uppercase;
   font-size: 16px;
 }
 
 .nav-link:hover {
-  color: #03dac5;
+  color: #bb86fc;
+}
+
+.nav-link:visited {
+  color: white;
 }
 
 .dropdown-item {
@@ -397,7 +437,7 @@ section {
 
 .dropdown-header {
   color: #bb86fc;
-  font-family: Inter-Bold;
+  font-weight: bold;
 }
 
 .dropdown-menu {
@@ -587,9 +627,13 @@ section {
 .btn {
   color: white;
   background-color: #bb86fc;
+  height: 3.125em;
+  width: 16.25em;
   border-radius: 50px;
-  padding: 10px 50px;
+  padding: 1em 0;
   border: none;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -740,7 +784,6 @@ td {
   padding-left: 8px;
 }
 
-md
 .button-font button {
   font-family: Inter-Light;
   font-size: 18px;
@@ -796,10 +839,6 @@ md
 
 .upcoming-events-border-black a:hover {
   color: #bb86fc;
-}
-
-.subscribe {
-  background-color: #3700b3;
 }
 
 .ftr-col-1,

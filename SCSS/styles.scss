@@ -184,6 +184,7 @@ html {
 body {
 	color: $white;
 }
+
 @media (min-width: 0px) {
 	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
 		max-width: 576px;
@@ -283,6 +284,11 @@ a, a:link, a:active {
 	box-sizing: inherit;
 }
 
+div, article {
+	margin: 0;
+	padding: 0;
+}
+
 // Background Colors -----------------------------------------------------
 
 .bg-darkpurple 		{background-color: $darkpurple;}
@@ -351,17 +357,15 @@ section {
 
 /* Hero Section */
 
-// .bg-image { 
-// 	width: 100%;
-// 	opacity: 100%;
-// 	background-repeat: no-repeat;
-//     background-position: center;
-// 	-webkit-background-size: cover;
-// 	-moz-background-size: cover;
-// 	-o-background-size: cover;
-// 	background-size: cover;
-//     background-attachment: relative;
-// }
+.d-grid {
+	margin: auto;
+	padding: 0;
+	bottom: 0;
+}
+
+.bg-image row {
+	bottom: 0;
+}
 
 @media (min-width: 992px) { // desktop hero image size
 	.bg-image {
@@ -376,11 +380,23 @@ section {
 		-o-background-size: cover;
 		background-size: cover;
 		background-attachment: relative;
+		padding: 0 8em;
 	}
 	.hero {
-		padding-top: 40vh;
-		padding-right: 6.5em;
-	}	
+		padding-top: 18em;
+		h1 {
+			font-family: Kasumi;
+			width: 100%;
+			font-size: 7em;
+			line-height: 1em;
+			letter-spacing: .1em;
+			margin: .25em 0;
+		}
+		.hero-button-mobile {
+			display: none;
+		}
+	}
+	
 } 
 
 @media (max-width: 992px) { // mobile hero image size
@@ -396,10 +412,21 @@ section {
 		-o-background-size: cover;
 		background-size: cover;
 		background-attachment: relative;
+		padding: 0 2.5em;
 	}
 	.hero {
-		padding-top: 70vh;
-		padding-right: 6em;
+		padding-top: 50em;
+		h1 {
+			font-family: Kasumi;
+			width: 100%;
+			font-size: 5.25em;
+			line-height: 1em;
+			letter-spacing: .1em;
+			margin: .25em 0;
+		}
+	}
+	.hero-button-desktop {
+		display: none;
 	}
 }
 
@@ -411,12 +438,7 @@ section {
 	transform: translateY(-50%);
 }
 
-// .bgimage h1 {
-//     text-shadow: 2px 2px #333;
-// 	font-family: Kasumi;
-// }
-
-.page-tagline {
+.page-tagline { // secondary pages header
 	font-family: Kasumi;
 	// font-size: 70px;
 	width: 100%;
@@ -427,23 +449,23 @@ section {
 // Logo ------------------------------------------------------
 
 .navbar-brand img { 
-    width: 186.83px;
-    height: 73px;
+    width: 187px;
 }
 
 //Navbar Content ------------------------------------------------------
 
-.navbar {
-	padding: 3em 6.75em;
+.navbar { // main nav container
+	padding: 2.5em 6.75em .5em;
 }
 
-
 .nav-link {
-	color:white !important;
+	color:white;
 	font-family: Inter-Medium;
     text-transform: uppercase;
 	font-size: 16px;
-	&:hover {color: $lightcyan;} // defines the hover state
+	&:hover {color: $lightpurple;} // defines the hover state
+	// &:active {color: $lightcyan;}
+	&:visited {color: $white;}
 }
 .dropdown-item{
 	cursor: pointer;
@@ -461,7 +483,7 @@ section {
 
 .dropdown-header {  // color of submenu title
 	color: $lightpurple;
-	font-family: Inter-Bold;
+	font-weight: bold;
 }
 
 .dropdown-menu {
@@ -469,10 +491,11 @@ section {
 }
 
 // Second Navbar ------------------------------------------------
-.second-navbar{
+
+.second-navbar {
 	display: inline-block;
 }
-.second-navbar-center{
+.second-navbar-center {
 	text-align:center;
 }
 .second-navbar {
@@ -484,20 +507,11 @@ section {
 	ul {
 	list-style: none;
 	}
-	li{
+	li {
 	display: inline-block;
 	margin: 0px 30px;
 	}
 }
-
-
-
-//Second Navbar Hover
-
-
-
-// Navbar Hovers ------------------------------------------------
-
 
 // Accordion ------------------------------------------------------
 .accordion-body{
@@ -516,30 +530,27 @@ color: black;
 .accordion-item{
 	font-size: 15px;
 	border: 1px solid #dee2e6 !important;
-	
 }
 
 .accordion-header{
 	border-bottom: 1px solid #dee2e6 !important;
-	
 }
 
 .accordion-item h2 button:hover{
 	color: $lightpurple !important;
-	
 }
 
 .accordion-item h2 button :active{
 	color: red !important;
-	
 }
+
 .content-title{
 	color: $black;
 }
+
 .content-title-invert{
 	color: $white;
 }
-
 
 .accordion-item h2 button{
 	text-align: left;
@@ -556,10 +567,6 @@ color: black;
 }
 
 // Accordion Hovers
-
-
-
-
 
 //   @media only screen and (max-width: 1222px)
 //   {
@@ -616,21 +623,21 @@ color: black;
 
 .card-deck-invert, .card-invert {
 	background-color: $white; // color from XD Prototype
-	color: black;
+	color: $black;
 }
 
 .card-body {
 	padding: 1em 0;
 	width: 100%;
-	font-family:Inter-Light;
+	font-family: Inter-Light;
 	font-size: 18px;
-	h5{
+	h5 {
 		font-family: Inter-Bold;
 		//font-size: 18px;
 	}
 }
 
-.card-margin{
+.card-margin {
 	margin-right: 10px;
 }
 
@@ -638,24 +645,24 @@ color: black;
 	padding:0 30px 0 0;
 }
 
-.txt-black{
+.txt-black {
 	color: black;
-	a{
+	a {
 	color: black;
 	}
 	
 }
 
-.text-decoration-underline{
+.text-decoration-underline {
 	color: $darkpurple;
 }
 
-.text-decoration-underline:hover{
+.text-decoration-underline:hover {
 	color: $lightpurple;
 }
 
 
-// Media Queries (Image Carousel) -------------------------------------------
+// Media Queries (News Section Card/Image Carousel) -------------------------------------------
 
 @media (min-width: 992px) { 
   .containerMobile {
@@ -693,9 +700,13 @@ color: black;
 .btn {
 	color: $white;
 	background-color: $lightpurple;
+	height: 3.125em;
+	width: 16.25em;
 	border-radius: 50px;
-	padding: 10px 50px;
+	padding: 1em 0;
 	border: none;
+	line-height: normal;
+	text-transform: uppercase;
 
 	&:hover {
 		background-color: $lightcyan;
@@ -705,23 +716,23 @@ color: black;
 // Team League --------------------------------------------------------------------------
 
 // Division 1 ---------------------------------------------------------------------------
-.teams-content{
+.teams-content {
 	ul {
 		text-align:center;
 		list-style: none;
 		}
-		li{
+		li {
 			font-family: Inter-Bold;	
 			
 		display: inline-block;
 		// margin: 0px 30px;
 		margin: 30px 30px;
 		}
-		a{
+		a {
 			
 		color:black;
 		}
-		a:hover{
+		a:hover {
 			color:$lightpurple;
 			}
 		th{
@@ -736,23 +747,23 @@ color: black;
 		ul {
 			list-style: none;
 		}
-		li{
+		li {
 			display: inline-block;
 			// margin: 0px 30px;
 			margin: 10px 50px;
 		}
-		a{
+		a {
 			color:black;
 		}
-		a:hover{
+		a:hover {
 			color:$lightpurple;
 		}
 	}
 }
 
-.schedule{
+.schedule {
   vertical-align: middle;
-	th{
+	th {
 		border: none;
 		text-align: center;
 		display: flex;
@@ -762,40 +773,40 @@ color: black;
 		color: black;
 		font-size: 16px;
 	}
-	td{
+	td {
 		vertical-align: center !important;
 		border: none;
 		font-family: Inter-Light;
 		color: black;
 		text-align: center;
 	}
-	tr{
+	tr {
 		border-bottom: 1px solid lightgrey;
 	}
-	.no-bottom{
+	.no-bottom {
 		border-bottom: 0px;
 	}
 	
 }
-.bolder{
+.bolder {
 	border-bottom: 1px solid black;
 }
 
-td{
+td {
 	//padding-top: 20px !important;
 	//padding-bottom: 20px !important;
 	vertical-align: center !important;
 }
 
 @include sm {
-	.schedule{
-		th{
+	.schedule {
+		th {
 			text-align: center;
 			display: flex;
 	  		justify-content: center;
 	  		align-items: center;
 		}
-		td{
+		td {
 			//padding-top: 20px !important;
 			//padding-bottom: 20px !important;
 			text-align: center;
@@ -807,26 +818,26 @@ td{
 }
 
 // Upcoming Events // Connect With Us Section -------------------------------------------
-.text-black{
-	h2{
-		color: black;
+.text-black {
+	h2 { 
+		color: $black;
 		font-family: Inter-Bold;
 	}
 
-	th, td{
-		color: black;
+	th, td {
+		color: $black;
 		padding: 36.8px 0;
 		font-size: 18px;
 	}
 
-	tr{
+	tr {
 		border-bottom: 2px solid black;
 		padding-bottom: 30px;
 		font-size: 18px;
 	}
-	label{
-		color: black;
-		font-family:Inter-Light;
+	label {
+		color: $black;
+		font-family: Inter-Light;
 		font-size: 18px;
 		text-transform: lowercase;
 	}
@@ -834,44 +845,40 @@ td{
 		text-transform: uppercase;
 		padding-left: 8px;
 	}
-	
 }
 
-md
-
-.button-font button{
-	font-family:Inter-Light;
+.button-font button {
+	font-family: Inter-Light;
 	font-size: 18px;
 	margin-top: 2em;
 	border-radius: 50px;
 	padding: 15px 30px;
 }
 
-.button-font-big button{
-	font-family:Inter-Light;
+.button-font-big button {
+	font-family: Inter-Light;
 	font-size: 18px;
 	margin-top: 0em;
 	border-radius: 50px;
 	padding: 15px 30px;
-	
 }
 
-.content-title{
-	color:black;
+.content-title {
+	color: $black;
 	font-family: Inter-Bold;
 }
 
-.content-title-invert{
-	color:white;
+.content-title-invert {
+	color: $white;
 	font-family: Inter-Bold;
 	padding-right: 40px;	
 	
 }
-.content-title-invert{
-	color:white;
+.content-title-invert { 
+	color: $white;
 }
 
-.upcoming-events-border-black{
+.upcoming-events-border-black {
 	tr{
 		border-bottom: 2px solid white;
 		font-family: Inter-Bold;
@@ -879,8 +886,7 @@ md
 	th{
 		font-family: Inter-Light;
 		font-size: 28px;
-		color: white;
-		
+		color: $white;
 	}
 	/* td is option here 
 	td {
@@ -891,7 +897,7 @@ md
 	}
 	*/
 	a:hover {
-		color:$lightpurple;
+		color: $lightpurple;
 		//color:$lightcyan;
 		//color:rgb(191, 173, 212);
 	}
@@ -899,12 +905,9 @@ md
 
 // Stay Up To Speed Section -------------------------------------------
 
-.subscribe {
-	background-color: $darkpurple;
-}
+
 
 // End Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
 
 $container-max-widths: (
         sm: 540px,
@@ -925,30 +928,32 @@ $container-max-widths: (
 	padding-left: 10px;
 }
 
-.ftr-col-2	{
-				a {
-					text-decoration: none;
-					color: white;
-					background-color: none;
-					width: 120px;
-					float: left;
-					padding-top: 8px;
-					padding-bottom: 8px;
-					text-align: left;
-					margin-left: 0px;
-					font-weight: bolder;
-				}
-				p {
-					font-weight: bolder;
-					font-size: 30px;
-				}
-				li {
-					list-style-type: none;
-				}
+.ftr-col-2 {
+	a {
+		text-decoration: none;
+		color: white;
+		background-color: none;
+		width: 120px;
+		float: left;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		text-align: left;
+		margin-left: 0px;
+		font-weight: bolder;
+	}
+	p {
+		font-weight: bolder;
+		font-size: 30px;
+	}
+	li {
+		list-style-type: none;
+	}
 }
+
 .ftr-logo {
 	width: 450px;
 }
+
 .ftr-col-name {
 	text-align: left;
 	margin-left: 33px;
@@ -968,12 +973,12 @@ $container-max-widths: (
 	padding-bottom: 10px;
 }
 
-.social-logo{
+.social-logo {
 	width:40px;
 	margin: 0px 15px;
 }
 
-.social-row{
+.social-row {
 	display: flex !important;
 	flex-direction: row-reverse !important;
 	float:left;
@@ -992,8 +997,7 @@ $container-max-widths: (
 		/* border-radius: none;*/
 		padding-top: 24px;
 	}
-
-	.ftr-col-2	{
+	.ftr-col-2 {
 		a {
 			text-decoration: none;
 			// color: white;
@@ -1005,7 +1009,6 @@ $container-max-widths: (
 			text-align: left;
 			margin-left: 0px;
 			font-weight: bolder;
-			
 		}
 		p {
 			font-weight: bolder;
@@ -1029,7 +1032,6 @@ $container-max-widths: (
 		padding: 1em 8em;
 	}
 }
-
 
 @include xl {
 	.margin28 {
@@ -1062,8 +1064,7 @@ $container-max-widths: (
 	.social-logo{
 		width:40px;
 		margin: 0px 65px;	
-	}
-		
+	}	
 }
 
 @include md {
@@ -1076,6 +1077,7 @@ $container-max-widths: (
 		background-color: black;
 	}
 }
+
 @include sm {
 	.margin28 {
 		padding: 2em 4em;
@@ -1084,15 +1086,16 @@ $container-max-widths: (
 		padding: 1em 4em;
 	}
 
-.social-logo{
-	width:40px;
-	margin: 0px 19px;
-	
+	.social-logo {
+		width:40px;
+		margin: 0px 19px;
 }
-.social-row{
+
+.social-row {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
 .ftr-col-1,
 .ftr-col-2,
 .ftr-col-3,
