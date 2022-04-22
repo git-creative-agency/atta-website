@@ -816,7 +816,51 @@ td {
 		}
 	}
 }
+// Coach's Info -------------------------------------------------------------------------
+.coach-img{
+	width: 200px;
+	border-radius: 200px;
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+}
+.coach-details {
+	vertical-align: middle !important;
+	height: 200px;
+	text-align: center;
+	font-size: 18px;
+	vertical-align: middle !important;
+td{
+	border-bottom: 0px solid grey;
+}		
+}
 
+@include xl{ 
+.coach-img{
+	width: 200px;
+	border-radius: 200px;
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+}
+.coach-details {
+	vertical-align: middle !important;
+	height: 100px;
+	text-align: center;
+	font-size: 18px;
+	vertical-align: middle !important;
+td{
+	border-bottom: 0px solid grey;
+}		
+}
+}
+
+// Rules of the Game --------------------------------------------------------------------
+.rules ul{
+	list-style: none;	
+	font-family: Inter-Light;
+	
+}
 // Upcoming Events // Connect With Us Section -------------------------------------------
 .text-black {
 	h2 { 

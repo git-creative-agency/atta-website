@@ -755,6 +755,55 @@ td {
   }
 }
 
+.coach-img {
+  width: 200px;
+  border-radius: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coach-details {
+  vertical-align: middle !important;
+  height: 200px;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle !important;
+}
+
+.coach-details td {
+  border-bottom: 0px solid grey;
+}
+
+@media only screen and (max-width: 1200px) {
+  .coach-img {
+    width: 200px;
+    border-radius: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .coach-details {
+    vertical-align: middle !important;
+    height: 100px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle !important;
+  }
+  .coach-details td {
+    border-bottom: 0px solid grey;
+  }
+}
+
+.rules ul {
+  list-style: none;
+  font-family: Inter-Light;
+}
+
 .text-black h2 {
   color: black;
   font-family: Inter-Bold;
