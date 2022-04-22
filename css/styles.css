@@ -315,6 +315,12 @@ section {
   padding: 2em 8em;
 }
 
+@media only screen and (max-width: 576px) {
+  .margin68 {
+    padding: 2em 3em !important;
+  }
+}
+
 /* Hero Section */
 @media (min-width: 992px) {
   .bg-image {
@@ -433,7 +439,16 @@ section {
 
 .accordion-body {
   border: 1px solid #dee2e6;
-  padding: 100px;
+  padding: 30px;
+  color: black;
+}
+
+.accordion-body th {
+  font-family: Inter-Bold;
+}
+
+.accordion-body td {
+  font-family: Inter-Light;
 }
 
 .accordion-item {
@@ -509,6 +524,12 @@ section {
 .card-body {
   padding: 1em 0;
   width: 100%;
+  font-family: Inter-Light;
+  font-size: 18px;
+}
+
+.card-body h5 {
+  font-family: Inter-Bold;
 }
 
 .card-margin {
@@ -525,6 +546,14 @@ section {
 
 .txt-black a {
   color: black;
+}
+
+.text-decoration-underline {
+  color: #3700b3;
+}
+
+.text-decoration-underline:hover {
+  color: #bb86fc;
 }
 
 @media (min-width: 992px) {
@@ -564,6 +593,120 @@ section {
 .btn-midpurple:hover {
   background-color: #03dac5;
   color: white;
+}
+
+.teams-content ul {
+  text-align: center;
+  list-style: none;
+}
+
+.teams-content li {
+  font-family: Inter-Bold;
+  display: inline-block;
+  margin: 30px 30px;
+}
+
+.teams-content a {
+  color: black;
+}
+
+.teams-content a:hover {
+  color: #bb86fc;
+}
+
+.teams-content th {
+  font-family: Inter-Bold;
+}
+
+@media only screen and (max-width: 576px) {
+  .teams-content {
+    text-align: center;
+  }
+  .teams-content ul {
+    list-style: none;
+  }
+  .teams-content li {
+    display: inline-block;
+    margin: 10px 50px;
+  }
+  .teams-content a {
+    color: black;
+  }
+  .teams-content a:hover {
+    color: #bb86fc;
+  }
+}
+
+.schedule {
+  vertical-align: middle;
+}
+
+.schedule th {
+  border: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Inter-Bold;
+  color: black;
+  font-size: 16px;
+}
+
+.schedule td {
+  vertical-align: center !important;
+  border: none;
+  font-family: Inter-Light;
+  color: black;
+  text-align: center;
+}
+
+.schedule tr {
+  border-bottom: 1px solid lightgrey;
+}
+
+.schedule .no-bottom {
+  border-bottom: 0px;
+}
+
+.bolder {
+  border-bottom: 1px solid black;
+}
+
+td {
+  vertical-align: center !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .schedule th {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .schedule td {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .text-black h2 {

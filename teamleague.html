@@ -86,14 +86,15 @@
                     </a>
                     <ul class="dropdown-menu dropdown-bg" aria-labelledby="teamLeagueDropdown">
                         <li class="dropdown-header text-white">San Diego League</li>
-                        <li><a class="dropdown-item" onClick="document.location='teamleague.html#team-league';">Team League</a></li>
+                        <li><a class="dropdown-item" onClick="document.location='teamleague.html';">Team League</a></li>
                         <li><a class="dropdown-item" onClick="document.location='teamleague.html#division-1';">Division 1</a></li>
                         <li><a class="dropdown-item" onClick="document.location='teamleague.html#division-2';">Division 2</a></li>
                         <li><a class="dropdown-item" onClick="document.location='teamleague.html#standings';">Standings</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li class="dropdown-header text-white">Rankings</li>
                         <li><a class="dropdown-item" onClick="document.location='teamleague.html#top-players';">Top Players</a></li>
-                        <li class="dropdown-header text-white">General Info</li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="dropdown-header text-white">Registration/Rules</li>
                         <li><a class="dropdown-item" onClick="document.location='teamleague.html#register-your-team';">Register Your Team</a></li>
                         <li><a class="dropdown-item" onClick="document.location='teamleague.html#rules-n-regulations';">Rules & Regulations</a></li>                            
                     </ul>
@@ -211,19 +212,18 @@
                         <ul >
                             <li><a  href="#division-1">DIVISION 1</a></li>
                             <li><a  href="#division-2">DIVISION 2</a></li>
-                            <li><a  href="#guidelines">GUIDELINES</a></li>
-                            <li><a  href="#schedule">SCHEDULE & SCORES</a></li>
-                            <li><a  href="#exhibitions">PLAYERS' RANKINGS</a></li>
-                        </ul>
+                            <li><a  href="#rankings">RANKINGS</a></li>
+                            <li><a  href="#registration-n-rules">REGISTRATION & RULES</a></li>
+                          </ul>
                     </nav>
                 </article>
             </section>
 
             <!-- Competitive Tournaments Accordion -->
-            <section class="row bg-white margin68" id="competitive-tournaments">
+            <section class="row bg-white margin68" id="division-1">
                 <article class="col-lg-2 col-md-12 col-sm-12">
                     <!-- Category Label Beside Accordion -->
-                        <h3 class="content-title" id="">COMPETITIVE TOURNAMENTS</h3>
+                        <h3 class="content-title" >DIVISION 1</h3>
                 </article>
                 <article class="col-lg-1 col-md-0 col-sm-0"></article> <!-- Column Spacing -->
                 <article class="col-lg-9 col-md-12 col-sm-12"> 
@@ -232,48 +232,199 @@
                           <h2 class="accordion-header" id="flush-headingOne">
                               <!-- Accordion Head Label -->
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              General Info
+                              Teams
                             </button>
                           </h2>
                           <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                               <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                            <div class="accordion-body teams-content">
+                                <nav>
+                                  <ul>
+                                    <li><a href="#division-1">The Wolfpack</a></li>
+                                    <li><a  href="#division-1">Team Chai-Yo</a></li>
+                                    <li><a  href="#division-1">Cornerstone</a></li>
+                                    <li><a  href="#division-1">The Underdogs</a></li>
+                                    <li><a  href="#division-1">The Nightmare</a></li>
+                                    <li><a  href="#division-1">The Incredibles</a></li>
+                                  </ul>
+                                </nav>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingTwo">
                               <!-- Accordion Head Label -->
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Host Your Own
+                              Schedule
                             </button>
                           </h2>
                           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                               <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                              <div class="accordion-body row">
+
+                                <!-- Division 1 - Schedule -->
+                                <!-- Column 1 -->
+                                <article class="col-lg-6 col-md-6 col-sm-12">
+                                  <table class="table schedule">
+                                    <tr>
+                                      <th>Team 1</th>
+                                      <th>Team 2</th>
+                                      <td>DATE</td>
+                                      <td>TIME</td>
+                                      <td>LOCATION</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Team 1</th>
+                                      <th>Team 2</th>
+                                      <td>DATE</td>
+                                      <td>TIME</td>
+                                      <td>LOCATION</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Team 1</th>
+                                      <th>Team 2</th>
+                                      <td>DATE</td>
+                                      <td>TIME</td>
+                                      <td>LOCATION</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Team 1</th>
+                                      <th>Team 2</th>
+                                      <td>DATE</td>
+                                      <td>TIME</td>
+                                      <td>LOCATION</td>
+                                    </tr>
+                                    <tr>
+                                      <th>Team 1</th>
+                                      <th>Team 2</th>
+                                      <td>DATE</td>
+                                      <td>TIME</td>
+                                      <td>LOCATION</td>
+                                    </tr>
+                                    <tr class="no-bottom">
+                                      <th>Team 1</th>
+                                      <th>Team 2</th>
+                                      <td>DATE</td>
+                                      <td>TIME</td>
+                                      <td>LOCATION</td>
+                                    </tr>
+                                  </table>
+                              </article>
+                              <!-- Column 2 -->
+                              <article class="col-lg-6 col-md-6 col-sm-12">
+                                <table class="table schedule">
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr class="no-bottom">
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                </table>
+                              </article>
+                              </div>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingThree">
                               <!-- Accordion Head Label -->
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Upcoming Events
+                              Standings
                             </button>
                           </h2>
                           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                               <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                            <div class="accordion-body">
+                                <table class="table">
+                                  <tr class="bolder">
+                                    <th>Teams</th>
+                                    <td>Place</td>
+                                    <td>Record</td>
+                                  </tr>
+                                  <tr>
+                                    <th>The Wolfpack</th>
+                                    <td>1st</td>
+                                    <td>4-1</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team Chai-Yo</th>
+                                    <td>2nd</td>
+                                    <td>4-1</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Cornerstone</th>
+                                    <td>3rd</td>
+                                    <td>3-2</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Cornerstone</th>
+                                    <td>3rd</td>
+                                    <td>3-2</td>
+                                  </tr>
+                                  <tr>
+                                    <th>The Underdogs</th>
+                                    <td>4th</td>
+                                    <td>2-3</td>
+                                  </tr>
+                                  <tr>
+                                    <th>The Nightmare</th>
+                                    <td>5th</td>
+                                    <td>2-3</td>
+                                  </tr>
+                                  <tr>
+                                    <th>The Incredibles</th>
+                                    <td>6th</td>
+                                    <td>0-5</td>
+                                  </tr>
+                                </table>
+                            </div>
                           </div>
                         </div>
                       </div>
+                      
                          
                 </article>
             </section>
 
             <!-- Corporate Events Accordion -->
-            <section class="row bg-grey margin68" id="corporate-events">
+            <section class="row bg-grey margin68" id="division-2">
                 <article class="col-lg-2 col-md-12 col-sm-12">
                     <!-- Category Label Beside Accordion -->
-                        <h3 class="content-title">CORPORATE EVENTS</h3>
+                        <h3 class="content-title">DIVISION 2</h3>
                 </article>
                 <article class="col-lg-1 col-md-0 col-sm-0"></article> <!-- Column Spacing -->
                 <article class="col-lg-9 col-md-12 col-sm-12 ">
@@ -282,85 +433,184 @@
                           <h2 class="accordion-header" id="flush-headingFour">
                               <!-- Accordion Head Label -->
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                              General Info
+                              Teams
                             </button>
                           </h2>
                           <div id="flush-collapseFour" class="accordion-collapse collapse show" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                               <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                              <div class="accordion-body teams-content">
+                                  <nav>
+                                    <ul>
+                                      <li><a href="#division-1">TBD</a></li>
+                                      <li><a  href="#division-1">TBD</a></li>
+                                      <li><a  href="#division-1">TBD</a></li>
+                                      <li><a  href="#division-1">TBD</a></li>
+                                      <li><a  href="#division-1">TBD</a></li>
+                                      <li><a  href="#division-1">TBD</a></li>
+                                    </ul>
+                                  </nav>
+                              </div>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingFive">
                               <!-- Accordion Head Label -->
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                              Host Your Own
+                              Schedule
                             </button>
                           </h2>
                           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                               <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                            <div class="accordion-body row">
+                              <article class="col-lg-6 col-md-6 col-sm-12">
+                                <table class="table schedule">
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                  <tr class="no-bottom">
+                                    <th>Team 1</th>
+                                    <th>Team 2</th>
+                                    <td>DATE</td>
+                                    <td>TIME</td>
+                                    <td>LOCATION</td>
+                                  </tr>
+                                </table>
+                            </article>
+                            <!-- Column 2 -->
+                            <article class="col-lg-6 col-md-6 col-sm-12">
+                              <table class="table schedule">
+                                <tr>
+                                  <th>Team 1</th>
+                                  <th>Team 2</th>
+                                  <td>DATE</td>
+                                  <td>TIME</td>
+                                  <td>LOCATION</td>
+                                </tr>
+                                <tr>
+                                  <th>Team 1</th>
+                                  <th>Team 2</th>
+                                  <td>DATE</td>
+                                  <td>TIME</td>
+                                  <td>LOCATION</td>
+                                </tr>
+                                <tr>
+                                  <th>Team 1</th>
+                                  <th>Team 2</th>
+                                  <td>DATE</td>
+                                  <td>TIME</td>
+                                  <td>LOCATION</td>
+                                </tr>
+                                <tr>
+                                  <th>Team 1</th>
+                                  <th>Team 2</th>
+                                  <td>DATE</td>
+                                  <td>TIME</td>
+                                  <td>LOCATION</td>
+                                </tr>
+                                <tr>
+                                  <th>Team 1</th>
+                                  <th>Team 2</th>
+                                  <td>DATE</td>
+                                  <td>TIME</td>
+                                  <td>LOCATION</td>
+                                </tr>
+                                <tr class="no-bottom">
+                                  <th>Team 1</th>
+                                  <th>Team 2</th>
+                                  <td>DATE</td>
+                                  <td>TIME</td>
+                                  <td>LOCATION</td>
+                                </tr>
+                              </table>
+                            </article>
+                            </div>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingSix">
                               <!-- Accordion Head Label -->
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Upcoming Events
+                              Standings
                             </button>
                           </h2>
                           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                               <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                          </div>
-                        </div>
-                      </div>
-                </article>
-            </section>
-
-             <!-- Private Events Accordion -->
-             <section class="row bg-white margin68" id="private-events">
-                <article class="col-lg-2 col-md-12 col-sm-12">
-                    <!-- Category Label Beside Accordion -->
-                        <h3 class="content-title">PRIVATE EVENTS</h3>
-                </article>
-                <article class="col-lg-1 col-md-0 col-sm-0"></article> <!-- Column Spacing -->
-                <article class="col-lg-9 col-md-12 col-sm-12">
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingSeven">
-                              <!-- Accordion Head Label -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-                              General Info
-                            </button>
-                          </h2>
-                          <div id="flush-collapseSeven" class="accordion-collapse collapse show" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
-                              <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingEight">
-                              <!-- Accordion Head Label -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                              Host Your Own
-                            </button>
-                          </h2>
-                          <div id="flush-collapseEight" class="accordion-collapse collapse " aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
-                              <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingNine">
-                              <!-- Accordion Head Label -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
-                              Past Events
-                            </button>
-                          </h2>
-                          <div id="flush-collapseNine" class="accordion-collapse collapse " aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
-                              <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                              <div class="accordion-body">
+                                <table class="table">
+                                  <tr class="bolder">
+                                    <th>Teams</th>
+                                    <td>Place</td>
+                                    <td>Record</td>
+                                  </tr>
+                                  <tr>
+                                    <th>N/A</th>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                  </tr>
+                                  <tr>
+                                    <th>N/A</th>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                  </tr>
+                                  <tr>
+                                    <th>N/A</th>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                  </tr>
+                                  <tr>
+                                    <th>N/A</th>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                  </tr>
+                                  <tr>
+                                    <th>N/A</th>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                  </tr>
+                                  <tr>
+                                    <th>N/A</th>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                  </tr>
+                                  <tr>
+                                    <th>N/A</th>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                  </tr>
+                                </table>
+                              </div>
                           </div>
                         </div>
                       </div>
@@ -368,10 +618,10 @@
             </section>
 
             <!-- Exhibitions Events Accordion -->
-            <section class="row bg-grey margin68" id="exhibitions">
+            <section class="row bg-white margin68" id="rankings">
                 <article class="col-lg-2 col-md-12 col-sm-12">
                     <!-- Category Label Beside Accordion -->
-                        <h3 class="content-title" >EXHIBITIONS</h3>
+                        <h3 class="content-title" >Rankings</h3>
                 </article>
                 <article class="col-lg-1 col-md-0 col-sm-0"></article> <!-- Column Spacing -->
                 <article class="col-lg-9 col-md-12 col-sm-12">
@@ -380,41 +630,54 @@
                           <h2 class="accordion-header" id="flush-headingTen">
                               <!-- Accordion Head Label -->
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
-                              General Info
+                              Top Players
                             </button>
                           </h2>
                           <div id="flush-collapseTen" class="accordion-collapse collapse show" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
                               <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingEleven">
-                              <!-- Accordion Head Label -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                              Host Your Own
-                            </button>
-                          </h2>
-                          <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
-                              <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingTwelve">
-                              <!-- Accordion Head Label -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
-                              Past Events
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
-                              <!-- Accordion Body Description -->
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                            <div class="accordion-body">TBD</div>
                           </div>
                         </div>
                       </div>
                 </article>
             </section>
+
+            <!-- Private Events Accordion -->
+            <section class="row bg-grey margin68" id="registration-n-rules">
+              <article class="col-lg-2 col-md-12 col-sm-12">
+                  <!-- Category Label Beside Accordion -->
+                      <h3 class="content-title">Registration & Rules</h3>
+              </article>
+              <article class="col-lg-1 col-md-0 col-sm-0"></article> <!-- Column Spacing -->
+              <article class="col-lg-9 col-md-12 col-sm-12">
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <!-- Accordion Head Label -->
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            Register Your Team
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse show" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <!-- Accordion Body Description -->
+                          <div class="accordion-body">TBD</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                            <!-- Accordion Head Label -->
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                            Rules & Regulations
+                          </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse " aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <!-- Accordion Body Description -->
+                          <div class="accordion-body">TBD</div>
+                        </div>
+                      </div>
+                    </div>
+              </article>
+          </section>
 
             <!-- Stay Up To Speed Section -->
             <section class="row margin68 bg-midpurple">

@@ -356,6 +356,11 @@ section {
 	padding: 2em 8em;
 }
 
+@include sm {
+	.margin68{
+		padding: 2em 3em !important;
+	}
+}
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 /* Hero Section */
@@ -511,7 +516,15 @@ section {
 // Accordion ------------------------------------------------------
 .accordion-body{
 	border: 1px solid #dee2e6;
-	padding: 100px;
+	padding: 30px;
+th{
+	font-family: Inter-Bold;
+}
+td{
+	font-family: Inter-Light;
+}
+color: black;
+	
 }
 
 .accordion-item{
@@ -543,7 +556,6 @@ section {
 
 
 .accordion-item h2 button{
-	
 	text-align: left;
 	text-decoration: none;
 	color: $darkpurple;
@@ -618,6 +630,12 @@ section {
 .card-body {
 	padding: 1em 0;
 	width: 100%;
+	font-family:Inter-Light;
+	font-size: 18px;
+	h5{
+		font-family: Inter-Bold;
+		//font-size: 18px;
+	}
 }
 
 .card-margin{
@@ -635,6 +653,15 @@ section {
 	}
 	
 }
+
+.text-decoration-underline{
+	color: $darkpurple;
+}
+
+.text-decoration-underline:hover{
+	color: $lightpurple;
+}
+
 
 // Media Queries (Image Carousel) -------------------------------------------
 
@@ -684,18 +711,123 @@ section {
 	background-color: $lightcyan;
 	color:white;
 }
+// Team League --------------------------------------------------------------------------
+
+// Division 1 ---------------------------------------------------------------------------
+.teams-content{
+	ul {
+		text-align:center;
+		list-style: none;
+		}
+		li{
+			font-family: Inter-Bold;	
+			
+		display: inline-block;
+		// margin: 0px 30px;
+		margin: 30px 30px;
+		}
+		a{
+			
+		color:black;
+		}
+		a:hover{
+			color:$lightpurple;
+			}
+		th{
+			font-family: Inter-Bold;
+		}
+}
+
+@include sm {
+	.teams-content{
+			text-align:center;
+		
+		ul {
+			list-style: none;
+		}
+		li{
+			display: inline-block;
+			// margin: 0px 30px;
+			margin: 10px 50px;
+		}
+		a{
+			color:black;
+		}
+		a:hover{
+			color:$lightpurple;
+		}
+	}
+}
+
+.schedule{
+  vertical-align: middle;
+	th{
+		border: none;
+		text-align: center;
+		display: flex;
+  		justify-content: center;
+  		align-items: center;
+		font-family: Inter-Bold;
+		color: black;
+		font-size: 16px;
+	}
+	td{
+		vertical-align: center !important;
+		border: none;
+		font-family: Inter-Light;
+		color: black;
+		text-align: center;
+	}
+	tr{
+		border-bottom: 1px solid lightgrey;
+	}
+	.no-bottom{
+		border-bottom: 0px;
+	}
+	
+}
+.bolder{
+	border-bottom: 1px solid black;
+}
+
+td{
+	//padding-top: 20px !important;
+	//padding-bottom: 20px !important;
+	vertical-align: center !important;
+}
+
+@include sm {
+	.schedule{
+		th{
+			text-align: center;
+			display: flex;
+	  		justify-content: center;
+	  		align-items: center;
+		}
+		td{
+			//padding-top: 20px !important;
+			//padding-bottom: 20px !important;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;	
+		}
+	}
+}
+
 // Upcoming Events // Connect With Us Section -------------------------------------------
 .text-black{
 	h2{
 		color: black;
 		font-family: Inter-Bold;
-		
 	}
+
 	th, td{
 		color: black;
 		padding: 36.8px 0;
 		font-size: 18px;
 	}
+
 	tr{
 		border-bottom: 2px solid black;
 		padding-bottom: 30px;
@@ -711,6 +843,7 @@ section {
 		text-transform: uppercase;
 		padding-left: 8px;
 	}
+	
 }
 
 md
