@@ -251,6 +251,14 @@ div, article {
   background-color: #e8e8e8;
 }
 
+.bg-dark {
+  background-color: #6200ee !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
 .text-darkpurple {
   color: #3700b3;
 }
@@ -406,7 +414,7 @@ section {
 }
 
 .nav-link {
-  color: white;
+  color: white !important;
   font-family: Inter-Medium;
   text-transform: uppercase;
   font-size: 16px;
@@ -442,6 +450,33 @@ section {
 
 .dropdown-menu {
   background: #08011e;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Inter-Medium !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: Inter-Medium !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Inter-Medium !important;
+  }
 }
 
 .second-navbar {
@@ -520,15 +555,6 @@ section {
 
 .accordion-body, .accordion-item {
   margin: -1px;
-}
-
-@media only screen and (max-width: 960px) {
-  .navbar a {
-    text-decoration: none;
-    display: block;
-    padding: 0em 0.5em;
-    font-family: arial;
-  }
 }
 
 .breadcrumb-nav {
