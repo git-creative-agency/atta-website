@@ -186,7 +186,7 @@ body {
 }
 
 @media (min-width: 0px) {
-	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image,  footer {
 		max-width: 576px;
 		margin: 0 auto;
 	}
@@ -388,8 +388,92 @@ section {
 		background-attachment: relative;
 		padding: 0 8em;
 	}
+	.bg-image2 {
+		background: url("../images/desktop/tabletennis.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image3 {
+		background: url("../images/desktop/teamleague.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image4 {
+		background: url("../images/desktop/events.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image5 {
+		background: url("../images/desktop/outreach.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image6 {
+		background: url("../images/desktop/news.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image7 {
+		background: url("../images/desktop/career.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
 	.hero {
-		padding-top: 18em;
+		padding-top: 13em;
 		h1 {
 			font-family: Kasumi;
 			width: 100%;
@@ -420,8 +504,92 @@ section {
 		background-attachment: relative;
 		padding: 0 2.5em;
 	}
+	.bg-image2 {
+		background: url("../images/desktop/tabletennis.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image3 {
+		background: url("../images/desktop/teamleague.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image4 {
+		background: url("../images/desktop/events.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image5 {
+		background: url("../images/desktop/outreach.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image6 {
+		background: url("../images/desktop/news.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
+	.bg-image7 {
+		background: url("../images/desktop/career.jpg");
+		height: 65vh;
+		width: 100%;
+		opacity: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: relative;
+		padding: 0 8em;
+	}
 	.hero {
-		padding-top: 50em;
+		padding-top: 30%;
 		h1 {
 			font-family: Kasumi;
 			width: 100%;
@@ -447,14 +615,40 @@ section {
 .page-tagline { // secondary pages header
 	font-family: Kasumi;
 	// font-size: 70px;
+	font-size: 90px !important;
 	width: 100%;
 }
 
+
 .page-tagline2{
 	font-family: Kasumi;
-	font-size: 60px !important;
+	font-size: 50px !important;
 	
 }
+@include lg {
+	.page-tagline{
+		font-family: Kasumi;
+	font-size: 70px !important;
+	vertical-align: middle;
+	}
+}
+
+@include md {
+	.page-tagline{
+		font-family: Kasumi;
+	font-size: 60px !important;
+	vertical-align: middle;
+	}
+}
+
+@include sm {
+	.page-tagline{
+		font-family: Kasumi;
+	font-size: 50px !important;
+	vertical-align: middle;
+	}
+}
+
 
 // Main Navigation -------------------------------------------
 

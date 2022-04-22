@@ -349,8 +349,74 @@ section {
     background-attachment: relative;
     padding: 0 8em;
   }
+  .bg-image2 {
+    background: url("../images/desktop/tabletennis.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image3 {
+    background: url("../images/desktop/teamleague.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image4 {
+    background: url("../images/desktop/events.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image5 {
+    background: url("../images/desktop/outreach.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image6 {
+    background: url("../images/desktop/news.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image7 {
+    background: url("../images/desktop/career.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
   .hero {
-    padding-top: 18em;
+    padding-top: 13em;
   }
   .hero h1 {
     font-family: Kasumi;
@@ -377,8 +443,74 @@ section {
     background-attachment: relative;
     padding: 0 2.5em;
   }
+  .bg-image2 {
+    background: url("../images/desktop/tabletennis.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image3 {
+    background: url("../images/desktop/teamleague.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image4 {
+    background: url("../images/desktop/events.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image5 {
+    background: url("../images/desktop/outreach.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image6 {
+    background: url("../images/desktop/news.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
+  .bg-image7 {
+    background: url("../images/desktop/career.jpg");
+    height: 65vh;
+    width: 100%;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+    padding: 0 8em;
+  }
   .hero {
-    padding-top: 50em;
+    padding-top: 30%;
   }
   .hero h1 {
     font-family: Kasumi;
@@ -402,12 +534,37 @@ section {
 
 .page-tagline {
   font-family: Kasumi;
+  font-size: 90px !important;
   width: 100%;
 }
 
 .page-tagline2 {
   font-family: Kasumi;
-  font-size: 60px !important;
+  font-size: 50px !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .page-tagline {
+    font-family: Kasumi;
+    font-size: 70px !important;
+    vertical-align: middle;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page-tagline {
+    font-family: Kasumi;
+    font-size: 60px !important;
+    vertical-align: middle;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .page-tagline {
+    font-family: Kasumi;
+    font-size: 50px !important;
+    vertical-align: middle;
+  }
 }
 
 .navbar-brand img {
