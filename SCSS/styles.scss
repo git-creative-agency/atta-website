@@ -33,11 +33,15 @@ $grey: 			rgb(232, 232, 232);
 // Sizes
 $size: 12px; // for padding, etc.
 $radius: 3px;
+
 $grid-breakpoints: (
-	phone: 0,
-	tablet: 600px,
-	desktop: 900px,
-	large: 1600px);
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 // Misc.
 $prefixes: -webkit-,
@@ -167,22 +171,13 @@ $prefixes: -webkit-,
 	}
 }
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-
 // General Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
 	scroll-behavior: smooth;
 }
 
@@ -277,17 +272,6 @@ a, a:link, a:active {
     color: white;
 }
 
-
-
-.btn {
-	color: $white;
-	background-color: $lightpurple;
-	border-radius: 50px;
-	padding: 10px 50px;
-	border: none;
-}
-
-
 // Global Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 * {
@@ -319,7 +303,9 @@ a, a:link, a:active {
 .text-black 		{color: $black;}
 .text-white 		{color: $white;}
 .text-grey 			{color: $grey;}
+
 /// Fonts ---------------------------------------------------------------------
+
 h2 {
 	font-family: Inter-Bold;
 }
@@ -448,7 +434,7 @@ section {
 //Navbar Content ------------------------------------------------------
 
 .navbar {
-	padding: 2em 8em;
+	padding: 3em 6.75em;
 }
 
 
@@ -602,16 +588,22 @@ color: black;
 
 // Breadcrumb Navigation -------------------------------------------
 
-.breadcrumb, .breadcrumb-item {
-    height: 25px;
-    font-size: smaller !important;
-    text-transform: uppercase;
-	font-family:Inter-Medium;
-	padding-left: 2em;
-	margin: 0;
-}
-.breadcrumb{
-	background-color:$darkblue;
+.breadcrumb-nav {  // main breadcrumb nav container
+	padding: .5em 8em;
+	height: 2em;
+
+	.breadcrumb-item { // breadcrumb li
+		font-size: small;
+		text-transform: uppercase;
+		font-family: Inter-Medium;
+		line-height: normal;
+	}
+	.active { // active link
+		font-weight: bold;
+	}
+	a:hover {
+		color: $lightpurple;
+	}
 }
 
 // Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -619,11 +611,11 @@ color: black;
 // News Section -------------------------------------------
 
 .card-deck, .card {
-	background-color: #08011E; // color from XD Prototype
+	background-color: $darkblue; // color from XD Prototype
 }
 
 .card-deck-invert, .card-invert {
-	background-color: white; // color from XD Prototype
+	background-color: $white; // color from XD Prototype
 	color: black;
 }
 
@@ -665,14 +657,6 @@ color: black;
 
 // Media Queries (Image Carousel) -------------------------------------------
 
-
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   xxl: 1400px
-
 @media (min-width: 992px) { 
   .containerMobile {
     display: none;
@@ -686,6 +670,7 @@ color: black;
 }
 
 // ATTA Maps -----------------------------------------------------------
+
 .ATTA-maps{
 	width: 100%;
 	height: 720px;
@@ -693,6 +678,7 @@ color: black;
 	margin-bottom: 0px;
 }
 // Column Lines ------------------------------------------------------
+
 .news-row-style {
 	border-bottom: 5px solid white;
 	width: 100%;
@@ -703,13 +689,18 @@ color: black;
 	color: white;
 }
 // Buttons ------------------------------------------------------------------------------
-.btn-midpurple{
+
+.btn {
+	color: $white;
 	background-color: $lightpurple;
-	color:white;
-}
-.btn-midpurple:hover{
-	background-color: $lightcyan;
-	color:white;
+	border-radius: 50px;
+	padding: 10px 50px;
+	border: none;
+
+	&:hover {
+		background-color: $lightcyan;
+		color: $darkblue;
+	}	
 }
 // Team League --------------------------------------------------------------------------
 
@@ -899,11 +890,11 @@ md
 		}
 	}
 	*/
-a:hover{
-	color:$lightpurple;
-	//color:$lightcyan;
-	//color:rgb(191, 173, 212);
-}
+	a:hover {
+		color:$lightpurple;
+		//color:$lightcyan;
+		//color:rgb(191, 173, 212);
+	}
 }
 
 // Stay Up To Speed Section -------------------------------------------

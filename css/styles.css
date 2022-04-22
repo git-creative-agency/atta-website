@@ -113,7 +113,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -206,14 +206,6 @@ h1, h3 {
 a, a:link, a:active {
   text-decoration: none;
   color: white;
-}
-
-.btn {
-  color: white;
-  background-color: #bb86fc;
-  border-radius: 50px;
-  padding: 10px 50px;
-  border: none;
 }
 
 * {
@@ -374,7 +366,7 @@ section {
 }
 
 .navbar {
-  padding: 2em 8em;
+  padding: 3em 6.75em;
 }
 
 .nav-link {
@@ -499,21 +491,28 @@ section {
   }
 }
 
-.breadcrumb, .breadcrumb-item {
-  height: 25px;
-  font-size: smaller !important;
-  text-transform: uppercase;
-  font-family: Inter-Medium;
-  padding-left: 2em;
-  margin: 0;
+.breadcrumb-nav {
+  padding: .5em 8em;
+  height: 2em;
 }
 
-.breadcrumb {
-  background-color: #08011e;
+.breadcrumb-nav .breadcrumb-item {
+  font-size: small;
+  text-transform: uppercase;
+  font-family: Inter-Medium;
+  line-height: normal;
+}
+
+.breadcrumb-nav .active {
+  font-weight: bold;
+}
+
+.breadcrumb-nav a:hover {
+  color: #bb86fc;
 }
 
 .card-deck, .card {
-  background-color: #08011E;
+  background-color: #08011e;
 }
 
 .card-deck-invert, .card-invert {
@@ -585,14 +584,17 @@ section {
   color: white;
 }
 
-.btn-midpurple {
-  background-color: #bb86fc;
+.btn {
   color: white;
+  background-color: #bb86fc;
+  border-radius: 50px;
+  padding: 10px 50px;
+  border: none;
 }
 
-.btn-midpurple:hover {
+.btn:hover {
   background-color: #03dac5;
-  color: white;
+  color: #08011e;
 }
 
 .teams-content ul {
