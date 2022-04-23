@@ -141,6 +141,9 @@ $prefixes: -webkit-,
 	@return mix(black, $color, $percentage);
 }
 
+// Media Queries -----------------------------------------------------
+
+
 @mixin xxl { // Large - 1601 to 2500 screen size
 	@media only screen and (max-width: 1400px) {
 		@content;
@@ -171,6 +174,30 @@ $prefixes: -webkit-,
 	}
 }
 
+// Hero Images -----------------------------------------------------
+
+@mixin desktop-image-replace ($imageURL) { // replaces desktop hero-image on repective pages
+	background: url($imageURL); // argument that changes hero-image URL
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: relative;
+}
+
+@mixin mobile-image-replace ($imageURL) { // replaces mobile hero-image on repective pages
+	background: url($imageURL); // argument that changes hero-image URL
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: relative;
+}
+
 // General Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 html {
@@ -186,7 +213,7 @@ body {
 }
 
 @media (min-width: 0px) {
-	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image,  footer {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image,  footer {
 		max-width: 576px;
 		margin: 0 auto;
 	}
@@ -199,7 +226,7 @@ body {
 }
 
 @media (min-width: 576px) {
-	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
 		max-width: 768px;
 		margin: 0 auto;
 	}
@@ -213,7 +240,7 @@ body {
 
 
 @media (min-width: 768px) {
-	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
 		max-width: 992px;
 		margin: 0 auto;
 	}
@@ -226,7 +253,7 @@ body {
 }
 
 @media (min-width: 992px) {
-	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
 		max-width: 1200px;
 		margin: 0 auto;
 	}
@@ -239,7 +266,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
 		max-width: 1400px;
 		margin: 0 auto;
 	}
@@ -252,7 +279,7 @@ body {
 }
 
 @media (min-width: 1400px) {
-	header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+	header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
 		max-width: 1920px;
 		margin: 0 auto;
 	}
@@ -262,10 +289,6 @@ body {
 	html {
 		background-color: black;
 	}
-}
-
-h1, h3 {
-    text-transform: uppercase !important;
 }
 
 a, a:link, a:active {
@@ -363,117 +386,42 @@ section {
 
 /* Hero Section */
 
-.d-grid {
-	margin: auto;
-	padding: 0;
-	bottom: 0;
-}
-
-.bg-image row {
-	bottom: 0;
-}
-
 @media (min-width: 992px) { // desktop hero image size
-	.bg-image {
-		background: url("../images/desktop/home.jpg");
+	.hero-image {
 		height: 65vh;
-		width: 100%;
+		max-width: 100%;
+		// max-width: 1920px;
+		// max-height: 900px;
 		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
 		padding: 0 8em;
+		position: relative;
 	}
-	.bg-image2 {
-		background: url("../images/desktop/tabletennis.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
+	// replaces desktop hero-image for each respective page
+	.hero-home {
+		@include desktop-image-replace("../images/desktop/home.jpg");
 	}
-	.bg-image3 {
-		background: url("../images/desktop/teamleague.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
+	.hero-table-tennis {
+		@include desktop-image-replace("../images.desktop/tabletennis.jpg");
 	}
-	.bg-image4 {
-		background: url("../images/desktop/events.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
+	.hero-team-league {
+		@include desktop-image-replace("../images/desktop/teamleague.jpg");
 	}
-	.bg-image5 {
-		background: url("../images/desktop/outreach.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
+	.hero-events {
+		@include desktop-image-replace("../images/desktop/events.jpg");
 	}
-	.bg-image6 {
-		background: url("../images/desktop/news.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
+	.hero-outreach {
+		@include desktop-image-replace("../images/desktop/outreach.jpg");
 	}
-	.bg-image7 {
-		background: url("../images/desktop/career.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
+	.hero-news {
+		@include desktop-image-replace("../images/desktop/news.jpg");
 	}
-	.hero {
-		padding-top: 13em;
+	.hero-career {
+		@include desktop-image-replace("../images/desktop/career.jpg");
+	}
+	.hero-text {
+		position: absolute;
+		padding: inherit;
+		bottom: 0;
 		h1 {
 			font-family: Kasumi;
 			width: 100%;
@@ -486,118 +434,49 @@ section {
 			display: none;
 		}
 	}
-	
 } 
 
 @media (max-width: 992px) { // mobile hero image size
-	.bg-image {
-		background: url("../images/mobile/home.jpg");
+	.hero-image {
 		height: 100vh;
 		width: 100%;
 		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
 		padding: 0 2.5em;
+		position: relative;
 	}
-	.bg-image2 {
-		background: url("../images/desktop/tabletennis.jpg");
-		height: 65vh;
+	// replaces mobile hero-image for each respective page
+	.hero-home {
+		@include mobile-image-replace("../images/mobile/home.jpg");
+	}
+	.hero-table-tennis {
+		@include mobile-image-replace("../images/mobile/tabletennis.jpg");
+	}
+	.hero-team-league {
+		@include mobile-image-replace("../images/mobile/teamleague.jpg");
+	}
+	.hero-events {
+		@include mobile-image-replace("../images/mobile/events.jpg");
+	}
+	.hero-outreach {
+		@include mobile-image-replace("../images/mobile/outreach.jpg");
+	}
+	.hero-news {
+		@include mobile-image-replace("../images/mobile/news.jpg");
+	}
+	.hero-career {
+		@include mobile-image-replace("../images/mobile/career.jpg");
+	}
+	.hero-text {
+		position: absolute;
+		padding: inherit;
+		bottom: 0;
+	h1 {
+		font-family: Kasumi;
 		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
-	}
-	.bg-image3 {
-		background: url("../images/desktop/teamleague.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
-	}
-	.bg-image4 {
-		background: url("../images/desktop/events.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
-	}
-	.bg-image5 {
-		background: url("../images/desktop/outreach.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
-	}
-	.bg-image6 {
-		background: url("../images/desktop/news.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
-	}
-	.bg-image7 {
-		background: url("../images/desktop/career.jpg");
-		height: 65vh;
-		width: 100%;
-		opacity: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		background-attachment: relative;
-		padding: 0 8em;
-	}
-	.hero {
-		padding-top: 30%;
-		h1 {
-			font-family: Kasumi;
-			width: 100%;
-			font-size: 5.25em;
-			line-height: 1em;
-			letter-spacing: .1em;
-			margin: .25em 0;
-		}
+		font-size: 5.25em;
+		line-height: 1em;
+		letter-spacing: .1em;
+		margin: .25em 0;
 	}
 	.hero-button-desktop {
 		display: none;
@@ -605,7 +484,6 @@ section {
 }
 
 .call-to-action {
-	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
@@ -613,8 +491,8 @@ section {
 }
 
 .page-tagline { // secondary pages header
-	font-family: Kasumi;
-	// font-size: 70px;
+	padding: 0;
+	font-family: Inter-Bold !important;
 	font-size: 90px !important;
 	width: 100%;
 }

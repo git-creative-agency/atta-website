@@ -122,7 +122,7 @@ body {
 }
 
 @media (min-width: 0px) {
-  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
     max-width: 576px;
     margin: 0 auto;
   }
@@ -135,7 +135,7 @@ body {
 }
 
 @media (min-width: 576px) {
-  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
     max-width: 768px;
     margin: 0 auto;
   }
@@ -148,7 +148,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
     max-width: 992px;
     margin: 0 auto;
   }
@@ -161,7 +161,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -174,7 +174,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
     max-width: 1400px;
     margin: 0 auto;
   }
@@ -187,7 +187,7 @@ body {
 }
 
 @media (min-width: 1400px) {
-  header, body, main, section, .row, .containerDesktop, .container-fluid .bg-image, footer {
+  header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
     max-width: 1920px;
     margin: 0 auto;
   }
@@ -197,10 +197,6 @@ body {
   html {
     background-color: black;
   }
-}
-
-h1, h3 {
-  text-transform: uppercase !important;
 }
 
 a, a:link, a:active {
@@ -333,186 +329,140 @@ section {
   bottom: 0;
 }
 
-.bg-image row {
-  bottom: 0;
-}
-
 @media (min-width: 992px) {
-  .bg-image {
+  .hero-image {
+    height: 65vh;
+    max-width: 100%;
+    opacity: 100%;
+    padding: 0 8em;
+    position: relative;
+  }
+  .hero-home {
     background: url("../images/desktop/home.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image2 {
-    background: url("../images/desktop/tabletennis.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
+  .hero-table-tennis {
+    background: url("../images.desktop/tabletennis.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image3 {
+  .hero-team-league {
     background: url("../images/desktop/teamleague.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image4 {
+  .hero-events {
     background: url("../images/desktop/events.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image5 {
+  .hero-outreach {
     background: url("../images/desktop/outreach.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image6 {
+  .hero-news {
     background: url("../images/desktop/news.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image7 {
+  .hero-career {
     background: url("../images/desktop/career.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .hero {
-    padding-top: 13em;
+  .hero-text {
+    position: absolute;
+    padding: inherit;
+    bottom: 0;
   }
-  .hero h1 {
+  .hero-text h1 {
     font-family: Kasumi;
-    width: 100%;
     font-size: 7em;
     line-height: 1em;
     letter-spacing: .1em;
     margin: .25em 0;
   }
-  .hero .hero-button-mobile {
+  .hero-text .hero-button-mobile {
     display: none;
   }
 }
 
 @media (max-width: 992px) {
-  .bg-image {
-    background: url("../images/mobile/home.jpg");
-    height: 100vh;
-    width: 100%;
+  .hero-image {
+    height: auto;
+    width: 100vw;
     opacity: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: relative;
     padding: 0 2.5em;
   }
-  .bg-image2 {
-    background: url("../images/desktop/tabletennis.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
+  .hero-home {
+    background: url("../images/mobile/home.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image3 {
-    background: url("../images/desktop/teamleague.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
+  .hero-table-tennis {
+    background: url("../images/mobile/tabletennis.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image4 {
-    background: url("../images/desktop/events.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
+  .hero-team-league {
+    background: url("../images/mobile/teamleague.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image5 {
-    background: url("../images/desktop/outreach.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
+  .hero-events {
+    background: url("../images/mobile/events.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image6 {
-    background: url("../images/desktop/news.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
+  .hero-outreach {
+    background: url("../images/mobile/outreach.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .bg-image7 {
-    background: url("../images/desktop/career.jpg");
-    height: 65vh;
-    width: 100%;
-    opacity: 100%;
+  .hero-news {
+    background: url("../images/mobile/news.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
-    padding: 0 8em;
   }
-  .hero {
-    padding-top: 30%;
+  .hero-career {
+    background: url("../images/mobile/career.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
   }
-  .hero h1 {
+  .hero-text {
+    padding-top: 50em;
+  }
+  .hero-text h1 {
     font-family: Kasumi;
     width: 100%;
     font-size: 5.25em;
@@ -526,14 +476,14 @@ section {
 }
 
 .call-to-action {
-  position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .page-tagline {
-  font-family: Kasumi;
+  padding: 0;
+  font-family: Inter-Bold !important;
   font-size: 90px !important;
   width: 100%;
 }
