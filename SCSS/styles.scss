@@ -1,12 +1,14 @@
 // Variables -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // Type
+
 $serif: '', '', '', serif; // insert brand serif fonts here
 $sans: '', '', sans-serif; // insert brand sans-serif fonts here
 $sans-cond: ''; // insert brand sans-serif condensed fonts here
 $mono: ''; // insert brand mono fonts here
 
 // Colors (hex)
+
 /*
 dark purple:      #3700B3
 midtone purple:   #6200EE
@@ -20,6 +22,7 @@ grey: 			  #E8E8E8
 */
 
 // Colors (rgb var)
+
 $darkpurple:	rgb(55, 00, 179);
 $midpurple: 	rgb(98, 00, 238);
 $lightpurple:	rgb(187, 134, 252);
@@ -31,6 +34,7 @@ $white:			rgb(255, 255, 255);
 $grey: 			rgb(232, 232, 232);
 
 // Sizes
+
 $size: 12px; // for padding, etc.
 $radius: 3px;
 
@@ -44,12 +48,14 @@ $grid-breakpoints: (
 );
 
 // Misc.
+
 $prefixes: -webkit-,
 -moz-,
 -o-,
 "";
 
 // Fonts
+
 @font-face {
 	font-family: "Kasumi";
 	src: url("/fonts/Kasumi\ Regular.otf")
@@ -238,7 +244,6 @@ body {
 	}
 }
 
-
 @media (min-width: 768px) {
 	header, body, main, section, .row, .containerDesktop, .container-fluid .hero-image, footer {
 		max-width: 992px;
@@ -291,9 +296,11 @@ body {
 	}
 }
 
-a, a:link, a:active {
+a {
     text-decoration: none;
-    color: white;
+    color: $white;
+	&:hover {color: $lightpurple}
+
 }
 
 // Global Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -321,13 +328,6 @@ div, article {
 .bg-black 			{background-color: $black;}
 .bg-white 			{background-color: $white;}
 .bg-grey 			{background-color: $grey;}
-.bg-dark {
-	background-color: $midpurple !important;
-}
-.nav-link {
-	color: white !important;
-}
-
 
 // Text Colors -----------------------------------------------------
 
@@ -344,6 +344,7 @@ div, article {
 h2 {
 	font-family: Inter-Bold;
 }
+
 // Page Structure -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // CSS Grid -------------------------------------------
@@ -361,37 +362,46 @@ section {
 	padding: 6em 1em;
 }
 
-.margin28{
+.margin28 {
 	padding: 2em 8em;
 }
 
-.margin38{
+.margin38 {
 	padding: 3em 8em;
 }
 
-.margin18{
+.margin18 {
 	padding: 2em 8em;
 }
 
-.footermargin{
+.footermargin {
 	padding: 2em 8em;
 }
 
 @include sm {
-	.margin68{
+	.margin68 {
 		padding: 2em 3em !important;
 	}
 }
+
 // Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 /* Hero Section */
+
+.d-grid {
+	padding: 0;
+	margin: 0;
+}
+
+.hero_image {
+	opacity: 100%;
+	position: relative;
+}
 
 @media (min-width: 992px) { // desktop hero image size
 	.hero-image {
 		height: 65vh;
 		max-width: 100%;
-		// max-width: 1920px;
-		// max-height: 900px;
 		opacity: 100%;
 		padding: 0 8em;
 		position: relative;
@@ -425,10 +435,11 @@ section {
 		h1 {
 			font-family: Kasumi;
 			width: 100%;
-			font-size: 7em;
+			font-size: 6.5vw;
 			line-height: 1em;
 			letter-spacing: .1em;
 			margin: .25em 0;
+			white-space: nowrap;
 		}
 		.hero-button-mobile {
 			display: none;
@@ -441,7 +452,7 @@ section {
 		height: 100vh;
 		width: 100%;
 		opacity: 100%;
-		padding: 0 2.5em;
+		padding: 4em;
 		position: relative;
 	}
 	// replaces mobile hero-image for each respective page
@@ -470,16 +481,17 @@ section {
 		position: absolute;
 		padding: inherit;
 		bottom: 0;
-	h1 {
-		font-family: Kasumi;
-		width: 100%;
-		font-size: 5.25em;
-		line-height: 1em;
-		letter-spacing: .1em;
-		margin: .25em 0;
-	}
-	.hero-button-desktop {
-		display: none;
+		h1 {
+			font-family: Kasumi;
+			width: 100%;
+			font-size: 12vw;
+			line-height: 1em;
+			letter-spacing: .1em;
+			margin: .25em auto;
+		}
+		.hero-button-desktop {
+			display: none;
+		}
 	}
 }
 
@@ -497,33 +509,32 @@ section {
 	width: 100%;
 }
 
-
-.page-tagline2{
+.page-tagline2 {
 	font-family: Kasumi;
-	font-size: 50px !important;
-	
+	font-size: 50px !important;	
 }
+
 @include lg {
-	.page-tagline{
+	.page-tagline {
 		font-family: Kasumi;
-	font-size: 70px !important;
-	vertical-align: middle;
+		font-size: 70px !important;
+		vertical-align: middle;
 	}
 }
 
 @include md {
-	.page-tagline{
+	.page-tagline {
 		font-family: Kasumi;
-	font-size: 60px !important;
-	vertical-align: middle;
+		font-size: 60px !important;
+		vertical-align: middle;
 	}
 }
 
 @include sm {
-	.page-tagline{
+	.page-tagline {
 		font-family: Kasumi;
-	font-size: 50px !important;
-	vertical-align: middle;
+		font-size: 50px !important;
+		vertical-align: middle;
 	}
 }
 
@@ -534,6 +545,7 @@ section {
 
 .navbar-brand img { 
     width: 187px;
+	height: auto;
 }
 
 //Navbar Content ------------------------------------------------------
@@ -543,23 +555,27 @@ section {
 }
 
 .nav-link {
-	color:white !important;
+	color: $white !important;
 	font-family: Inter-Medium;
     text-transform: uppercase;
 	font-size: 16px;
 	&:hover {color: $lightpurple;} // defines the hover state
-	// &:active {color: $lightcyan;}
+	&:active {color: $lightcyan; background-color: $lightcyan;}
 	&:visited {color: $white;}
+	&:focus {background-color: $darkpurple;}
 }
-.dropdown-item{
+
+.dropdown-item {
 	cursor: pointer;
 }
-.dropdown-header{ // color of navbar main
+
+.dropdown-header { // color of navbar main
 	color: $lightpurple !important;
 	font-family: Inter-Medium;
 	font-size: 16px !important;
 	//text-decoration: underline;
 }
+
 .dropdown-item { // color of submenu items
 	color:white;
 	font-size: 16px;
@@ -575,6 +591,7 @@ section {
 }
 
 // Main Navbar Mobile
+
 @include xxl {
 	.nav-link {
 		color: white !important;
@@ -582,32 +599,36 @@ section {
 		font-size: 16px;
 		font-family: Inter-Medium !important;
 	}
+}
+
+@include xl {
+	.nav-link {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-family: Inter-Medium !important;
 	}
-	@include xl {
-		.nav-link {
-			color: white !important;
-			text-transform: uppercase;
-			font-size: 11px;
-			font-family: Inter-Medium !important;
-		}
-		}
-	@include lg{
+}
+
+@include lg {
 	.nav-link {
 		color: white !important;
 		text-transform: uppercase;
 		font-size: 16px;
 		font-family: Inter-Medium !important; 
 	}
-	}
+}
 
 // Second Navbar ------------------------------------------------
 
 .second-navbar {
 	display: inline-block;
 }
+
 .second-navbar-center {
 	text-align:center;
 }
+
 .second-navbar {
 	text-align:center;
 	a {
@@ -624,45 +645,40 @@ section {
 }
 
 // Accordion ------------------------------------------------------
-.accordion-body{
+
+.accordion-body {
 	border: 1px solid #dee2e6;
 	padding: 30px;
-th{
-	font-family: Inter-Bold;
-}
-td{
-	font-family: Inter-Light;
-}
-color: black;
-	
+	color: black;
+	th {
+		font-family: Inter-Bold;
+	}
+	td {
+		font-family: Inter-Light;
+	}
 }
 
-.accordion-item{
+.accordion-item {
 	font-size: 15px;
 	border: 1px solid #dee2e6 !important;
+	button {
+		&:hover {
+			color: $lightpurple !important;
+		}
+		&:active {
+			color: $midpurple !important;
+		}
+	}
+	.accordion-header {
+		border-bottom: 1px solid #dee2e6 !important;
+	}
 }
 
-.accordion-header{
-	border-bottom: 1px solid #dee2e6 !important;
-}
-
-.accordion-item h2 button:hover{
-	color: $lightpurple !important;
-}
-
-.accordion-item h2 button :active{
-	color: red !important;
-}
-
-.content-title{
-	color: $black;
-}
-
-.content-title-invert{
+.content-title-invert {
 	color: $white;
 }
 
-.accordion-item h2 button{
+.accordion-item h2 button {
 	text-align: left;
 	text-decoration: none;
 	color: $darkpurple;
@@ -699,7 +715,6 @@ color: black;
 .breadcrumb-nav {  // main breadcrumb nav container
 	padding: .5em 8em;
 	height: 2em;
-
 	.breadcrumb-item { // breadcrumb li
 		font-size: small;
 		text-transform: uppercase;
@@ -708,9 +723,6 @@ color: black;
 	}
 	.active { // active link
 		font-weight: bold;
-	}
-	a:hover {
-		color: $lightpurple;
 	}
 }
 
@@ -751,7 +763,6 @@ color: black;
 	a {
 	color: black;
 	}
-	
 }
 
 .text-decoration-underline {
@@ -776,33 +787,36 @@ color: black;
     display: none;
   }
 }
+
 // Sponsor US
+
 .pricetag {
 	font-family: Inter-Bold;
 	float: right;
 	color: $midpurple
-	
-
 }
+
 // ATTA Maps -----------------------------------------------------------
 
-.ATTA-maps{
+.ATTA-maps {
 	width: 100%;
 	height: 720px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+
 // Column Lines ------------------------------------------------------
 
 .news-row-style {
 	border-bottom: 5px solid white;
 	width: 100%;
 	font-size: 24px;	
-  }
+}
 
 .news-a-style {
 	color: white;
 }
+
 // Buttons ------------------------------------------------------------------------------
 
 .btn {
@@ -810,48 +824,46 @@ color: black;
 	background-color: $lightpurple;
 	height: 3.125em;
 	width: 16.25em;
-	border-radius: 50px;
 	padding: 1em 0;
 	border: none;
 	line-height: normal;
 	text-transform: uppercase;
+	font-family: Inter-Light;
+	font-size: 18px;
+	margin-top: .5em;
 
 	&:hover {
 		background-color: $lightcyan;
 		color: $darkblue;
 	}	
 }
+
 // Team League --------------------------------------------------------------------------
 
 // Division 1 ---------------------------------------------------------------------------
+
 .teams-content {
 	ul {
 		text-align:center;
 		list-style: none;
-		}
-		li {
-			font-family: Inter-Bold;	
-			
+	}
+	li {
+		font-family: Inter-Bold;	
 		display: inline-block;
 		// margin: 0px 30px;
 		margin: 30px 30px;
-		}
-		a {
-			
-		color:black;
-		}
-		a:hover {
-			color:$lightpurple;
-			}
-		th{
-			font-family: Inter-Bold;
-		}
+	}
+	a {
+		color:$black;
+	}
+	th {
+		font-family: Inter-Bold;
+	}
 }
 
 @include sm {
-	.teams-content{
-			text-align:center;
-		
+	.teams-content {
+		text-align:center;
 		ul {
 			list-style: none;
 		}
@@ -861,10 +873,7 @@ color: black;
 			margin: 10px 50px;
 		}
 		a {
-			color:black;
-		}
-		a:hover {
-			color:$lightpurple;
+			color:$black;
 		}
 	}
 }
@@ -894,8 +903,8 @@ color: black;
 	.no-bottom {
 		border-bottom: 0px;
 	}
-	
 }
+
 .bolder {
 	border-bottom: 1px solid black;
 }
@@ -924,95 +933,79 @@ td {
 		}
 	}
 }
+
 // Coach's Info -------------------------------------------------------------------------
-.coach-img{
+
+.coach-img {
 	width: 200px;
 	border-radius: 200px;
 	text-align: center;
 	margin: 0 auto;
 	display: flex;
 }
+
 .coach-details {
 	vertical-align: middle !important;
 	height: 200px;
 	text-align: center;
 	font-size: 18px;
 	vertical-align: middle !important;
-td{
-	border-bottom: 0px solid grey;
-}		
+	td {
+		border-bottom: 0px solid grey;
+	}		
 }
 
-@include xl{ 
-.coach-img{
-	width: 200px;
-	border-radius: 200px;
-	text-align: center;
-	margin: 0 auto;
-	display: flex;
-}
-.coach-details {
-	vertical-align: middle !important;
-	height: 100px;
-	text-align: center;
-	font-size: 18px;
-	vertical-align: middle !important;
-td{
-	border-bottom: 0px solid grey;
-}		
-}
+@include xl { 
+	.coach-img {
+		width: 200px;
+		border-radius: 200px;
+		text-align: center;
+		margin: 0 auto;
+		display: flex;
+	}
+	.coach-details {
+		vertical-align: middle !important;
+		height: 100px;
+		text-align: center;
+		font-size: 18px;
+		vertical-align: middle !important;
+		td {
+			border-bottom: 0px solid grey;
+		}		
+	}
 }
 
 // Rules of the Game --------------------------------------------------------------------
-.rules ul{
+
+.rules ul {
 	list-style: none;	
 	font-family: Inter-Light;
-	
 }
+
 // Upcoming Events // Connect With Us Section -------------------------------------------
+
 .text-black {
 	h2 { 
-		color: $black;
 		font-family: Inter-Bold;
 	}
-
 	th, td {
-		color: $black;
 		padding: 36.8px 0;
 		font-size: 18px;
 	}
-
 	tr {
 		border-bottom: 2px solid black;
 		padding-bottom: 30px;
 		font-size: 18px;
 	}
 	label {
-		color: $black;
 		font-family: Inter-Light;
 		font-size: 18px;
-		text-transform: lowercase;
-	}
-	label::first-letter {
-		text-transform: uppercase;
+		text-transform: capitalize;
 		padding-left: 8px;
 	}
-}
-
-.button-font button {
-	font-family: Inter-Light;
-	font-size: 18px;
-	margin-top: 2em;
-	border-radius: 50px;
-	padding: 15px 30px;
-}
-
-.button-font-big button {
-	font-family: Inter-Light;
-	font-size: 18px;
-	margin-top: 0em;
-	border-radius: 50px;
-	padding: 15px 30px;
+	label::first-letter {
+		padding-left: 8px;
+	}
 }
 
 .content-title {
@@ -1026,16 +1019,13 @@ td{
 	padding-right: 40px;	
 	
 }
-.content-title-invert { 
-	color: $white;
-}
 
 .upcoming-events-border-black {
-	tr{
-		border-bottom: 2px solid white;
+	tr {
+		border-bottom: 2px solid $white;
 		font-family: Inter-Bold;
 	} 
-	th{
+	th {
 		font-family: Inter-Light;
 		font-size: 28px;
 		color: $white;
@@ -1048,11 +1038,6 @@ td{
 		}
 	}
 	*/
-	a:hover {
-		color: $lightpurple;
-		//color:$lightcyan;
-		//color:rgb(191, 173, 212);
-	}
 }
 
 // Stay Up To Speed Section -------------------------------------------
@@ -1120,7 +1105,6 @@ $container-max-widths: (
 
 .footer-color {
 	// background-color: $darkblue;
-	
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -1172,7 +1156,7 @@ $container-max-widths: (
 	}
 	.ftr-logo {
 		width: 350px;	
-}
+	}
 	.ftr-vert {
 		// background-color: $darkblue;
 		text-align: center;
@@ -1201,30 +1185,30 @@ $container-max-widths: (
 	.margin18 {
 		padding: 1em 4em;
 	}
-	.social-logo{
+	.social-logo {
 		width:40px;
 		margin: 0px 15px;
 	}
-	.social-row{
-		display: flex !important;
-		flex-direction: row-reverse !important;
+	.social-row {
+		// display: flex !important;
+		// flex-direction: row-reverse !important;
 		float: none;
 		text-align: center;
 		justify-content: center;
 		align-items: center;
 	}
-	.social-logo{
+	.social-logo {
 		width:40px;
 		margin: 0px 65px;	
 	}	
 }
 
 @include md {
-	.social-logo{
-		width:40px;
+	.social-logo {
+		width: 40px;
 		margin: 0px 32px;
 	}
-	.credits-color {
+	.credits {
 		height: 9em;
 		background-color: black;
 	}
@@ -1237,32 +1221,30 @@ $container-max-widths: (
 	.margin18 {
 		padding: 1em 4em;
 	}
-
 	.social-logo {
-		width:40px;
+		width: 40px;
 		margin: 0px 19px;
+	}
+	.social-row {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.ftr-col-1,
+	.ftr-col-2,
+	.ftr-col-3,
+	.ftr-col-4 {
+		font-family: arial;
+		font-size: 10px;
+		width: 200px;
+		height: 45px;
+		margin: 10px 25px;	
+	}
+	.credits {
+		height: 20em;
+		// background-color: black;
+	}
+	.ftr-col-name {
+		padding-top: 10px;
+	}
 }
 
-.social-row {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.ftr-col-1,
-.ftr-col-2,
-.ftr-col-3,
-.ftr-col-4 {
-	font-family: arial;
-	font-size: 10px;
-	width: 200px;
-	height: 45px;
-	margin: 10px 25px;	
-}
-.credits-color {
-	height: 20em;
-	// background-color: black;
-}
-.ftr-col-name {
-	padding-top: 10px;
-}
-}

@@ -199,9 +199,13 @@ body {
   }
 }
 
-a, a:link, a:active {
+a {
   text-decoration: none;
   color: white;
+}
+
+a:hover {
+  color: #bb86fc;
 }
 
 * {
@@ -245,14 +249,6 @@ div, article {
 
 .bg-grey {
   background-color: #e8e8e8;
-}
-
-.bg-dark {
-  background-color: #6200ee !important;
-}
-
-.nav-link {
-  color: white !important;
 }
 
 .text-darkpurple {
@@ -324,9 +320,13 @@ section {
 
 /* Hero Section */
 .d-grid {
-  margin: auto;
   padding: 0;
-  bottom: 0;
+  margin: 0;
+}
+
+.hero_image {
+  opacity: 100%;
+  position: relative;
 }
 
 @media (min-width: 992px) {
@@ -393,10 +393,12 @@ section {
   }
   .hero-text h1 {
     font-family: Kasumi;
-    font-size: 7em;
+    width: 100%;
+    font-size: 6.5vw;
     line-height: 1em;
     letter-spacing: .1em;
     margin: .25em 0;
+    white-space: nowrap;
   }
   .hero-text .hero-button-mobile {
     display: none;
@@ -405,10 +407,11 @@ section {
 
 @media (max-width: 992px) {
   .hero-image {
-    height: auto;
-    width: 100vw;
+    height: 100vh;
+    width: 100%;
     opacity: 100%;
-    padding: 0 2.5em;
+    padding: 4em;
+    position: relative;
   }
   .hero-home {
     background: url("../images/mobile/home.jpg");
@@ -460,17 +463,19 @@ section {
     background-attachment: relative;
   }
   .hero-text {
-    padding-top: 50em;
+    position: absolute;
+    padding: inherit;
+    bottom: 0;
   }
   .hero-text h1 {
     font-family: Kasumi;
     width: 100%;
-    font-size: 5.25em;
+    font-size: 12vw;
     line-height: 1em;
     letter-spacing: .1em;
-    margin: .25em 0;
+    margin: .25em auto;
   }
-  .hero-button-desktop {
+  .hero-text .hero-button-desktop {
     display: none;
   }
 }
@@ -519,6 +524,7 @@ section {
 
 .navbar-brand img {
   width: 187px;
+  height: auto;
 }
 
 .navbar {
@@ -536,8 +542,17 @@ section {
   color: #bb86fc;
 }
 
+.nav-link:active {
+  color: #03dac5;
+  background-color: #03dac5;
+}
+
 .nav-link:visited {
   color: white;
+}
+
+.nav-link:focus {
+  background-color: #3700b3;
 }
 
 .dropdown-item {
@@ -635,20 +650,16 @@ section {
   border: 1px solid #dee2e6 !important;
 }
 
-.accordion-header {
-  border-bottom: 1px solid #dee2e6 !important;
-}
-
-.accordion-item h2 button:hover {
+.accordion-item button:hover {
   color: #bb86fc !important;
 }
 
-.accordion-item h2 button :active {
-  color: red !important;
+.accordion-item button:active {
+  color: #6200ee !important;
 }
 
-.content-title {
-  color: black;
+.accordion-item .accordion-header {
+  border-bottom: 1px solid #dee2e6 !important;
 }
 
 .content-title-invert {
@@ -683,10 +694,6 @@ section {
 
 .breadcrumb-nav .active {
   font-weight: bold;
-}
-
-.breadcrumb-nav a:hover {
-  color: #bb86fc;
 }
 
 .card-deck, .card {
@@ -773,11 +780,13 @@ section {
   background-color: #bb86fc;
   height: 3.125em;
   width: 16.25em;
-  border-radius: 50px;
   padding: 1em 0;
   border: none;
   line-height: normal;
   text-transform: uppercase;
+  font-family: Inter-Light;
+  font-size: 18px;
+  margin-top: .5em;
 }
 
 .btn:hover {
@@ -800,10 +809,6 @@ section {
   color: black;
 }
 
-.teams-content a:hover {
-  color: #bb86fc;
-}
-
 .teams-content th {
   font-family: Inter-Bold;
 }
@@ -821,9 +826,6 @@ section {
   }
   .teams-content a {
     color: black;
-  }
-  .teams-content a:hover {
-    color: #bb86fc;
   }
 }
 
@@ -949,12 +951,10 @@ td {
 }
 
 .text-black h2 {
-  color: black;
   font-family: Inter-Bold;
 }
 
 .text-black th, .text-black td {
-  color: black;
   padding: 36.8px 0;
   font-size: 18px;
 }
@@ -966,31 +966,14 @@ td {
 }
 
 .text-black label {
-  color: black;
   font-family: Inter-Light;
   font-size: 18px;
-  text-transform: lowercase;
-}
-
-.text-black label::first-letter {
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding-left: 8px;
 }
 
-.button-font button {
-  font-family: Inter-Light;
-  font-size: 18px;
-  margin-top: 2em;
-  border-radius: 50px;
-  padding: 15px 30px;
-}
-
-.button-font-big button {
-  font-family: Inter-Light;
-  font-size: 18px;
-  margin-top: 0em;
-  border-radius: 50px;
-  padding: 15px 30px;
+.text-black label::first-letter {
+  padding-left: 8px;
 }
 
 .content-title {
@@ -1002,10 +985,6 @@ td {
   color: white;
   font-family: Inter-Bold;
   padding-right: 40px;
-}
-
-.content-title-invert {
-  color: white;
 }
 
 .upcoming-events-border-black {
@@ -1028,10 +1007,6 @@ td {
   font-family: Inter-Light;
   font-size: 28px;
   color: white;
-}
-
-.upcoming-events-border-black a:hover {
-  color: #bb86fc;
 }
 
 .ftr-col-1,
@@ -1166,13 +1141,6 @@ td {
     margin: 0px 15px;
   }
   .social-row {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
     float: none;
     text-align: center;
     -webkit-box-pack: center;
@@ -1193,7 +1161,7 @@ td {
     width: 40px;
     margin: 0px 32px;
   }
-  .credits-color {
+  .credits {
     height: 9em;
     background-color: black;
   }
@@ -1224,7 +1192,7 @@ td {
     height: 45px;
     margin: 10px 25px;
   }
-  .credits-color {
+  .credits {
     height: 20em;
   }
   .ftr-col-name {
