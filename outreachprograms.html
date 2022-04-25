@@ -238,29 +238,33 @@
 
   <!-------------------------------- Main -------------------------------->
 
-
-  <!-- Atta Map Locatios -->
-
-
-
-
-
-
-  <!-- Desktop News Section -->
   <main class="container-fluid">
 
     <!-- Hero Call-to-Action -->
-    <div class="bg-image">
-
-      <section class="row margin68 hero">
-        <div class="d-grid justify-content-end">
-          <button class="btn btn-midpurple btn-lg" type="button">LEARN MORE</button>
-        </div>
+    <section class="hero-image hero-outreach">
+      <div class="row hero-text">
         <div class="d-grid">
-          <h1 class="text-start">Find Outreach Programs In Your Area</h1>
+          <h1 class="text-start">Find Outreach Programs<br>In Your Area</h1>
         </div>
-      </section>
-    </div>
+        <!-- Outreach Program Search Form -->
+        <!-- *** needs to be connected to Google Map App or site's list of programs *** -->
+        <form class="row g-3 pb-5 ps-0 text-uppercase text-black">
+          <div class="form-floating col-md-6 col-sm-12 ps-0">
+            <input type="text" class="form-control" id="filterPrograms" placeholder="Enter First Name">
+            <label for="filterPrograms" class="form-label">Filter Programs</label>
+          </div>
+          <div class="form-floating col-md-6 col-sm-12">
+            <input type="text" class="form-control" id="location" placeholder="Enter Last Name">
+            <label for="location" class="form-label">City, State, or Zip Code</label>
+          </div>
+          <div class="col-12">
+            <button class="btn rounded-pill" type="button">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Atta Map Locations -->
 
     <!-- Map -->
     <article class="col-lg-12 col-md-12 col-sm-12">
@@ -527,7 +531,7 @@
             <label for="email" class="form-label">Email</label>
           </div>
           <div class="col-12">
-            <button class="btn btn-midpurple btn-lg" type="button">SUBSCRIBE</button>
+            <button class="btn btn-midpurple" type="button">SUBSCRIBE</button>
           </div>
         </form>
       </article>

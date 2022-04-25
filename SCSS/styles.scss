@@ -176,7 +176,7 @@ $prefixes: -webkit-,
 @mixin xxl {
 
     // Large: above 1400 screen size
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (min-width: 1400px) {
         @content;
     }
 }
@@ -184,7 +184,7 @@ $prefixes: -webkit-,
 @mixin xl {
 
     // Large: 1200 to 1399 screen size
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (min-width: 1200px) {
         @content;
     }
 }
@@ -192,7 +192,7 @@ $prefixes: -webkit-,
 @mixin lg {
 
     // desktop: 992 to 1199 screen size
-    @media only screen and (max-width: 992px) {
+    @media only screen and (min-width: 992px) {
         @content;
     }
 }
@@ -200,15 +200,23 @@ $prefixes: -webkit-,
 @mixin md {
 
     // Tablet: 768 to 991 screen size
-    @media only screen and (max-width: 768px) {
+    @media only screen and (min-width: 768px) {
         @content;
     }
 }
 
 @mixin sm {
 
-    // Phone: below 768 screen size
-    @media only screen and (max-width: 576px) {
+    // Phone: 576 to 767 screen size
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin xs {
+
+    // Phone: 0 to  575 screen size
+    @media only screen and (min-width: 0) {
         @content;
     }
 }
@@ -372,6 +380,20 @@ h2 {
 
 h3 {
     font-size: 2.25em;
+}
+
+h4 {
+    // Footer Headings
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-family: Inter-Bold;
+    text-align: left;
+    margin-left: 33px;
+    width: 181px;
+    color: white;
+    background-color: none;
+    border-top: 2px solid $lightpurple;
+    padding-top: 24px;
 }
 
 // Page Structure -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -680,10 +702,20 @@ section {
 
 // General Section Sizing -------------------------------------------
 
-section { // responsive section padding
-	//"doesn't exist" @include xs {padding: 0;}
-	@include sm {padding: 4em;}
-	@include md {padding: 6em;}
+section {
+
+    // responsive section padding
+    @include xs {
+        padding: 2.25em;
+    }
+
+    @include sm {
+        padding: 4em;
+    }
+
+    @include md {
+        padding: 6em;
+    }
 }
 
 
@@ -769,8 +801,8 @@ section { // responsive section padding
         @include desktop-image-replace("../images/desktop/news.jpg");
     }
 
-    .hero-career {
-        @include desktop-image-replace("../images/desktop/career.jpg");
+    .hero-about {
+        @include desktop-image-replace("../images/desktop/about.jpg");
     }
 }
 
@@ -837,8 +869,8 @@ section { // responsive section padding
         @include mobile-image-replace("../images/mobile/news.jpg");
     }
 
-    .hero-career {
-        @include mobile-image-replace("../images/mobile/career.jpg");
+    .hero-about {
+        @include mobile-image-replace("../images/mobile/about.jpg");
     }
 }
 
@@ -1258,11 +1290,15 @@ $container-max-widths: (sm: 540px,
 
 // FOOTER ----------------------------------------------------------
 
+footer .container-fluid {
+    padding: 2em 4.25em;
+}
+
 .ftr-col-1,
 .ftr-col-2,
 .ftr-col-3,
 .ftr-col-4 {
-    font-family: arial;
+    font-family: Inter-Medium;
     font-size: 10px;
     padding-left: 10px;
 }
@@ -1295,20 +1331,7 @@ $container-max-widths: (sm: 540px,
     width: 450px;
 }
 
-.ftr-col-name {
-    text-align: left;
-    margin-left: 33px;
-    width: 181px;
-    color: white;
-    background-color: none;
-    border-top: 2px solid $lightcyan;
-    // border-right: 2px solid $lightcyan;
-    /* border-radius: none;*/
-    padding-top: 24px;
-}
-
 .footer-color {
-    // background-color: $darkblue;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -1371,33 +1394,33 @@ $container-max-widths: (sm: 540px,
         text-align: center;
     }
 
-    .margin28 {
-        padding: 2em 8em;
-    }
+    // .margin28 {
+    //     padding: 2em 8em;
+    // }
 
-    .margin18 {
-        padding: 1em 8em;
-    }
+    // .margin18 {
+    //     padding: 1em 8em;
+    // }
 }
 
 @include xl {
-    .margin28 {
-        padding: 2em 4em;
-    }
+    // .margin28 {
+    //     padding: 2em 4em;
+    // }
 
-    .margin18 {
-        padding: 1em 4em;
-    }
+    // .margin18 {
+    //     padding: 1em 4em;
+    // }
 }
 
 @include lg {
-    .margin28 {
-        padding: 2em 4em;
-    }
+    // .margin28 {
+    //     padding: 2em 4em;
+    // }
 
-    .margin18 {
-        padding: 1em 4em;
-    }
+    // .margin18 {
+    //     padding: 1em 4em;
+    // }
 
     .social-logo {
         width: 40px;
@@ -1427,18 +1450,18 @@ $container-max-widths: (sm: 540px,
 
     .credits {
         height: 9em;
-        background-color: black;
+        background-color: $black;
     }
 }
 
 @include sm {
-    .margin28 {
-        padding: 2em 4em;
-    }
+    // .margin28 {
+    //     padding: 2em 4em;
+    // }
 
-    .margin18 {
-        padding: 1em 4em;
-    }
+    // .margin18 {
+    //     padding: 1em 4em;
+    // }
 
     .social-logo {
         width: 40px;
@@ -1462,7 +1485,7 @@ $container-max-widths: (sm: 540px,
     }
 
     .credits {
-        height: 20em;
+        height: 6.25em;
     }
 
     .ftr-col-name {

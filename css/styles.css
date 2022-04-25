@@ -230,6 +230,19 @@ h3 {
   font-size: 2.25em;
 }
 
+h4 {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-family: Inter-Bold;
+  text-align: left;
+  margin-left: 33px;
+  width: 181px;
+  color: white;
+  background-color: none;
+  border-top: 2px solid #bb86fc;
+  padding-top: 24px;
+}
+
 @media (min-width: 0px) {
   header,
   body,
@@ -332,7 +345,7 @@ section {
   padding: 6em 8em;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   .margin68 {
     padding: 2em 3em !important;
   }
@@ -395,7 +408,7 @@ section {
   background: #08011e;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .nav-link {
     color: white !important;
     text-transform: uppercase;
@@ -404,7 +417,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .nav-link {
     color: white !important;
     text-transform: uppercase;
@@ -413,7 +426,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
   .nav-link {
     color: white !important;
     text-transform: uppercase;
@@ -468,13 +481,19 @@ section {
   margin: 0px 30px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 0) {
+  section {
+    padding: 2.25em;
+  }
+}
+
+@media only screen and (min-width: 576px) {
   section {
     padding: 4em;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   section {
     padding: 6em;
   }
@@ -565,8 +584,8 @@ section {
     background-size: cover;
     background-attachment: relative;
   }
-  .hero-career {
-    background: url("../images/desktop/career.jpg");
+  .hero-about {
+    background: url("../images/desktop/about.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -645,8 +664,8 @@ section {
     background-size: cover;
     background-attachment: relative;
   }
-  .hero-career {
-    background: url("../images/mobile/career.jpg");
+  .hero-about {
+    background: url("../images/mobile/about.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -818,7 +837,7 @@ section {
   font-family: Inter-Bold;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   .teams-content {
     text-align: center;
   }
@@ -879,7 +898,7 @@ td {
   vertical-align: center !important;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   .schedule th {
     text-align: center;
     display: -webkit-box;
@@ -928,7 +947,7 @@ td {
   border-bottom: 0px solid grey;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .coach-img {
     width: 200px;
     border-radius: 200px;
@@ -1014,11 +1033,15 @@ td {
   color: white;
 }
 
+footer .container-fluid {
+  padding: 2em 4.25em;
+}
+
 .ftr-col-1,
 .ftr-col-2,
 .ftr-col-3,
 .ftr-col-4 {
-  font-family: arial;
+  font-family: Inter-Medium;
   font-size: 10px;
   padding-left: 10px;
 }
@@ -1049,17 +1072,6 @@ td {
   width: 450px;
 }
 
-.ftr-col-name {
-  text-align: left;
-  margin-left: 33px;
-  width: 181px;
-  color: white;
-  background-color: none;
-  border-top: 2px solid #03dac5;
-  /* border-radius: none;*/
-  padding-top: 24px;
-}
-
 .footer-color {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1082,7 +1094,7 @@ td {
   margin-top: 1em;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .ftr-col-name {
     text-align: left;
     margin-left: 33px;
@@ -1117,30 +1129,9 @@ td {
   .ftr-vert {
     text-align: center;
   }
-  .margin28 {
-    padding: 2em 8em;
-  }
-  .margin18 {
-    padding: 1em 8em;
-  }
 }
 
-@media only screen and (max-width: 1200px) {
-  .margin28 {
-    padding: 2em 4em;
-  }
-  .margin18 {
-    padding: 1em 4em;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .margin28 {
-    padding: 2em 4em;
-  }
-  .margin18 {
-    padding: 1em 4em;
-  }
+@media only screen and (min-width: 992px) {
   .social-logo {
     width: 40px;
     margin: 0px 15px;
@@ -1161,7 +1152,7 @@ td {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .social-logo {
     width: 40px;
     margin: 0px 32px;
@@ -1172,13 +1163,7 @@ td {
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .margin28 {
-    padding: 2em 4em;
-  }
-  .margin18 {
-    padding: 1em 4em;
-  }
+@media only screen and (min-width: 576px) {
   .social-logo {
     width: 40px;
     margin: 0px 19px;
@@ -1198,7 +1183,7 @@ td {
     margin: 10px 25px;
   }
   .credits {
-    height: 20em;
+    height: 6.25em;
   }
   .ftr-col-name {
     padding-top: 10px;
