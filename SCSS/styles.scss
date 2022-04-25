@@ -681,7 +681,7 @@ section {
 // General Section Sizing -------------------------------------------
 
 section { // responsive section padding
-	@include xs {padding: 0;}
+	//"doesn't exist" @include xs {padding: 0;}
 	@include sm {padding: 4em;}
 	@include md {padding: 6em;}
 }
@@ -850,7 +850,13 @@ section { // responsive section padding
 //   xl: 1200px,
 //   xxl: 1400px
 // );
-
+//Teams ---------------------------------------------------
+.teams{
+    cursor:pointer
+}
+.teams:hover{
+    color:$lightcyan;
+}
 // News Section -------------------------------------------
 
 .card-deck,

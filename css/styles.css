@@ -654,6 +654,14 @@ section {
   }
 }
 
+.teams {
+  cursor: pointer;
+}
+
+.teams:hover {
+  color: #03dac5;
+}
+
 .card-deck,
 .card {
   background-color: #08011e;
