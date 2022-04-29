@@ -324,7 +324,7 @@ h4 {
     margin: 0 auto;
   }
   body {
-    border: solid #03dac5 2px;
+    border: 0px solid #03dac5;
   }
 }
 
@@ -536,6 +536,20 @@ section {
     line-height: 1em;
     margin: .25em 0;
   }
+  .hero-home {
+    background: url("../images/desktop/home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: relative;
+  }
+  .hero-home h1 {
+    font-family: Kasumi;
+    font-size: 7em;
+    letter-spacing: .1em;
+    line-height: 1em;
+    margin: .25em 0;
+  }
   .hero-table-tennis {
     background: url("../images/desktop/tabletennis.jpg");
     background-repeat: no-repeat;
@@ -561,12 +575,26 @@ section {
     background-size: cover;
     background-attachment: relative;
   }
+  .hero-team-league h1 {
+    font-family: Kasumi;
+    font-size: 7em;
+    letter-spacing: .1em;
+    line-height: 1em;
+    margin: .25em 0;
+  }
   .hero-events {
     background: url("../images/desktop/events.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: relative;
+  }
+  .hero-events h1 {
+    font-family: Kasumi;
+    font-size: 7em;
+    letter-spacing: .1em;
+    line-height: 1em;
+    margin: .25em 0;
   }
   .hero-outreach {
     background: url("../images/desktop/outreach.jpg");
@@ -588,6 +616,13 @@ section {
     background-position: center;
     background-size: cover;
     background-attachment: relative;
+  }
+  .hero-about h1 {
+    font-family: Kasumi;
+    font-size: 7em;
+    letter-spacing: .1em;
+    line-height: 1em;
+    margin: .25em 0;
   }
 }
 

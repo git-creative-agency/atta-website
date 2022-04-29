@@ -496,7 +496,7 @@ h4 {
     }
 
     body {
-        border: solid $lightcyan 2px;
+        border: 0px solid $lightcyan ;
     }
 }
 
@@ -767,6 +767,20 @@ section {
         }
     }
 
+    
+
+    .hero-home {
+        // home page hero image and h1
+        @include desktop-image-replace("../images/desktop/home.jpg");
+
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
+    } 
     .hero-table-tennis {
         @include desktop-image-replace("../images/desktop/tabletennis.jpg");
 
@@ -786,10 +800,24 @@ section {
 
     .hero-team-league {
         @include desktop-image-replace("../images/desktop/teamleague.jpg");
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
     }
 
     .hero-events {
         @include desktop-image-replace("../images/desktop/events.jpg");
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
     }
 
     .hero-outreach {
@@ -802,6 +830,13 @@ section {
 
     .hero-about {
         @include desktop-image-replace("../images/desktop/about.jpg");
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
     }
 }
 
