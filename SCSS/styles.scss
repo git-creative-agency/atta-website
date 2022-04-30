@@ -1,76 +1,1529 @@
-// ----- Navigation Styles ------ //
+// Variables -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// Type ------------------------------------------------------
+
+$serif: '',
+'',
+'',
+serif; // insert brand serif fonts here
+$sans: '',
+'',
+sans-serif; // insert brand sans-serif fonts here
+$sans-cond: ''; // insert brand sans-serif condensed fonts here
+$mono: ''; // insert brand mono fonts here
+
+// Colors (hex) ------------------------------------------------------
+
+/*
+dark purple:      #3700B3
+midtone purple:   #6200EE
+light purple:     #BB86FC
+dark blue		  #08011E
+midtone cyan:     #018786
+light cyan:       #03DAC5 
+black:            #000000
+white:            #FFFFFF
+grey: 			  #E8E8E8
+*/
+
+// Colors (rgb) ------------------------------------------------------
+
+$darkpurple: rgb(55, 00, 179);
+$midpurple: rgb(98, 00, 238);
+$lightpurple: rgb(187, 134, 252);
+$darkblue: rgb(08, 01, 30);
+$midcyan: rgb(0, 86, 84);
+$lightcyan: rgb(3, 218, 197);
+$black: rgb(00, 00, 00);
+$white: rgb(255, 255, 255);
+$grey: rgb(232, 232, 232);
+
+// Sizes ------------------------------------------------------
+
+$size: 12px; // for padding, etc.
+$radius: 3px;
+
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px);
+
+// Misc. ------------------------------------------------------
+
+$prefixes: -webkit-,
+-moz-,
+-o-,
+"";
+
+// Fonts ------------------------------------------------------
+
+@font-face {
+    font-family: "Kasumi";
+    src: url("/fonts/Kasumi\ Regular.otf")
+}
+
+@font-face {
+    font-family: "Inter-Black";
+    src: url("/fonts/Inter-Black.otf")
+}
+
+@font-face {
+    font-family: "Inter-Black-Italic";
+    src: url("/fonts/Inter-BlackItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("/fonts/Inter-Bold.otf")
+}
+
+@font-face {
+    font-family: "Bold-Italic";
+    src: url("/fonts/Inter-BoldItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-ExtraBold";
+    src: url("/fonts/Inter-ExtraBold.otf")
+}
+
+@font-face {
+    font-family: "Inter-ExtraBold-Italic";
+    src: url("/fonts/Inter-ExtraBoldItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-ExtraLight";
+    src: url("/fonts/Inter-ExtraLight.otf")
+}
+
+@font-face {
+    font-family: "Inter-ExtraLight-Italic";
+    src: url("/fonts/Inter-ExtraLightItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-Italic";
+    src: url("/fonts/Inter-Italic.otf")
+}
+
+@font-face {
+    font-family: "Inter-Light";
+    src: url("/fonts/Inter-Light.otf")
+}
+
+@font-face {
+    font-family: "Inter-Light-Italic";
+    src: url("/fonts/Inter-LightItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-Medium";
+    src: url("/fonts/Inter-Medium.otf")
+}
+
+@font-face {
+    font-family: "Inter-Medium-Italic";
+    src: url("/fonts/Inter-MediumItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-Regular";
+    src: url("/fonts/Inter-Regular.otf")
+}
+
+@font-face {
+    font-family: "Inter-SemiBold";
+    src: url("/fonts/Inter-SemiBold.otf")
+}
+
+@font-face {
+    font-family: "Inter-SemiBold-Italic";
+    src: url("/fonts/Inter-SemiBoldItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-Thin";
+    src: url("/fonts/Inter-Thin.otf")
+}
+
+@font-face {
+    font-family: "Inter-Thin-Italic";
+    src: url("/fonts/Inter-ThinItalic.otf")
+}
+
+@font-face {
+    font-family: "Inter-V";
+    src: url("/fonts/Inter-V.otf")
+}
+
+// Mixins -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@function tint($color, $percentage) {
+    // creates "tint", the addition of white to $color (e.g. $percentage between $color and white)
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    // creates "shade", the addition of black to $color (e.g. $percentage between $color and black)
+    @return mix(black, $color, $percentage);
+}
+
+// Media Queries -----------------------------------------------------
+
+@mixin xxl {
+
+    // Large: above 1400 screen size
+    @media only screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin xl {
+
+    // Large: 1200 to 1399 screen size
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin lg {
+
+    // desktop: 992 to 1199 screen size
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin md {
+
+    // Tablet: 768 to 991 screen size
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin sm {
+
+    // Phone: 576 to 767 screen size
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin xs {
+
+    // Phone: 0 to  575 screen size
+    @media only screen and (min-width: 0) {
+        @content;
+    }
+}
+
+// Hero Images -----------------------------------------------------
+
+@mixin desktop-image-replace ($imageURL) {
+    // replaces desktop hero-image on repective pages
+    background: url($imageURL); // argument that changes hero-image URL
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;
+}
+
+@mixin mobile-image-replace ($imageURL) {
+    // replaces mobile hero-image on repective pages
+    background: url($imageURL); // argument that changes hero-image URL
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;
+}
+
+// General Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: $black;
+    height: 100%;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $white;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+        color: $lightpurple
+    }
+
+    // finish additional &: styles
+}
+
+// Buttons ------------------------------------------------------------------------------
+
+.btn {
+    color: $white;
+    background-color: $lightpurple;
+    height: 3.125em;
+    width: 16.25em;
+    padding: 1em 0;
+    border: none;
+    line-height: normal;
+    text-transform: uppercase;
+    font-family: Inter-Light;
+    font-size: 18px;
+    margin-top: .5em;
+
+    &:hover {
+        background-color: $lightcyan;
+        color: $darkblue;
+    }
+}
+
+.btn-white {
+    background-color: $white;
+    border: 2px solid $lightpurple;
+    color: $black;
+    // vertical-align: middle !important;
+    padding: 0;
+
+    &:hover {
+        background-color: $lightcyan;
+        color: $darkblue;
+        border: none;
+    }
+
+}
+
+// Global Styles -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 * {
-	  box-sizing: border-box;
-	  margin: 0;
-	  padding: 0;
-	  background-color:#24252A;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+// Background Colors -----------------------------------------------------
+
+.bg-darkpurple {
+    background-color: $darkpurple;
+}
+
+.bg-midpurple {
+    background-color: $midpurple;
+}
+
+.bg-lightpurple {
+    background-color: $lightpurple;
+}
+
+.bg-darkblue {
+    background-color: $darkblue;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-grey {
+    background-color: $grey;
+}
+
+// Text Colors -----------------------------------------------------
+
+.text-darkpurple {
+    color: $darkpurple;
+}
+
+.text-midpurple {
+    color: $midpurple;
+}
+
+.text-lightpurple {
+    color: $lightpurple;
+}
+
+.text-darkblue {
+    color: $darkblue;
+}
+
+.text-black {
+    color: $black;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-grey {
+    color: $grey;
+}
+
+// Fonts ---------------------------------------------------------------------
+
+// h1 {font-size: 6em}
+h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: Inter-Bold;
+    padding-bottom: .5em;
+    letter-spacing: .2em;
+}
+
+h3 {
+    font-size: 2.25em;
+}
+
+h4 {
+    // Footer Headings
+    font-size: 1.5em;
+    line-height: normal;
+    text-transform: capitalize;
+    font-family: Inter-Bold;
+    // top border line
+    border-top: 2px solid $lightpurple;
+    padding-top: 1em;
+    width: 7.5em;
+}
+
+// Page Structure -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// CSS Grid -------------------------------------------
+
+// CSS Reset 
+@media (min-width: 0px) {
+
+    // xs screen size
+    header,
+    body,
+    main,
+    section,
+    .row,
+    .containerDesktop,
+    .container-fluid .hero-image,
+    footer {
+        max-width: 575px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 576px) {
+
+    // sm screen size
+    header,
+    body,
+    main,
+    section,
+    .row,
+    .containerDesktop,
+    .container-fluid .hero-image,
+    footer {
+        max-width: 767px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    // md screen size
+    header,
+    body,
+    main,
+    section,
+    .row,
+    .containerDesktop,
+    .container-fluid .hero-image,
+    footer {
+        max-width: 991px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) {
+
+    // lg screen size
+    header,
+    body,
+    main,
+    section,
+    .row,
+    .containerDesktop,
+    .container-fluid .hero-image,
+    footer {
+        max-width: 1199px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    // xl screen size
+    header,
+    body,
+    main,
+    section,
+    .row,
+    .containerDesktop,
+    .container-fluid .hero-image,
+    footer {
+        max-width: 1399px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    // xxl screen size
+    header,
+    body,
+    main,
+    section,
+    .row,
+    .containerDesktop,
+    .container-fluid .hero-image,
+    footer {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    body {
+        border: 0px solid $lightcyan ;
+    }
+}
+
+.container-fluid,
+div,
+article {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+
+    // major section padding for all pages
+
+    @include xs {
+        padding: 4em 2em !important;
+    }
+
+    // @include sm {
+    //     padding: 1em 2em !important;
+    // }
+
+    // @include md {
+    //     padding: 2em 4em !important;
+    // }
+
+    @include lg {
+        padding: 6em 6em !important;
+    }
+
+    @include xl {
+        padding: 6em 8em !important;
+    }
+}
+
+// $grid-breakpoints: (xs: 0,
+//     sm: 576px,
+//     md: 768px,
+//     lg: 992px,
+//     xl: 1200px,
+//     xxl: 1400px);
+
+// .margin61 {
+// 	padding: 6em 1em;
+// }
+
+// .margin28 {
+// 	padding: 2em 8em;
+// }
+
+// .margin38 {
+// 	padding: 3em 8em;
+// }
+
+// .margin18 {
+// 	padding: 2em 8em;
+// }
+
+// .footermargin {
+// 	padding: 2em 8em;
+// }
+
+@include sm {
+    .margin68 {
+        padding: 2em 3em !important;
+    }
+}
+
+// Header -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// Main Navigation -------------------------------------------
+
+// Logo ------------------------------------------------------
+
+.navbar-brand img {
+    width: 187px;
+    height: auto;
+    margin-right: 1em;
+}
+
+// Navbar Content ------------------------------------------------------
+
+// main nav container
+.navbar {
+
+    @include xs {
+        // padding: 4em 2em !important;
+        padding: 2.5em 2em .5em 0 !important;
+    }
+
+    // @include sm {
+    //     padding: 1em 2em !important;
+    // }
+
+    // @include md {
+    //     padding: 2em 4em !important;
+    // }
+
+    @include lg {
+        // padding: 6em 6em !important;
+        padding: 2.5em 6em .5em 3.75em !important;
+    }
+
+    @include xl {
+        padding: 2.5em 8em .5em 5.75em !important;
+    }
+}
+
+ul.navbar-nav {
+    width: 100%;
+    justify-content: space-between !important;
+    display: inline-flex !important;
+    float: right !important;
+
+    a {
+        width: 100% !important;
+        text-align: right !important;
+        white-space: nowrap !important;
+    }
+}
+
+
+.nav-link {
+    color: $white !important;
+    font-family: Inter-Medium;
+    text-transform: uppercase;
+    font-size: 16px;
+
+    &:hover {
+        color: $lightpurple;
+    }
+
+    // defines the hover state
+    &:active {
+        color: $lightcyan;
+        background-color: $lightcyan;
+    }
+
+    &:visited {
+        color: $white;
+    }
+
+    &:focus {
+        background-color: $darkblue;
+        border-radius: .25em;
+    }
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-header {
+    // color of navbar main
+    color: $lightpurple !important;
+    font-family: Inter-Medium;
+    font-size: 16px !important;
+    //text-decoration: underline;
+}
+
+.dropdown-item {
+    // color of submenu items
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown-header {
+    // color of submenu title
+    color: $lightpurple;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background: $darkblue;
+}
+
+// Main Navbar (Mobile) ------------------------------------------------
+
+@include lg {
+    .nav-link {
+        color: white !important;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: Inter-Medium !important;
+    }
+}
+
+@include xl {
+    .nav-link {
+        color: white !important;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: Inter-Medium !important;
+    }
+}
+
+@include xxl {
+    .nav-link {
+        color: white !important;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-family: Inter-Medium !important;
+    }
+}
+
+// Breadcrumb Navigation -------------------------------------------
+
+.breadcrumb-nav {
+    // main breadcrumb nav container
+    // padding: .5em 8em;
+    height: 2em;
+    letter-spacing: .1em;
+    vertical-align: middle;
+
+    ol {
+        padding: 0;
+        margin: 0;
+    }
+
+    @include xs {
+        display: none;
+    }
+
+    @include lg {
+        display: block;
+        padding: .5em 6em !important;
+    }
+
+    @include xl {
+        padding: .5em 8em !important;
+    }
+
+    .breadcrumb-item {
+        // breadcrumb li
+        font-size: small;
+        text-transform: uppercase;
+        font-family: Inter-Medium;
+        line-height: normal;
+
+        &::before {
+            // targets separator (fwd slash '/') between breadcrumb items
+            color: $white;
+        }
+    }
+
+    .active {
+        // active link
+        font-weight: bold;
+    }
+}
+
+// Second Navbar ------------------------------------------------
+
+.second-navbar {
+    display: inline-block;
+}
+
+.second-navbar-center {
+    text-align: center;
+}
+
+.second-navbar {
+    text-align: center;
+
+    a {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0px 30px;
+    }
+}
+
+// Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// Hero Section -------------------------------------------
+
+.d-grid {
+    padding: 0;
+    margin: 0;
+    // width: 100%;
+}
+
+@media (min-width: 992px) {
+
+    // desktop hero image size
+    .hero-image {
+        // general styles for all desktop hero images
+        height: 65vh;
+        max-width: 100%;
+        opacity: 100%;
+        position: relative;
+
+        .hero-text {
+            // general styles for all desktop hero text
+            position: absolute;
+            padding: inherit;
+            padding-bottom: 0;
+            bottom: 0;
+            right: 0;
+
+            h1,
+            h2 {
+                width: 100%;
+            }
+
+            .hero-button-mobile {
+                display: none;
+            }
+        }
+    }
+
+    // replaces desktop hero-image for each respective page
+    .hero-home {
+        // home page hero image and h1
+        @include desktop-image-replace("../images/desktop/home.jpg");
+
+        h1 {
+            font-family: Kasumi;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+            font-size: 7em;
+        }
+    }
+
+    
+
+    .hero-home {
+        // home page hero image and h1
+        @include desktop-image-replace("../images/desktop/home.jpg");
+
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
+    } 
+    .hero-table-tennis {
+        @include desktop-image-replace("../images/desktop/tabletennis.jpg");
+
+        h1 {
+            font-family: Inter-Bold;
+            font-size: 6em;
+            line-height: normal;
+        }
+
+        h2 {
+            font-family: Inter-Bold;
+            font-size: 2.25em;
+            letter-spacing: .2em;
+            line-height: normal;
+        }
+    }
+
+    .hero-team-league {
+        @include desktop-image-replace("../images/desktop/teamleague.jpg");
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
+    }
+
+    .hero-events {
+        @include desktop-image-replace("../images/desktop/events.jpg");
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
+    }
+
+    .hero-outreach {
+        @include desktop-image-replace("../images/desktop/outreach.jpg");
+    }
+
+    .hero-news {
+        @include desktop-image-replace("../images/desktop/news.jpg");
+    }
+
+    .hero-about {
+        @include desktop-image-replace("../images/desktop/about.jpg");
+        h1 {
+            font-family: Kasumi;
+            font-size: 7em;
+            letter-spacing: .1em;
+            line-height: 1em;
+            margin: .25em 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    // mobile hero image size
+    .hero-image {
+        // general styles for all mobile hero images
+        height: 100vh;
+        max-width: 100%;
+        opacity: 100%;
+        padding: 1em 1em;
+        position: relative;
+
+        .hero-text {
+            // general styles for all mobile hero text
+            position: absolute;
+            padding: inherit;
+            bottom: 0;
+            right: 0;
+
+            h1,
+            h2 {
+                width: 100%;
+                padding: inherit;
+            }
+
+            .hero-button-desktop {
+                display: none;
+            }
+        }
+    }
+
+    // replaces mobile hero-image for each respective page
+    .hero-home {
+        // padding: 4em;
+        @include mobile-image-replace("../images/mobile/home.jpg");
+
+        h1 {
+            font-family: Kasumi;
+            font-size: 12vw;
+            line-height: 1em;
+            letter-spacing: .1em;
+            margin: .25em auto;
+        }
+    }
+
+    .hero-table-tennis {
+        @include mobile-image-replace("../images/mobile/tabletennis.jpg");
+    }
+
+    .hero-team-league {
+        @include mobile-image-replace("../images/mobile/teamleague.jpg");
+    }
+
+    .hero-events {
+        @include mobile-image-replace("../images/mobile/events.jpg");
+    }
+
+    .hero-outreach {
+        @include mobile-image-replace("../images/mobile/outreach.jpg");
+    }
+
+    .hero-news {
+        @include mobile-image-replace("../images/mobile/news.jpg");
+    }
+
+    .hero-about {
+        @include mobile-image-replace("../images/mobile/about.jpg");
+    }
+}
+
+//Teams ---------------------------------------------------
+
+.teams {
+    cursor: pointer
+}
+
+.teams:hover {
+    color: $lightcyan;
+}
+
+// News Section -------------------------------------------
+
+.card-deck,
+.card {
+    background-color: $darkblue;
+
+    .card {
+        margin-right: 10px;
+    }
+
+    .card-body {
+        padding: 1em 0;
+        width: 100%;
+
+        p {
+            font-family: Inter-Medium;
+        }
+
+        h3 {
+            font-family: Inter-Bold;
+        }
+    }
+}
+
+.card-deck-invert,
+.card-invert {
+    background-color: $white;
+    color: $black;
+}
+
+.news-pad {
+    padding: 0 30px 0 0;
+}
+
+.txt-black {
+    color: $black;
+
+    a {
+        color: $black;
+    }
+}
+
+.text-decoration-underline {
+    color: $midpurple;
+}
+
+.text-decoration-underline:hover {
+    color: $lightpurple;
+
+}
+
+
+// Media Queries (News Section Card/Image Carousel) -------------------------------------------
+
+@media (min-width: 992px) {
+    .containerMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .containerDesktop {
+        display: none;
+    }
+}
+
+// Accordion ------------------------------------------------------
+
+.accordion-body {
+    border: 1px solid #dee2e6;
+    padding: 30px;
+    color: black;
+
+    th {
+        font-family: Inter-Bold;
+    }
+
+    td {
+        font-family: Inter-Light;
+    }
+}
+
+.accordion-item {
+    font-size: 15px;
+    border: 1px solid #dee2e6 !important;
+
+    button {
+        &:hover {
+            color: $lightpurple !important;
+        }
+
+        &:active {
+            color: $midpurple !important;
+        }
+    }
+
+    .accordion-header {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+}
+
+.content-title-invert {
+    color: $white;
+}
+
+.accordion-item h2 button {
+    text-align: left;
+    text-decoration: none;
+    color: $darkpurple;
+    position: relative;
+    -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 0;
+}
+
+.accordion-body,
+.accordion-item {
+    margin: -1px;
+}
+
+// Accordion Hovers
+
+//   @media only screen and (max-width: 1222px)
+//   {
+//   .navbar a,
+//   .navbar-category,
+//   .navbar  {
+//     color: #444;
+//     text-decoration: none;
+//     display: block;
+//     padding: 0em 1em;
+//     font-family: arial;
+//     visibility: hidden;
+// }
+// }
+
+// Sponsor US
+
+.pricetag {
+    font-family: Inter-Bold;
+    float: right;
+    color: $midpurple
+}
+
+// ATTA Maps -----------------------------------------------------------
+
+.ATTA-maps {
+    width: 100%;
+    height: 720px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+// Column Lines ------------------------------------------------------
+
+.news-row-style {
+    border-bottom: 5px solid white;
+    width: 100%;
+    font-size: 24px;
+}
+
+.news-a-style {
+    color: white;
+}
+
+// Team League --------------------------------------------------------------------------
+
+// Division 1 ---------------------------------------------------------------------------
+
+.teams-content {
+    ul {
+        text-align: center;
+        list-style: none;
+    }
+
+    li {
+        font-family: Inter-Bold;
+        display: inline-block;
+        // margin: 0px 30px;
+        margin: 30px 30px;
+    }
+
+    a {
+        color: $black;
+    }
+
+    th {
+        font-family: Inter-Bold;
+    }
+}
+
+@include sm {
+    .teams-content {
+        text-align: center;
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: inline-block;
+            // margin: 0px 30px;
+            margin: 10px 50px;
+        }
+
+        a {
+            color: $black;
+        }
+    }
+}
+
+.schedule {
+    vertical-align: middle;
+
+    th {
+        border: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Inter-Bold;
+        color: black;
+        font-size: 16px;
+    }
+
+    td {
+        vertical-align: center !important;
+        border: none;
+        font-family: Inter-Light;
+        color: black;
+        text-align: center;
+    }
+
+    tr {
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .no-bottom {
+        border-bottom: 0px;
+    }
+}
+
+.bolder {
+    border-bottom: 1px solid black;
+}
+
+td {
+    //padding-top: 20px !important;
+    //padding-bottom: 20px !important;
+    vertical-align: center !important;
+}
+
+@include sm {
+    .schedule {
+        th {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        td {
+            //padding-top: 20px !important;
+            //padding-bottom: 20px !important;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+// Coach's Info -------------------------------------------------------------------------
+
+.coach-img {
+    width: 200px;
+    border-radius: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+.coach-details {
+    vertical-align: middle !important;
+    height: 200px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle !important;
+
+    td {
+        border-bottom: 0px solid grey;
+    }
+}
+
+@include xl {
+    .coach-img {
+        width: 200px;
+        border-radius: 200px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .coach-details {
+        vertical-align: middle !important;
+        height: 100px;
+        text-align: center;
+        font-size: 18px;
+        vertical-align: middle !important;
+
+        td {
+            border-bottom: 0px solid grey;
+        }
+    }
+}
+
+// Rules of the Game --------------------------------------------------------------------
+
+.rules ul {
+    list-style: none;
+    font-family: Inter-Light;
+}
+
+// Upcoming Events // Connect With Us Section -------------------------------------------
+
+// Upcoming Events
+.events-table {
+    color: $black;
+    white-space: nowrap;
+
+    @include xs {
+        padding-bottom: 4em;
+    }
+
+    @include lg {
+        padding: 0 4em 0 0;
+    }
+
+    @include xl {
+        padding: 0 8em 0 0;
+    }
+
+    tr {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid black;
+
+
+        th {
+            font-family: Inter-Bold;
+            width: 100%;
+            vertical-align: middle;
+            margin: 0;
+            padding: 2em 0;
+            text-align: left;
+        }
+
+        td {
+            font-family: Inter-Medium;
+            width: 100%;
+            margin: 0;
+            padding: 2em 0 2em 3em;
+
+            text-align: right;
+            justify-content: space-between !important;
+        }
+    }
+}
+
+.text-black {
+    h2 {
+        font-family: Inter-Bold;
+    }
+
+    th,
+    td {
+        padding: 36.8px 0;
+        font-size: 18px;
+
+    }
+
+    tr {
+        border-bottom: 2px solid black;
+        padding-bottom: 30px;
+        font-size: 18px;
+    }
+
+    label {
+        font-family: Inter-Light;
+        font-size: 18px;
+        text-transform: capitalize;
+        padding-left: 8px;
+    }
+
+    label::first-letter {
+        padding-left: 8px;
+    }
+}
+
+.content-title {
+    color: $black;
+    font-family: Inter-Bold;
+}
+
+.content-title-invert {
+    color: $white;
+    font-family: Inter-Bold;
+    padding-right: 40px;
+
+}
+
+.upcoming-events-border-black {
+    tr {
+        border-bottom: 2px solid $white;
+    }
+
+    th {
+        font-family: Inter-Light;
+        font-size: 28px;
+        color: $white;
+    }
+
+    /* td is option here 
+	td {
+		font-family: Inter-Light;
+		font-size: 24px;
+		color: white;
+		}
 	}
-
-	header {
-	  display: flex;
-	  justify-content: center;
-	  align-items:center;
-	  background-color: red;
-	  margin-top: 1.7em;
-	}
-
-	.logo {
-	  width: 165px;
-	  background-color: blue;
-	  float: left;
-
-	}
-
-	.nav__links {
-	  list-style: none;
-	  margin-top:1.5em;
-	}
-
-	@media only screen and (max-width: 1146px) {
-	  .nav__links {
-	    display: none;
-	  }
-	}
-
-	.nav__links li {
-	  display: inline-block;
-	  padding: 0px 15px;
-	}
-
-	.nav__links li a {
-	  transition: all 0.3s ease 0s;
-	  text-decoration: none;
-	  font-family: arial;
-	  font-weight: 500;
-	  font-size: 16px;
-	  color: #edf0f1;
-	}
-
-	.nav__links li a:hover{
-	  color: #0088a9;
-	}
+	*/
+}
 
 
-	.left {
+// Connect with Us
 
-	    height: 65px;
-	    float: left;
-	    background-color:green;
-	}
+// *** below style is for show (to replicate prototype)
+// *** "Load More" button needs actually functionality once real Instagram feed is attached to site
+img.load-more {
+    @include xs {
+        display: none;
+    }
+    @include lg {
+        display: block;
+    }
+}
 
-	.right {
-	    width: 12%;
-	    height: 65px;
-	    float: right;
-	    background-color:green;
+// Stay Up To Speed Section -------------------------------------------
 
-	  }
 
-	.middle {
-	  width: 60%;
-	  background-color: white;
-	  height: 50px;
-	  text-align: center;
-	  margin-right: 4%;
-	  margin-left: 4%;
-	}
+
+// End Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+// FOOTER ----------------------------------------------------------
+
+// Footer Container
+footer {
+    padding: 0;
+}
+
+// Footer Logo
+.ftr-logo {
+    @include xs {
+        // width: 365px;
+        width: 100%;
+        justify-items: center !important;
+    }
+
+    @include lg {
+        width: 460px;
+        margin-left: -1.9em !important; // negates img padding
+    }
+}
+
+// Social Icons
+.social-row {
+    display: flex !important;
+    float: left;
+
+    // social icons
+    img {
+        width: 50px;
+    }
+
+    @include xs {
+        float: none;
+        justify-content: space-between !important;
+    }
+
+    @include lg {
+        display: flex !important;
+        float: none;
+
+        a {
+            padding-right: 4.125em;
+        }
+    }
+}
+
+// Footer Columns
+.ftr-col {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+
+    @include xs {
+        float: left;
+        padding-top: 2em;
+    }
+
+    @include lg {
+        float: right;
+        max-width: 7.5em;
+        margin: auto;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        max-width: 7.5em;
+
+        a {
+            float: left;
+            padding: .5em 0;
+            text-align: left;
+            text-transform: uppercase;
+            font-family: Inter-Medium;
+            min-width: 7.5em;
+        }
+    }
+}
