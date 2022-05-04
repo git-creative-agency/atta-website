@@ -336,7 +336,7 @@ h4 {
     margin: 0 auto;
   }
   body {
-    border: 0px solid #03dac5;
+    border: 2px solid #03dac5;
   }
 }
 
@@ -1208,6 +1208,31 @@ footer {
   }
 }
 
+section.credits {
+  padding-top: 2.5em !important;
+  padding-bottom: 1em !important;
+  border-top: solid 0.125px #e8e8e8;
+}
+
+@media only screen and (min-width: 0) {
+  section.credits .ftr-col {
+    margin-top: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  section.credits .ftr-col {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  section.credits .ftr-col a {
+    padding: .95em 0 !important;
+    line-height: normal !important;
+    vertical-align: middle !important;
+  }
+}
+
 .social-row {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -1215,8 +1240,16 @@ footer {
   float: left;
 }
 
-.social-row img {
+.social-row a {
+  padding: 0;
+  margin: 0;
+  vertical-align: middle !important;
+}
+
+.social-row a img {
   width: 50px;
+  padding: 0;
+  margin: 0;
 }
 
 @media only screen and (min-width: 0) {
@@ -1225,6 +1258,7 @@ footer {
     -webkit-box-pack: justify !important;
         -ms-flex-pack: justify !important;
             justify-content: space-between !important;
+    padding-bottom: 1em !important;
   }
 }
 
@@ -1234,6 +1268,7 @@ footer {
     display: -ms-flexbox !important;
     display: flex !important;
     float: none;
+    padding-bottom: 0 !important;
   }
   .social-row a {
     padding-right: 4.125em;
@@ -1241,23 +1276,21 @@ footer {
 }
 
 .ftr-col {
-  padding: 0;
-  margin: 0;
   white-space: nowrap;
 }
 
 @media only screen and (min-width: 0) {
   .ftr-col {
     float: left;
-    padding-top: 2em;
+    margin-top: 2em !important;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .ftr-col {
-    float: right;
-    max-width: 7.5em;
-    margin: auto;
+    float: right !important;
+    max-width: 11.25em;
+    width: 100%;
   }
 }
 
@@ -1265,7 +1298,8 @@ footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  max-width: 7.5em;
+  min-width: 7.5em;
+  width: 100%;
 }
 
 .ftr-col ul a {
@@ -1275,4 +1309,5 @@ footer {
   text-transform: uppercase;
   font-family: Inter-Medium;
   min-width: 7.5em;
+  width: 100%;
 }

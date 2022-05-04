@@ -510,7 +510,7 @@ h4 {
     }
 
     body {
-        border: 0px solid $lightcyan ;
+        border: 2px solid $lightcyan;
     }
 }
 
@@ -842,7 +842,7 @@ ul.navbar-nav {
         }
     }
 
-    
+
 
     .hero-home {
         // home page hero image and h1
@@ -855,7 +855,8 @@ ul.navbar-nav {
             line-height: 1em;
             margin: .25em 0;
         }
-    } 
+    }
+
     .hero-table-tennis {
         @include desktop-image-replace("../images/desktop/tabletennis.jpg");
 
@@ -875,6 +876,7 @@ ul.navbar-nav {
 
     .hero-team-league {
         @include desktop-image-replace("../images/desktop/teamleague.jpg");
+
         h1 {
             font-family: Kasumi;
             font-size: 7em;
@@ -886,6 +888,7 @@ ul.navbar-nav {
 
     .hero-events {
         @include desktop-image-replace("../images/desktop/events.jpg");
+
         h1 {
             font-family: Kasumi;
             font-size: 7em;
@@ -905,6 +908,7 @@ ul.navbar-nav {
 
     .hero-about {
         @include desktop-image-replace("../images/desktop/about.jpg");
+
         h1 {
             font-family: Kasumi;
             font-size: 7em;
@@ -1436,6 +1440,7 @@ img.load-more {
     @include xs {
         display: none;
     }
+
     @include lg {
         display: block;
     }
@@ -1448,7 +1453,7 @@ img.load-more {
 // End Main -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 
-// FOOTER ----------------------------------------------------------
+// Footer ----------------------------------------------------------
 
 // Footer Container
 footer {
@@ -1469,24 +1474,59 @@ footer {
     }
 }
 
+// Credits Section ----------------------------------------------------------
+
+// Credits Container 
+section.credits {
+    padding-top: 2.5em !important;
+    padding-bottom: 1em !important;
+    border-top: solid .125px $grey;
+
+    .ftr-col {
+        @include xs {
+            margin-top: 0 !important;
+        }
+
+        @include lg {
+            display: flex !important;
+
+            a {
+                padding: .95em 0 !important;
+                line-height: normal !important;
+                vertical-align: middle !important;
+            }
+        }
+    }
+}
+
 // Social Icons
 .social-row {
     display: flex !important;
     float: left;
 
     // social icons
-    img {
-        width: 50px;
+    a {
+        padding: 0;
+        margin: 0;
+        vertical-align: middle !important;
+
+        img {
+            width: 50px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     @include xs {
         float: none;
         justify-content: space-between !important;
+        padding-bottom: 1em !important;
     }
 
     @include lg {
         display: flex !important;
         float: none;
+        padding-bottom: 0 !important;
 
         a {
             padding-right: 4.125em;
@@ -1496,26 +1536,25 @@ footer {
 
 // Footer Columns
 .ftr-col {
-    padding: 0;
-    margin: 0;
     white-space: nowrap;
 
     @include xs {
         float: left;
-        padding-top: 2em;
+        margin-top: 2em !important;
     }
 
     @include lg {
-        float: right;
-        max-width: 7.5em;
-        margin: auto;
+        float: right !important;
+        max-width: 11.25em;
+        width: 100%;
     }
 
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        max-width: 7.5em;
+        min-width: 7.5em;
+        width: 100%;
 
         a {
             float: left;
@@ -1524,6 +1563,7 @@ footer {
             text-transform: uppercase;
             font-family: Inter-Medium;
             min-width: 7.5em;
+            width: 100%;
         }
     }
 }
